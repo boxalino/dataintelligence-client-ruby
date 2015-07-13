@@ -1,0 +1,2163 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<link href="style.css" rel="stylesheet" type="text/css"/>
+<title>Thrift module: BoxalinoDataIntelligenceV1</title></head><body>
+<div class="container-fluid">
+<h1>Thrift module: BoxalinoDataIntelligenceV1</h1>
+<table class="table-bordered table-striped table-condensed"><thead><th>Module</th><th>Services</th><th>Data types</th><th>Constants</th></thead>
+<tr>
+<td>BoxalinoDataIntelligenceV1</td><td><a href="#Svc_BoxalinoDataIntelligence">BoxalinoDataIntelligence</a><br/>
+<ul>
+<li><a href="#Fn_BoxalinoDataIntelligence_CloneConfiguration">CloneConfiguration</a></li>
+<li><a href="#Fn_BoxalinoDataIntelligence_CreateChoice">CreateChoice</a></li>
+<li><a href="#Fn_BoxalinoDataIntelligence_CreateChoiceVariant">CreateChoiceVariant</a></li>
+<li><a href="#Fn_BoxalinoDataIntelligence_CreateDataExport">CreateDataExport</a></li>
+<li><a href="#Fn_BoxalinoDataIntelligence_CreateDataSource">CreateDataSource</a></li>
+<li><a href="#Fn_BoxalinoDataIntelligence_CreateEmailCampaign">CreateEmailCampaign</a></li>
+<li><a href="#Fn_BoxalinoDataIntelligence_CreateField">CreateField</a></li>
+<li><a href="#Fn_BoxalinoDataIntelligence_CreateFieldsFromReferenceCSVFile">CreateFieldsFromReferenceCSVFile</a></li>
+<li><a href="#Fn_BoxalinoDataIntelligence_CreateProcessTask">CreateProcessTask</a></li>
+<li><a href="#Fn_BoxalinoDataIntelligence_CreateRecommendationBlock">CreateRecommendationBlock</a></li>
+<li><a href="#Fn_BoxalinoDataIntelligence_CreateReferenceCSVDataSource">CreateReferenceCSVDataSource</a></li>
+<li><a href="#Fn_BoxalinoDataIntelligence_CreateReferenceCSVFile">CreateReferenceCSVFile</a></li>
+<li><a href="#Fn_BoxalinoDataIntelligence_CreateScheduling">CreateScheduling</a></li>
+<li><a href="#Fn_BoxalinoDataIntelligence_DeleteChoice">DeleteChoice</a></li>
+<li><a href="#Fn_BoxalinoDataIntelligence_DeleteChoiceVariant">DeleteChoiceVariant</a></li>
+<li><a href="#Fn_BoxalinoDataIntelligence_DeleteDataExport">DeleteDataExport</a></li>
+<li><a href="#Fn_BoxalinoDataIntelligence_DeleteDataSource">DeleteDataSource</a></li>
+<li><a href="#Fn_BoxalinoDataIntelligence_DeleteEmailCampaign">DeleteEmailCampaign</a></li>
+<li><a href="#Fn_BoxalinoDataIntelligence_DeleteField">DeleteField</a></li>
+<li><a href="#Fn_BoxalinoDataIntelligence_DeleteProcessTask">DeleteProcessTask</a></li>
+<li><a href="#Fn_BoxalinoDataIntelligence_DeleteRecommendationBlock">DeleteRecommendationBlock</a></li>
+<li><a href="#Fn_BoxalinoDataIntelligence_DeleteReferenceCSVDataSource">DeleteReferenceCSVDataSource</a></li>
+<li><a href="#Fn_BoxalinoDataIntelligence_DeleteReferenceCSVFile">DeleteReferenceCSVFile</a></li>
+<li><a href="#Fn_BoxalinoDataIntelligence_DeleteScheduling">DeleteScheduling</a></li>
+<li><a href="#Fn_BoxalinoDataIntelligence_GetAllReferenceCSVFiles">GetAllReferenceCSVFiles</a></li>
+<li><a href="#Fn_BoxalinoDataIntelligence_GetAuthentication">GetAuthentication</a></li>
+<li><a href="#Fn_BoxalinoDataIntelligence_GetBehaviorReport">GetBehaviorReport</a></li>
+<li><a href="#Fn_BoxalinoDataIntelligence_GetChoiceReport">GetChoiceReport</a></li>
+<li><a href="#Fn_BoxalinoDataIntelligence_GetChoiceVariants">GetChoiceVariants</a></li>
+<li><a href="#Fn_BoxalinoDataIntelligence_GetChoices">GetChoices</a></li>
+<li><a href="#Fn_BoxalinoDataIntelligence_GetConfigurationDifferences">GetConfigurationDifferences</a></li>
+<li><a href="#Fn_BoxalinoDataIntelligence_GetConfigurationVersion">GetConfigurationVersion</a></li>
+<li><a href="#Fn_BoxalinoDataIntelligence_GetDataExports">GetDataExports</a></li>
+<li><a href="#Fn_BoxalinoDataIntelligence_GetDataSources">GetDataSources</a></li>
+<li><a href="#Fn_BoxalinoDataIntelligence_GetEmailCampaigns">GetEmailCampaigns</a></li>
+<li><a href="#Fn_BoxalinoDataIntelligence_GetFields">GetFields</a></li>
+<li><a href="#Fn_BoxalinoDataIntelligence_GetLastTransactionID">GetLastTransactionID</a></li>
+<li><a href="#Fn_BoxalinoDataIntelligence_GetPageViews">GetPageViews</a></li>
+<li><a href="#Fn_BoxalinoDataIntelligence_GetProcessStatus">GetProcessStatus</a></li>
+<li><a href="#Fn_BoxalinoDataIntelligence_GetProcessTasks">GetProcessTasks</a></li>
+<li><a href="#Fn_BoxalinoDataIntelligence_GetRecommendationBlocks">GetRecommendationBlocks</a></li>
+<li><a href="#Fn_BoxalinoDataIntelligence_GetReferenceCSVFileDataSources">GetReferenceCSVFileDataSources</a></li>
+<li><a href="#Fn_BoxalinoDataIntelligence_GetSchedulings">GetSchedulings</a></li>
+<li><a href="#Fn_BoxalinoDataIntelligence_GetTransactionReport">GetTransactionReport</a></li>
+<li><a href="#Fn_BoxalinoDataIntelligence_PublishConfiguration">PublishConfiguration</a></li>
+<li><a href="#Fn_BoxalinoDataIntelligence_RunProcessTask">RunProcessTask</a></li>
+<li><a href="#Fn_BoxalinoDataIntelligence_RunScheduling">RunScheduling</a></li>
+<li><a href="#Fn_BoxalinoDataIntelligence_SetDataSourcesConfiguration">SetDataSourcesConfiguration</a></li>
+<li><a href="#Fn_BoxalinoDataIntelligence_UpdateChoice">UpdateChoice</a></li>
+<li><a href="#Fn_BoxalinoDataIntelligence_UpdateChoiceVariant">UpdateChoiceVariant</a></li>
+<li><a href="#Fn_BoxalinoDataIntelligence_UpdateDataExport">UpdateDataExport</a></li>
+<li><a href="#Fn_BoxalinoDataIntelligence_UpdateDataSource">UpdateDataSource</a></li>
+<li><a href="#Fn_BoxalinoDataIntelligence_UpdateEmailCampaign">UpdateEmailCampaign</a></li>
+<li><a href="#Fn_BoxalinoDataIntelligence_UpdateField">UpdateField</a></li>
+<li><a href="#Fn_BoxalinoDataIntelligence_UpdatePassword">UpdatePassword</a></li>
+<li><a href="#Fn_BoxalinoDataIntelligence_UpdateProcessTask">UpdateProcessTask</a></li>
+<li><a href="#Fn_BoxalinoDataIntelligence_UpdateRecommendationBlock">UpdateRecommendationBlock</a></li>
+<li><a href="#Fn_BoxalinoDataIntelligence_UpdateReferenceCSVDataSource">UpdateReferenceCSVDataSource</a></li>
+<li><a href="#Fn_BoxalinoDataIntelligence_UpdateReferenceCSVFile">UpdateReferenceCSVFile</a></li>
+<li><a href="#Fn_BoxalinoDataIntelligence_UpdateScheduling">UpdateScheduling</a></li>
+</ul>
+</td>
+<td><a href="#Struct_Authentication">Authentication</a><br/>
+<a href="#Struct_AuthenticationRequest">AuthenticationRequest</a><br/>
+<a href="#Struct_BehaviorReport">BehaviorReport</a><br/>
+<a href="#Struct_BehaviorReportRequest">BehaviorReportRequest</a><br/>
+<a href="#Struct_BehaviorReportResult">BehaviorReportResult</a><br/>
+<a href="#Enum_CSVFileColumnType">CSVFileColumnType</a><br/>
+<a href="#Struct_Choice">Choice</a><br/>
+<a href="#Struct_ChoiceReport">ChoiceReport</a><br/>
+<a href="#Struct_ChoiceReportRequest">ChoiceReportRequest</a><br/>
+<a href="#Struct_ChoiceReportResult">ChoiceReportResult</a><br/>
+<a href="#Struct_ChoiceVariant">ChoiceVariant</a><br/>
+<a href="#Enum_ConditionOperator">ConditionOperator</a><br/>
+<a href="#Struct_ConditionTarget">ConditionTarget</a><br/>
+<a href="#Struct_ConfigurationDifference">ConfigurationDifference</a><br/>
+<a href="#Struct_ConfigurationVersion">ConfigurationVersion</a><br/>
+<a href="#Enum_ConfigurationVersionType">ConfigurationVersionType</a><br/>
+<a href="#Struct_DataExport">DataExport</a><br/>
+<a href="#Struct_DataIntelligenceServiceException">DataIntelligenceServiceException</a><br/>
+<a href="#Enum_DataIntelligenceServiceExceptionNumber">DataIntelligenceServiceExceptionNumber</a><br/>
+<a href="#Struct_DataSource">DataSource</a><br/>
+<a href="#Struct_DataSyncProcessTask">DataSyncProcessTask</a><br/>
+<a href="#Struct_DimensionCondition">DimensionCondition</a><br/>
+<a href="#Struct_EmailCampaign">EmailCampaign</a><br/>
+<a href="#Struct_Field">Field</a><br/>
+<a href="#Enum_Language">Language</a><br/>
+<a href="#Struct_MetricCondition">MetricCondition</a><br/>
+<a href="#Struct_ProcessTask">ProcessTask</a><br/>
+<a href="#Struct_ProcessTaskExecutionParameters">ProcessTaskExecutionParameters</a><br/>
+<a href="#Struct_ProcessTaskExecutionStatus">ProcessTaskExecutionStatus</a><br/>
+<a href="#Enum_ProcessTaskExecutionStatusType">ProcessTaskExecutionStatusType</a><br/>
+<a href="#Struct_RecommendationBlock">RecommendationBlock</a><br/>
+<a href="#Struct_ReferenceCSVDataSource">ReferenceCSVDataSource</a><br/>
+<a href="#Struct_ReferenceCSVFileDescriptor">ReferenceCSVFileDescriptor</a><br/>
+<a href="#Struct_ReportDimension">ReportDimension</a><br/>
+<a href="#Enum_ReportDimensionType">ReportDimensionType</a><br/>
+<a href="#Struct_ReportDimensionValue">ReportDimensionValue</a><br/>
+<a href="#Struct_ReportFilter">ReportFilter</a><br/>
+<a href="#Struct_ReportMetric">ReportMetric</a><br/>
+<a href="#Enum_ReportMetricType">ReportMetricType</a><br/>
+<a href="#Struct_ReportMetricValue">ReportMetricValue</a><br/>
+<a href="#Struct_ReportResultKeyValues">ReportResultKeyValues</a><br/>
+<a href="#Enum_ReportResultTimeRangeType">ReportResultTimeRangeType</a><br/>
+<a href="#Struct_ReportResultValues">ReportResultValues</a><br/>
+<a href="#Struct_Scheduling">Scheduling</a><br/>
+<a href="#Struct_SchedulingExecutionParameters">SchedulingExecutionParameters</a><br/>
+<a href="#Struct_TimeRange">TimeRange</a><br/>
+<a href="#Enum_TimeRangePrecision">TimeRangePrecision</a><br/>
+<a href="#Struct_TimeRangeValue">TimeRangeValue</a><br/>
+<a href="#Struct_TransactionReport">TransactionReport</a><br/>
+<a href="#Struct_TransactionReportRequest">TransactionReportRequest</a><br/>
+<a href="#Struct_TransactionReportResult">TransactionReportResult</a><br/>
+</td>
+<td></code></td>
+</tr></table>
+<hr/><h2 id="Enumerations">Enumerations</h2>
+<div class="definition"><h3 id="Enum_DataIntelligenceServiceExceptionNumber">Enumeration: DataIntelligenceServiceExceptionNumber</h3>
+This enumeration defines the possible exception states returned by Boxalino Data Intelligence Thrift API
+<br/><br/><table class="table-bordered table-striped table-condensed">
+<tr><td><code>GENERAL_EXCEPTION</code></td><td><code>1</code></td><td>
+general case of exception (no special detailed provided)
+<br/></td></tr>
+<tr><td><code>INVALID_CREDENTIALS</code></td><td><code>2</code></td><td>
+the provided credentials to retrieve an authentication token are not valid (wrong username, password or both)
+<br/></td></tr>
+<tr><td><code>BLOCKED_USER</code></td><td><code>3</code></td><td>
+your user has been blocked (but it doesn't necessarily mean your account has been blocked)
+<br/></td></tr>
+<tr><td><code>BLOCKED_ACCOUNT</code></td><td><code>4</code></td><td>
+your account has been blocked, you must contact Boxalino (<a href="mailto:support@boxalino.com">support@boxalino.com</a>) to know the reasons of this blocking.
+<br/></td></tr>
+<tr><td><code>INVALID_AUTHENTICATION_TOKEN</code></td><td><code>5</code></td><td>
+the provided authentication token is invalid (wrong, or no more valid), you should get a new one by calling the GetAuthentication service.
+<br/></td></tr>
+<tr><td><code>INVALID_NEW_PASSWORD</code></td><td><code>6</code></td><td>
+specific to the service function UpdatePassword: means that the new password is not correct (should be at least 8 characters long and not contain any punctuation)
+<br/></td></tr>
+<tr><td><code>INVALID_CONFIGURATION_VERSION</code></td><td><code>7</code></td><td>
+the provided configuration object contains a configuration version number which doesn't exists or cannot be accessed
+<br/></td></tr>
+<tr><td><code>INVALID_DATASOURCE</code></td><td><code>8</code></td><td>
+the provided XML data source is not correct (see documentation of the data source XML format)
+<br/></td></tr>
+<tr><td><code>NON_EXISTING_CONTENT_ID</code></td><td><code>9</code></td><td>
+the provided content to be changed (updated, deleted, etc.) is defined with a content id which doesn't exists
+<br/></td></tr>
+<tr><td><code>ALREADY_EXISTING_CONTENT_ID</code></td><td><code>10</code></td><td>
+the provided content id to be created already exists
+<br/></td></tr>
+<tr><td><code>INVALID_CONTENT_ID</code></td><td><code>11</code></td><td>
+the provided content id doesn't not match the requested format (less than 50 alphanumeric characters without any punctuation or accent)
+<br/></td></tr>
+<tr><td><code>INVALID_CONTENT</code></td><td><code>12</code></td><td>
+the provided content data are not correctly set
+<br/></td></tr>
+<tr><td><code>INVALID_LANGUAGE</code></td><td><code>13</code></td><td>
+one of the provided languages has not been defined for this account
+<br/></td></tr>
+<tr><td><code>DUPLICATED_FILE_ID</code></td><td><code>14</code></td><td>
+the provided file identifier has been already used
+<br/></td></tr>
+<tr><td><code>EMPTY_COLUMNS_LIST</code></td><td><code>15</code></td><td>
+the provided list of columns is empty
+<br/></td></tr>
+<tr><td><code>NON_EXISTING_FILE</code></td><td><code>16</code></td><td>
+the provided file identifier was not found
+<br/></td></tr>
+<tr><td><code>INVALID_RANGE</code></td><td><code>17</code></td><td>
+the provided time range is incorrect (start timestamp is higher than the end one)
+<br/></td></tr>
+<tr><td><code>INVALID_REPORT_REQUEST</code></td><td><code>18</code></td><td>
+the provided report request contains some invalid parameters settings (missing settings, conflicting settings, etc.)
+<br/></td></tr>
+</table></div>
+<div class="definition"><h3 id="Enum_ConfigurationVersionType">Enumeration: ConfigurationVersionType</h3>
+This enumeration defines the version type. All contents are versioned, normally, you want to change the current development version and then, when finished, publish it (so it becomes the new production version and a new development version is created), but it is also possible to access the production version directly
+<br/><br/><table class="table-bordered table-striped table-condensed">
+<tr><td><code>CURRENT_DEVELOPMENT_VERSION</code></td><td><code>1</code></td><td>
+this is the normal case, as you want to retrieve the current dev version of your account configuration and not touch the production one
+<br/></td></tr>
+<tr><td><code>CURRENT_PRODUCTION_VERSION</code></td><td><code>2</code></td><td>
+this should only be used in rare cases where you want to recuperate information from the production configuration, but be careful in changing this version as it will immediately affect your production processes!
+<br/></td></tr>
+</table></div>
+<div class="definition"><h3 id="Enum_Language">Enumeration: Language</h3>
+<br/><table class="table-bordered table-striped table-condensed">
+<tr><td><code>GERMAN</code></td><td><code>1</code></td><td>
+</td></tr>
+<tr><td><code>FRENCH</code></td><td><code>2</code></td><td>
+</td></tr>
+<tr><td><code>ENGLISH</code></td><td><code>3</code></td><td>
+</td></tr>
+<tr><td><code>ITALIAN</code></td><td><code>4</code></td><td>
+</td></tr>
+<tr><td><code>SPANISH</code></td><td><code>5</code></td><td>
+</td></tr>
+<tr><td><code>DUTCH</code></td><td><code>6</code></td><td>
+</td></tr>
+<tr><td><code>PORTUGUESE</code></td><td><code>7</code></td><td>
+</td></tr>
+<tr><td><code>SWEDISH</code></td><td><code>8</code></td><td>
+</td></tr>
+<tr><td><code>ARABIC</code></td><td><code>9</code></td><td>
+</td></tr>
+<tr><td><code>RUSSIAN</code></td><td><code>10</code></td><td>
+</td></tr>
+<tr><td><code>JAPANESE</code></td><td><code>11</code></td><td>
+</td></tr>
+<tr><td><code>KOREAN</code></td><td><code>12</code></td><td>
+</td></tr>
+<tr><td><code>TURKISH</code></td><td><code>13</code></td><td>
+</td></tr>
+<tr><td><code>VIETNAMESE</code></td><td><code>14</code></td><td>
+</td></tr>
+<tr><td><code>POLISH</code></td><td><code>15</code></td><td>
+</td></tr>
+<tr><td><code>UKRAINIAN</code></td><td><code>16</code></td><td>
+</td></tr>
+<tr><td><code>CHINESE_MANDARIN</code></td><td><code>17</code></td><td>
+</td></tr>
+<tr><td><code>OTHER</code></td><td><code>100</code></td><td>
+</td></tr>
+</table></div>
+<div class="definition"><h3 id="Enum_ProcessTaskExecutionStatusType">Enumeration: ProcessTaskExecutionStatusType</h3>
+This enumeration defines the possible process task execution statuses type (to check the completion of an execution of  process task and its result)
+<br/><br/><table class="table-bordered table-striped table-condensed">
+<tr><td><code>WAITING</code></td><td><code>1</code></td><td>
+The process was not started yet
+<br/></td></tr>
+<tr><td><code>STARTED</code></td><td><code>2</code></td><td>
+The process has started and is currently running
+<br/></td></tr>
+<tr><td><code>FINISHED_SUCCESS</code></td><td><code>3</code></td><td>
+The process has finished successfully
+<br/></td></tr>
+<tr><td><code>FINISHED_WITH_WARNINGS</code></td><td><code>4</code></td><td>
+The process has finished, but with some warnings
+<br/></td></tr>
+<tr><td><code>FAILED</code></td><td><code>5</code></td><td>
+The process has failed
+<br/></td></tr>
+<tr><td><code>ABORTED</code></td><td><code>6</code></td><td>
+The process has been aborted
+<br/></td></tr>
+</table></div>
+<div class="definition"><h3 id="Enum_CSVFileColumnType">Enumeration: CSVFileColumnType</h3>
+This enumeration defines possible types of columns which can be used in a reference CSV file
+<br/><br/><table class="table-bordered table-striped table-condensed">
+<tr><td><code>STRING</code></td><td><code>1</code></td><td>
+text string encoded using UTF-8 encoding
+<br/></td></tr>
+<tr><td><code>INTEGER</code></td><td><code>2</code></td><td>
+signed 64-bit integer
+<br/></td></tr>
+<tr><td><code>DOUBLE</code></td><td><code>3</code></td><td>
+floating point number
+<br/></td></tr>
+<tr><td><code>DATETIME</code></td><td><code>4</code></td><td>
+textual representation of the date and time in the format YYYY-MM-DD HH:MM:SS
+<br/></td></tr>
+<tr><td><code>DATE</code></td><td><code>5</code></td><td>
+textual representation of the date in the format YYYY-MM-DD
+<br/></td></tr>
+<tr><td><code>TIME</code></td><td><code>6</code></td><td>
+textual representation of the time in the format HH:MM:SS
+<br/></td></tr>
+<tr><td><code>UNIX_TIMESTAMP</code></td><td><code>7</code></td><td>
+numerical representation of the date and time as an unsigned 32-bit integer, counting the seconds since the start of the UNIX epoch
+<br/></td></tr>
+</table></div>
+<div class="definition"><h3 id="Enum_TimeRangePrecision">Enumeration: TimeRangePrecision</h3>
+This enumeration defines possible granularities used in time ranges
+<br/><br/><table class="table-bordered table-striped table-condensed">
+<tr><td><code>DAY</code></td><td><code>1</code></td><td>
+daily precision
+<br/></td></tr>
+<tr><td><code>WEEK</code></td><td><code>2</code></td><td>
+weekly precision
+<br/></td></tr>
+<tr><td><code>MONTH</code></td><td><code>3</code></td><td>
+monthly precision
+<br/></td></tr>
+<tr><td><code>QUARTER</code></td><td><code>4</code></td><td>
+quarterly precision
+<br/></td></tr>
+<tr><td><code>YEAR</code></td><td><code>5</code></td><td>
+yearly precision
+<br/></td></tr>
+<tr><td><code>ALL</code></td><td><code>6</code></td><td>
+return all data for provided date range as one
+<br/></td></tr>
+</table></div>
+<div class="definition"><h3 id="Enum_ReportMetricType">Enumeration: ReportMetricType</h3>
+This enumeration defines possible report metric types
+<br/><br/><table class="table-bordered table-striped table-condensed">
+<tr><td><code>VISITORS</code></td><td><code>1</code></td><td>
+number of unique visitors (or user)
+<br/></td></tr>
+<tr><td><code>VISITS</code></td><td><code>2</code></td><td>
+number of visits (or session)
+<br/></td></tr>
+<tr><td><code>BOUNCES</code></td><td><code>3</code></td><td>
+number of landing page bounces
+<br/></td></tr>
+<tr><td><code>BOUNCE_RATE</code></td><td><code>4</code></td><td>
+BOUNCES / VISITS
+<br/></td></tr>
+<tr><td><code>PAGE_VIEWS</code></td><td><code>5</code></td><td>
+number of page views
+<br/></td></tr>
+<tr><td><code>PAGE_VIEWS_PER_VISIT</code></td><td><code>6</code></td><td>
+PAGE_VIEWS / VISITS
+<br/></td></tr>
+<tr><td><code>AVERAGE_TIME_ON_SITE</code></td><td><code>7</code></td><td>
+average time of visits
+<br/></td></tr>
+<tr><td><code>PRODUCT_VIEWS</code></td><td><code>8</code></td><td>
+number of product views
+<br/></td></tr>
+<tr><td><code>PRODUCT_VIEWS_PER_VISIT</code></td><td><code>9</code></td><td>
+PRODUCT_VIEWS / VISITS
+<br/></td></tr>
+<tr><td><code>VISITS_WITH_PRODUCT_VIEWS</code></td><td><code>10</code></td><td>
+number of visits having at least one product view
+<br/></td></tr>
+<tr><td><code>VISITS_WITH_PRODUCT_VIEWS_RATE</code></td><td><code>11</code></td><td>
+VISITS_WITH_PRODUCT_VIEWS / VISITS
+<br/></td></tr>
+<tr><td><code>SEARCHES</code></td><td><code>12</code></td><td>
+number of in-site searches
+<br/></td></tr>
+<tr><td><code>SEARCHES_PER_VISIT</code></td><td><code>13</code></td><td>
+SEARCHES / VISITS
+<br/></td></tr>
+<tr><td><code>VISITS_WITH_SEARCHES</code></td><td><code>14</code></td><td>
+number of visits having at least one search
+<br/></td></tr>
+<tr><td><code>VISITS_WITH_SEARCHES_RATE</code></td><td><code>15</code></td><td>
+VISITS_WITH_SEARCHES / VISITS
+<br/></td></tr>
+<tr><td><code>GOALS</code></td><td><code>16</code></td><td>
+number of goals (require identifier to be provided with the choice identifier)
+<br/></td></tr>
+<tr><td><code>GOALS_PER_VISIT</code></td><td><code>17</code></td><td>
+GOALS / VISITS (require identifier to be provided with the choice identifier)
+<br/></td></tr>
+<tr><td><code>VISITS_WITH_GOALS</code></td><td><code>18</code></td><td>
+number of visits having at least one goal (require identifier to be provided with the choice identifier)
+<br/></td></tr>
+<tr><td><code>VISITS_WITH_GOALS_RATE</code></td><td><code>19</code></td><td>
+VISITS_WITH_GOALS / VISITS (require identifier to be provided with the choice identifier)
+<br/></td></tr>
+<tr><td><code>TRANSACTIONS</code></td><td><code>20</code></td><td>
+number of transactions
+<br/></td></tr>
+<tr><td><code>TRANSACTIONS_PER_VISIT</code></td><td><code>21</code></td><td>
+TRANSACTIONS / VISITS
+<br/></td></tr>
+<tr><td><code>VISITS_WITH_TRANSACTIONS</code></td><td><code>22</code></td><td>
+number of visits having at least one transaction
+<br/></td></tr>
+<tr><td><code>VISITS_WITH_TRANSACTIONS_RATE</code></td><td><code>23</code></td><td>
+VISITS_WITH_TRANSACTIONS / VISITS
+<br/></td></tr>
+<tr><td><code>TRANSACTIONS_TURNOVER</code></td><td><code>28</code></td><td>
+transaction turnover
+N.B.: will return zero for all cases which cannot be mapped to any transaction
+<br/></td></tr>
+<tr><td><code>TRANSACTIONS_PARAMETER_SUM</code></td><td><code>29</code></td><td>
+sum of the transaction parameter values (require identifier to be provided with the transaction parameter name)
+N.B.: will return zero for all cases which cannot be mapped to any transaction
+<br/></td></tr>
+<tr><td><code>TRANSACTIONS_QUANTITY</code></td><td><code>30</code></td><td>
+count of the total number of transaction items (one product with quantity one is one item)
+<br/></td></tr>
+<tr><td><code>ADD_TO_BASKETS</code></td><td><code>24</code></td><td>
+number of add-to-basket events
+<br/></td></tr>
+<tr><td><code>ADD_TO_BASKETS_PER_VISIT</code></td><td><code>25</code></td><td>
+ADD_TO_BASKET / VISITS
+<br/></td></tr>
+<tr><td><code>VISITS_WITH_ADD_TO_BASKETS</code></td><td><code>26</code></td><td>
+number of visits having at least one add to basket event
+<br/></td></tr>
+<tr><td><code>VISITS_WITH_ADD_TO_BASKETS_RATE</code></td><td><code>27</code></td><td>
+VISITS_WITH_ADD_TO_BASKETS / VISITS
+<br/></td></tr>
+<tr><td><code>EVENT_COUNT</code></td><td><code>40</code></td><td>
+number of time the event has occurred
+<br/></td></tr>
+<tr><td><code>CHOICE_DISPLAYS</code></td><td><code>100</code></td><td>
+number of display of a choice
+<br/></td></tr>
+<tr><td><code>VISITS_WITH_CHOICE_DISPLAYS</code></td><td><code>101</code></td><td>
+number of visits having at least one choice display
+<br/></td></tr>
+<tr><td><code>PRODUCT_VIEWS_FROM_CHOICE_DISPLAY</code></td><td><code>110</code></td><td>
+number of product views event related to product displayed in a choice display
+if a ReportDimension is on the product id, then only for this product id
+<br/></td></tr>
+<tr><td><code>VISITS_WITH_PRODUCT_VIEWS_FROM_CHOICE_DISPLAY</code></td><td><code>111</code></td><td>
+number of visits having at least one product views event related to product displayed in a choice display
+if a ReportDimension is on the product id, then only for this product id
+if a ReportDimension is on a Choice, then only for this choice
+if a ReportDimension is on a ChoiceVariant, then only for this choice variant
+<br/></td></tr>
+<tr><td><code>TRANSACTIONS_FROM_CHOICE_DISPLAY</code></td><td><code>112</code></td><td>
+number of transactions related to product displayed in a choice display
+if a ReportDimension is on the product id, then only for this product id
+if a ReportDimension is on a Choice, then only for this choice
+if a ReportDimension is on a ChoiceVariant, then only for this choice variant
+<br/></td></tr>
+<tr><td><code>TRANSACTIONS_PARAMETER_SUM_FROM_CHOICE_DISPLAY</code></td><td><code>113</code></td><td>
+sum of transaction property value of transactions related to product displayed in a choice display
+if a ReportDimension is on the product id, then only for this product id
+if a ReportDimension is on a Choice, then only for this choice
+if a ReportDimension is on a ChoiceVariant, then only for this choice variant
+<br/></td></tr>
+<tr><td><code>VISITS_WITH_TRANSACTIONS_FROM_CHOICE_DISPLAY</code></td><td><code>114</code></td><td>
+number of visits having at least one transaction event related to product displayed in a choice display
+if a ReportDimension is on the product id, then only for this product id
+if a ReportDimension is on a Choice, then only for this choice
+if a ReportDimension is on a ChoiceVariant, then only for this choice variant
+<br/></td></tr>
+<tr><td><code>ADD_TO_BASKETS_FROM_CHOICE_DISPLAY</code></td><td><code>115</code></td><td>
+number of add to baskets related to product displayed in a choice display
+if a ReportDimension is on the product id, then only for this product id
+if a ReportDimension is on a Choice, then only for this choice
+if a ReportDimension is on a ChoiceVariant, then only for this choice variant
+<br/></td></tr>
+<tr><td><code>VISITS_WITH_ADD_TO_BASKETS_FROM_CHOICE_DISPLAY</code></td><td><code>116</code></td><td>
+number of visits having at least one add to basket related to product displayed in a choice display
+if a ReportDimension is on the product id, then only for this product id
+if a ReportDimension is on a Choice, then only for this choice
+if a ReportDimension is on a ChoiceVariant, then only for this choice variant
+<br/></td></tr>
+<tr><td><code>GOALS_FROM_CHOICE_DISPLAY</code></td><td><code>117</code></td><td>
+number of goals related to product displayed in a choice display
+(require identifier to be provided with the choice identifier)
+(will only work if a product identifier is provided with the goal)
+if a ReportDimension is on the product id, then only for this product id
+if a ReportDimension is on a Choice, then only for this choice
+if a ReportDimension is on a ChoiceVariant, then only for this choice variant
+<br/></td></tr>
+<tr><td><code>VISITS_WITH_GOALS_FROM_CHOICE_DISPLAY</code></td><td><code>118</code></td><td>
+number of visits having at least goal related to product displayed in a choice display
+(require identifier to be provided with the choice identifier)
+(will only work if a product identifier is provided with the goal)
+if a ReportDimension is on the product id, then only for this product id
+if a ReportDimension is on a Choice, then only for this choice
+if a ReportDimension is on a ChoiceVariant, then only for this choice variant
+<br/></td></tr>
+</table></div>
+<div class="definition"><h3 id="Enum_ReportDimensionType">Enumeration: ReportDimensionType</h3>
+This enumeration defines possible report dimension types
+<br/><br/><table class="table-bordered table-striped table-condensed">
+<tr><td><code>NEW_VISITOR</code></td><td><code>1</code></td><td>
+is the visitor a new visitor or a returning visitor
+<br/></td></tr>
+<tr><td><code>GEO_COUNTRY</code></td><td><code>2</code></td><td>
+the detected country of the visitor (NULL if none detected)
+<br/></td></tr>
+<tr><td><code>GEO_ZIP</code></td><td><code>3</code></td><td>
+the detected zip code of the visitor (NULL if none detected)
+<br/></td></tr>
+<tr><td><code>GEO_SUBDIVISION</code></td><td><code>4</code></td><td>
+the detected subdivision (Kanton for Switzerland) of the visitor (NULL if none detected)
+<br/></td></tr>
+<tr><td><code>GEO_CITY</code></td><td><code>4</code></td><td>
+the detected city of the visitor (NULL if none detected)
+<br/></td></tr>
+<tr><td><code>BROWSER_NAME</code></td><td><code>5</code></td><td>
+the user agent name (most common values: IE,Mobile Safari,Chrome,Firefox,Safari,Android browser,Chrome Mobile,Java,IE Mobile,Opera,Mobile Firefox)
+<br/></td></tr>
+<tr><td><code>BROWSER_VERSION</code></td><td><code>5</code></td><td>
+the user agent version
+<br/></td></tr>
+<tr><td><code>OPERATING_SYSTEM</code></td><td><code>6</code></td><td>
+the user agent operating system (most common values: Windows 7,iOS 7,Windows 8.1,iOS 8,Android 4.4 KitKat,OS X 10.9 Mavericks,Windows 8,Windows XP,Windows Vista,Android 4.2 Jelly Bean)
+<br/></td></tr>
+<tr><td><code>DEVICE_CATEGORY</code></td><td><code>7</code></td><td>
+the user agent device category (most common values: Personal computer,Smartphone,Tablet,Other)
+<br/></td></tr>
+<tr><td><code>ADWORDS_CREATIVE</code></td><td><code>8</code></td><td>
+the AdWords Creative (requires that the AdWords ValueTrack is passed on the url parameter as "&creative={creative}"
+<br/></td></tr>
+<tr><td><code>ADWORDS_KEYWORD</code></td><td><code>9</code></td><td>
+the AdWords Keyword (requires that the AdWords ValueTrack is passed on the url parameter as "&keyword={keyword}"
+<br/></td></tr>
+<tr><td><code>ONSITE_SEARCH_QUERY</code></td><td><code>15</code></td><td>
+the search queries done in the web-site
+<br/></td></tr>
+<tr><td><code>HOUR_OF_DAY</code></td><td><code>20</code></td><td>
+the different hours of the day (from "0" to "24")
+<br/></td></tr>
+<tr><td><code>MOMENT_OF_DAY</code></td><td><code>21</code></td><td>
+the different moments of the day ("22-6", "6-10", "10-12", "12-14", "14-17", "17-19", "19-22")
+<br/></td></tr>
+<tr><td><code>DAY_OF_WEEK</code></td><td><code>22</code></td><td>
+the different days of the week ("Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday")
+<br/></td></tr>
+<tr><td><code>MOMENT_OF_WEEK</code></td><td><code>23</code></td><td>
+the different moments of the week ("Monday-Friday", "Saturday-Sunday")
+<br/></td></tr>
+<tr><td><code>SESSION_START_TIMESTAMP</code></td><td><code>24</code></td><td>
+the timestamp at the beginning of the session (one dimension per session)
+<br/></td></tr>
+<tr><td><code>SESSION_ID</code></td><td><code>25</code></td><td>
+the session id (as provided by the tracker)
+<br/></td></tr>
+<tr><td><code>INTERNAL_SESSION_ID</code></td><td><code>26</code></td><td>
+the session id (internal id of Boxalino)
+<br/></td></tr>
+<tr><td><code>VISITOR_ID</code></td><td><code>27</code></td><td>
+the visitor id (as provided by the tracker)
+<br/></td></tr>
+<tr><td><code>INTERNAL_VISITOR_ID</code></td><td><code>28</code></td><td>
+the visitor id (internal id of Boxalino)
+<br/></td></tr>
+<tr><td><code>URL_PARAMETER</code></td><td><code>50</code></td><td>
+the different values of a URL parameter (require identifier to be provided with url parameter name)
+<br/></td></tr>
+<tr><td><code>TRANSACTION_PROPERTY</code></td><td><code>100</code></td><td>
+the different values of a transaction property (requires identifier to be provided with the transaction property name)
+N.B.: a connection to the transaction property must be available (e.g.: For visit&visitor-based reporting, like ChoiceReport, will only work for the visits/visitors with a transaction)
+<br/></td></tr>
+<tr><td><code>CUSTOMER_PROPERTY</code></td><td><code>150</code></td><td>
+the different values of a customer property (requires identifier to be provided with the customer property name)
+N.B.: a connection to the transaction property must be available (e.g.: For visit&visitor-based reporting, like ChoiceReport, will only work for the visits/visitors with a login or other ways to link the customer id to the visitor id)
+<br/></td></tr>
+<tr><td><code>PURCHASED_PRODUCT_PROPERTY</code></td><td><code>200</code></td><td>
+the different values of a product property (requires identifier to be provided with the product property name)
+N.B.: a connection to the transaction property must be available (e.g.: For visit&visitor-based reporting, like ChoiceReport, will only work for the visits/visitors with a product purchased)
+<br/></td></tr>
+<tr><td><code>PRODUCT_PROPERTY</code></td><td><code>201</code></td><td>
+the different values of a product property (requires identifier to be provided with the product property name)
+N.B.: a connection to the product property must be available (e.g.: For visit&visitor-based reporting, like ChoiceReport, will only work for the visits/visitors with a product displayed in the choice variant)
+<br/></td></tr>
+<tr><td><code>CHOICE</code></td><td><code>300</code></td><td>
+the different possible choice ids (requires identifier to be provided with the choiceId as indicated in the structure Choice)
+N.B.: a connection to the product property must be available (e.g.: For visit&visitor-based reporting, like ChoiceReport, will only work for the visits/visitors with a product displayed in the choice variant)
+<br/></td></tr>
+<tr><td><code>CHOICE_VARIANT</code></td><td><code>301</code></td><td>
+the different possible choice variant ids (requires identifier to be provided with the choiceVariantIdId as indicated in the structure ChoiceVariant)
+N.B.: a connection to the product property must be available (e.g.: For visit&visitor-based reporting, like ChoiceReport, will only work for the visits/visitors with a product displayed in the choice variant)
+<br/></td></tr>
+<tr><td><code>COHORT_INDEX</code></td><td><code>1000</code></td><td>
+ * The index of the returned time serie (starting at zero) related to this result (requires identifier to be provided with the cohort id field requested)
+* N.B.: the ReportDimensionValue value will indicate the index as a number 0-&gt;n-1, n-1 being the last time range of the cohort report
+<br/></td></tr>
+</table></div>
+<div class="definition"><h3 id="Enum_ConditionOperator">Enumeration: ConditionOperator</h3>
+the possible condition operators to be used in a condition target
+<br/><br/><table class="table-bordered table-striped table-condensed">
+<tr><td><code>IS</code></td><td><code>1</code></td><td>
+when cast as a String, does the substring provided in the ConditionTarget value match exactly the source string?
+<br/></td></tr>
+<tr><td><code>IS_NOT</code></td><td><code>2</code></td><td>
+when cast as a String, does the substring provided in the ConditionTarget value NOT match exactly the source string?
+<br/></td></tr>
+<tr><td><code>IS_GREATER</code></td><td><code>3</code></td><td>
+when cast as a number, is the number provided in the source number greater (but not equal or smaller) than the ConditionTarget value?
+<br/></td></tr>
+<tr><td><code>IS_GREATER_OR_EQUAL</code></td><td><code>4</code></td><td>
+when cast as a number, is the number provided in the source number greater or equal (but not smaller) than the ConditionTarget value?
+<br/></td></tr>
+<tr><td><code>IS_SMALLER</code></td><td><code>5</code></td><td>
+when cast as a number, is the number provided in the source number smaller (but not equal or greater) than the ConditionTarget value?
+<br/></td></tr>
+<tr><td><code>IS_SMALLER_OR_EQUAL</code></td><td><code>6</code></td><td>
+when cast as a number, is the number provided in the source number smaller or equal (but not greater) than the ConditionTarget value?
+<br/></td></tr>
+<tr><td><code>CONTAINS</code></td><td><code>7</code></td><td>
+when cast as a String, is the substring provided in the ConditionTarget value contained in the source string?
+<br/></td></tr>
+<tr><td><code>DOES_NOT_CONTAIN</code></td><td><code>8</code></td><td>
+when cast as a String, is the substring provided in the ConditionTarget value NOT contained in the source string?
+<br/></td></tr>
+<tr><td><code>STARTS_WITH</code></td><td><code>9</code></td><td>
+when cast as a String, does the substring provided in the ConditionTarget value match the first characters of the source string?
+<br/></td></tr>
+<tr><td><code>DOES_NOT_START_WITH</code></td><td><code>10</code></td><td>
+when cast as a String, does the substring provided in the ConditionTarget value NOT match the first characters of the source string?
+<br/></td></tr>
+<tr><td><code>ENDS_WITH</code></td><td><code>11</code></td><td>
+when cast as a String, does the substring provided in the ConditionTarget value match the last characters of the source string?
+<br/></td></tr>
+<tr><td><code>DOES_NOT_END_WITH</code></td><td><code>12</code></td><td>
+when cast as a String, does the substring provided in the ConditionTarget value NOT match the last characters of the source string?
+<br/></td></tr>
+</table></div>
+<div class="definition"><h3 id="Enum_ReportResultTimeRangeType">Enumeration: ReportResultTimeRangeType</h3>
+This enumeration defines possible report result value key types.
+For each report result groups, the system returns a map of ReportResultValues object (i.e.:a map of report metric (kpi) with their values) for each time range.
+These time ranges can be of different types (absolute defining exactly form a specific moment to another, or relative, starting at 0 for the first key, for cohort analysis).
+<br/><br/><table class="table-bordered table-striped table-condensed">
+<tr><td><code>REAL_TIME</code></td><td><code>1</code></td><td>
+an absolute time range (defines the datetime start and end of the reporting values for this key)
+<br/></td></tr>
+<tr><td><code>COHORT</code></td><td><code>2</code></td><td>
+returns the start and end date time based on timestamp 0 being the beginning of the report (if cohort per day: first value: 0-&gt;3600*24, second value: 3600*24-&gt;3600*24*2, ...)
+<br/></td></tr>
+</table></div>
+<hr/><h2 id="Structs">Data structures</h2>
+<div class="definition"><h3 id="Struct_DataIntelligenceServiceException">Exception: DataIntelligenceServiceException</h3>
+<table class="table-bordered table-striped table-condensed"><thead><th>Key</th><th>Field</th><th>Type</th><th>Description</th><th>Requiredness</th><th>Default value</th></thead>
+<tr><td>1</td><td>exceptionNumber</td><td><code><a href="BoxalinoDataIntelligenceV1.html#Enum_DataIntelligenceServiceExceptionNumber">DataIntelligenceServiceExceptionNumber</a></code></td><td>indicate the exception number based on the enumeration DataIntelligenceServiceExceptionNumber
+</td><td>required</td><td></td></tr>
+<tr><td>2</td><td>message</td><td><code>string</code></td><td>a textual message to explain the error conditions more in details
+</td><td>required</td><td></td></tr>
+</table><br/>This exception is raised by all the BoxalinoDataIntelligence service function in case of a problem
+<br/></div><div class="definition"><h3 id="Struct_AuthenticationRequest">Struct: AuthenticationRequest</h3>
+<table class="table-bordered table-striped table-condensed"><thead><th>Key</th><th>Field</th><th>Type</th><th>Description</th><th>Requiredness</th><th>Default value</th></thead>
+<tr><td>1</td><td>account</td><td><code>string</code></td><td>the name of your account (as provided to you by Boxalino team, if you don't have an account, contact <a href="mailto:support@boxalino.com">support@boxalino.com</a>)
+</td><td>required</td><td></td></tr>
+<tr><td>2</td><td>username</td><td><code>string</code></td><td>usually the same value as account (but can be different for users with smaller rights, if you don't have a username, contact <a href="mailto:support@boxalino.com">support@boxalino.com</a>)
+</td><td>required</td><td></td></tr>
+<tr><td>3</td><td>password</td><td><code>string</code></td><td>as provided by Boxalino, or according to the last password update you have set. If you lost your password, contact <a href="mailto:support@boxalino.com">support@boxalino.com</a>)
+</td><td>required</td><td></td></tr>
+</table><br/>This structure defines the parameters to be send to receive an authentication token (required by all the other services)
+<br/></div><div class="definition"><h3 id="Struct_Authentication">Struct: Authentication</h3>
+<table class="table-bordered table-striped table-condensed"><thead><th>Key</th><th>Field</th><th>Type</th><th>Description</th><th>Requiredness</th><th>Default value</th></thead>
+<tr><td>1</td><td>authenticationToken</td><td><code>string</code></td><td>the return authentication token is a string valid for one hour
+</td><td>required</td><td></td></tr>
+</table><br/>This structure defines the authentication object (to pass as authentication proof to all function and services)
+<br/></div><div class="definition"><h3 id="Struct_ConfigurationVersion">Struct: ConfigurationVersion</h3>
+<table class="table-bordered table-striped table-condensed"><thead><th>Key</th><th>Field</th><th>Type</th><th>Description</th><th>Requiredness</th><th>Default value</th></thead>
+<tr><td>1</td><td>configurationVersionNumber</td><td><code>i16</code></td><td>an internal number identifying the configuration version
+</td><td>required</td><td></td></tr>
+<tr><td>2</td><td>systemParameters</td><td><code>map&lt;<code>string</code>, <code>string</code>&gt;</code></td><td>an internal number identifying the configuration version
+</td><td>optional</td><td></td></tr>
+</table><br/>This structure defines a configuration version of your account. It must be provided to all functions accessing / updating or removing information from your account configuration
+<br/></div><div class="definition"><h3 id="Struct_ConfigurationDifference">Struct: ConfigurationDifference</h3>
+<table class="table-bordered table-striped table-condensed"><thead><th>Key</th><th>Field</th><th>Type</th><th>Description</th><th>Requiredness</th><th>Default value</th></thead>
+<tr><td>1</td><td>contentType</td><td><code>string</code></td><td>the type of content which has changed (e.g.: 'field')
+</td><td>required</td><td></td></tr>
+<tr><td>2</td><td>contentId</td><td><code>string</code></td><td>the content id which has changed (e.g: a field id)
+</td><td>required</td><td></td></tr>
+<tr><td>3</td><td>parameterName</td><td><code>string</code></td><td>the content parameter which has changed (e.g.: a field type)
+</td><td>required</td><td></td></tr>
+<tr><td>4</td><td>contentSource</td><td><code>string</code></td><td>the string encoded value of the content parameter value of the source configuration
+</td><td>required</td><td></td></tr>
+<tr><td>5</td><td>contentDestination</td><td><code>string</code></td><td>the string encoded value of the content parameter value of the destination configuration
+</td><td>required</td><td></td></tr>
+</table><br/>This structure defines a configuration difference (somethin which has changed between two configuration versions)
+<br/></div><div class="definition"><h3 id="Struct_Field">Struct: Field</h3>
+<table class="table-bordered table-striped table-condensed"><thead><th>Key</th><th>Field</th><th>Type</th><th>Description</th><th>Requiredness</th><th>Default value</th></thead>
+<tr><td>1</td><td>fieldId</td><td><code>string</code></td><td>a unique id which should not contain any punctuation, only non-accentuated alphabetic and numeric characters and should not be longer than 50 characters
+</td><td>required</td><td></td></tr>
+</table><br/>This structure defines a data Field. A field covers any type of data property (customer property, product properties, etc.). Fields are global for all data sources, but can be used only for special data sources and ignored for others. This grants that the properties are always ready to unify values from different sources, but they don't have to.
+<br/></div><div class="definition"><h3 id="Struct_ProcessTask">Struct: ProcessTask</h3>
+<table class="table-bordered table-striped table-condensed"><thead><th>Key</th><th>Field</th><th>Type</th><th>Description</th><th>Requiredness</th><th>Default value</th></thead>
+<tr><td>1</td><td>processTaskId</td><td><code>string</code></td><td>a unique id which should not contain any punctuation, only non-accentuated alphabetic and numeric characters and should not be longer than 50 characters
+</td><td>required</td><td></td></tr>
+</table><br/>This structure defines a data ProcessTask. A process task covers any kind of process task to be executed by the system.
+<br/></div><div class="definition"><h3 id="Struct_DataSyncProcessTask">Struct: DataSyncProcessTask</h3>
+<table class="table-bordered table-striped table-condensed"><thead><th>Key</th><th>Field</th><th>Type</th><th>Description</th><th>Requiredness</th><th>Default value</th></thead>
+<tr><td>1</td><td>processTaskId</td><td><code>string</code></td><td>a unique id which should not contain any punctuation, only non-accentuated alphabetic and numeric characters and should not be longer than 50 characters
+</td><td>required</td><td></td></tr>
+<tr><td>2</td><td>inputs</td><td><code>list&lt;<code><a href="BoxalinoDataIntelligenceV1.html#Typedef_DataSource">DataSource</a></code>&gt;</code></td><td>list of data sources which should be used to get data from
+</td><td>required</td><td></td></tr>
+<tr><td>3</td><td>outputs</td><td><code>list&lt;<code><a href="BoxalinoDataIntelligenceV1.html#Typedef_DataExport">DataExport</a></code>&gt;</code></td><td>list of data exports which should be used to push the data into
+</td><td>required</td><td></td></tr>
+<tr><td>4</td><td>dev</td><td><code>bool</code></td><td>defines if it is dev version of the task process
+</td><td>required</td><td><code>false</code></td></tr>
+<tr><td>5</td><td>delta</td><td><code>bool</code></td><td>defines if this particular task process is differential
+</td><td>required</td><td><code>false</code></td></tr>
+</table><br/>This structure defines a data synchronisation process task. It is used to get the data from external systems and process it.
+<br/></div><div class="definition"><h3 id="Struct_Scheduling">Struct: Scheduling</h3>
+<table class="table-bordered table-striped table-condensed"><thead><th>Key</th><th>Field</th><th>Type</th><th>Description</th><th>Requiredness</th><th>Default value</th></thead>
+<tr><td>1</td><td>schedulingId</td><td><code>string</code></td><td>a unique id which should not contain any punctuation, only non-accentuated alphabetic and numeric characters and should not be longer than 50 characters
+</td><td>required</td><td></td></tr>
+</table><br/>This structure defines a task Scheduling. A scheduling is a collection of process tasks to be executed one after the other by the system.
+<br/></div><div class="definition"><h3 id="Struct_RecommendationBlock">Struct: RecommendationBlock</h3>
+<table class="table-bordered table-striped table-condensed"><thead><th>Key</th><th>Field</th><th>Type</th><th>Description</th><th>Requiredness</th><th>Default value</th></thead>
+<tr><td>1</td><td>recommendationBlockId</td><td><code>string</code></td><td>a unique id which should not contain any punctuation, only non-accentuated alphabetic and numeric characters and should not be longer than 50 characters
+</td><td>required</td><td></td></tr>
+</table><br/>This structure defines a task RecommendationBlock. A RecommendationBlock is a visual block of recommendation for one page of your web-site (product detail page, basket page, etc.) you can have several recommendation blocks on the same page.
+<br/></div><div class="definition"><h3 id="Struct_DataSource">Struct: DataSource</h3>
+<table class="table-bordered table-striped table-condensed"><thead><th>Key</th><th>Field</th><th>Type</th><th>Description</th><th>Requiredness</th><th>Default value</th></thead>
+<tr><td>1</td><td>dataSourceId</td><td><code>string</code></td><td>a unique id which should not contain any punctuation, only non-accentuated alphabetic and numeric characters and should not be longer than 50 characters
+</td><td>required</td><td></td></tr>
+</table><br/>This structure defines a data source. Data source is used to get the data from external systems into DI.
+<br/></div><div class="definition"><h3 id="Struct_ReferenceCSVDataSource">Struct: ReferenceCSVDataSource</h3>
+<table class="table-bordered table-striped table-condensed"><thead><th>Key</th><th>Field</th><th>Type</th><th>Description</th><th>Requiredness</th><th>Default value</th></thead>
+<tr><td>1</td><td>dataSourceId</td><td><code>string</code></td><td>a unique id which should not contain any punctuation, only non-accentuated alphabetic and numeric characters and should not be longer than 50 characters
+</td><td>required</td><td></td></tr>
+<tr><td>2</td><td>extendedDataSourceId</td><td><code>string</code></td><td>identifier of the data source which will be extended by this data source
+</td><td>required</td><td></td></tr>
+</table><br/>This structure defines a data source type used to get the data from reference csv files defined with the API
+<br/></div><div class="definition"><h3 id="Struct_DataExport">Struct: DataExport</h3>
+<table class="table-bordered table-striped table-condensed"><thead><th>Key</th><th>Field</th><th>Type</th><th>Description</th><th>Requiredness</th><th>Default value</th></thead>
+<tr><td>1</td><td>dataExportId</td><td><code>string</code></td><td>a unique id which should not contain any punctuation, only non-accentuated alphabetic and numeric characters and should not be longer than 50 characters
+</td><td>required</td><td></td></tr>
+</table><br/>This structure defines a data export type used to push processed data into
+<br/></div><div class="definition"><h3 id="Struct_EmailCampaign">Struct: EmailCampaign</h3>
+<table class="table-bordered table-striped table-condensed"><thead><th>Key</th><th>Field</th><th>Type</th><th>Description</th><th>Requiredness</th><th>Default value</th></thead>
+<tr><td>1</td><td>emailCampaignId</td><td><code>string</code></td><td>a unique id which should not contain any punctuation, only non-accentuated alphabetic and numeric characters and should not be longer than 50 characters
+</td><td>required</td><td></td></tr>
+<tr><td>2</td><td>cmpid</td><td><code>string</code></td><td>the running campaign id which is often specific to the running of a specific newsletter e-mail (should be changed every time before sending a blast e-mail with the new value (don't forget to publish the dev configuration)
+</td><td>required</td><td></td></tr>
+<tr><td>3</td><td>dateTime</td><td><code>string</code></td><td>the dateTime at which the campaign will be sent (cannot be in the past when the campaign is ran, an exception will be then raised). Must have the format YYYY-MM-DD HH:MM:SS
+</td><td>required</td><td></td></tr>
+<tr><td>4</td><td>baseUrl</td><td><code>map&lt;<code><a href="BoxalinoDataIntelligenceV1.html#Enum_Language">Language</a></code>, <code>string</code>&gt;</code></td><td>a localized value of the base url to use for e-mail links
+</td><td>required</td><td></td></tr>
+<tr><td>5</td><td>subject</td><td><code>map&lt;<code><a href="BoxalinoDataIntelligenceV1.html#Enum_Language">Language</a></code>, <code>string</code>&gt;</code></td><td>a localized value of the subject line of the e-mail (default, can be overwritten by a specific choice variant localized parameters with parameter name 'subject')
+</td><td>required</td><td></td></tr>
+<tr><td>6</td><td>firstSentence</td><td><code>map&lt;<code><a href="BoxalinoDataIntelligenceV1.html#Enum_Language">Language</a></code>, <code>string</code>&gt;</code></td><td>a localized value of the first sentence of the e-mail (default, can be overwritten by a specific choice variant localized parameters with parameter name 'firstSentence')
+</td><td>required</td><td></td></tr>
+<tr><td>7</td><td>legals</td><td><code>map&lt;<code><a href="BoxalinoDataIntelligenceV1.html#Enum_Language">Language</a></code>, <code>string</code>&gt;</code></td><td>a localized value of the legal notices to be included in the e-mail (default, can be extended by a specific choice variant localized parameters with parameter name 'legals')
+</td><td>required</td><td></td></tr>
+</table><br/>This structure defines a data EmailCampaign. A campaign is a parameter holder for a campaign execution. It should not change at each sending, but the parameters (especially cmpid) can and should be changed before any new campaign sending (if new campid applies). For the case of trigger campaigns, the cmpid (and other parameters) usually don't change, but for the case of newsletter campaigns, very often each sending has a different id. In this case, the cmpid must be updated (and the dev configuration should be published) every time.
+<br/></div><div class="definition"><h3 id="Struct_Choice">Struct: Choice</h3>
+<table class="table-bordered table-striped table-condensed"><thead><th>Key</th><th>Field</th><th>Type</th><th>Description</th><th>Requiredness</th><th>Default value</th></thead>
+<tr><td>1</td><td>choiceId</td><td><code>string</code></td><td>a unique id which should not contain any punctuation, only non-accentuated alphabetic and numeric characters and should not be longer than 50 characters
+</td><td>required</td><td></td></tr>
+</table><br/>This structure defines a data Choice.
+<br/></div><div class="definition"><h3 id="Struct_ChoiceVariant">Struct: ChoiceVariant</h3>
+<table class="table-bordered table-striped table-condensed"><thead><th>Key</th><th>Field</th><th>Type</th><th>Description</th><th>Requiredness</th><th>Default value</th></thead>
+<tr><td>1</td><td>choiceVariantId</td><td><code>string</code></td><td>a unique id which should not contain any punctuation, only non-accentuated alphabetic and numeric characters and should not be longer than 50 characters
+</td><td>required</td><td></td></tr>
+<tr><td>2</td><td>choiceId</td><td><code>string</code></td><td>the choice id of the choice which this variant is associated to
+</td><td>required</td><td></td></tr>
+<tr><td>3</td><td>tags</td><td><code>list&lt;<code>string</code>&gt;</code></td><td>a list of tags this variant is connected to
+</td><td>required</td><td></td></tr>
+<tr><td>4</td><td>simpleParameters</td><td><code>map&lt;<code>string</code>, <code>list&lt;<code>string</code>&gt;</code>&gt;</code></td><td>a list of non-localized parameters this variant is connected to (for example, to overwrite the campaign properties, keys should have the same name as the campaign parameter name)
+</td><td>required</td><td></td></tr>
+<tr><td>5</td><td>localizedParemeters</td><td><code>map&lt;<code>string</code>, <code>list&lt;<code>map&lt;<code><a href="BoxalinoDataIntelligenceV1.html#Enum_Language">Language</a></code>, <code>string</code>&gt;</code>&gt;</code>&gt;</code></td><td>a list of localized parameters this variant is connected to (for example, to overwrite the campaign properties, keys should have the same name as the campaign parameter name)
+</td><td>required</td><td></td></tr>
+</table><br/>This structure defines a data Choice variant
+<br/></div><div class="definition"><h3 id="Struct_ProcessTaskExecutionStatus">Struct: ProcessTaskExecutionStatus</h3>
+<table class="table-bordered table-striped table-condensed"><thead><th>Key</th><th>Field</th><th>Type</th><th>Description</th><th>Requiredness</th><th>Default value</th></thead>
+<tr><td>1</td><td>statusType</td><td><code><a href="BoxalinoDataIntelligenceV1.html#Enum_ProcessTaskExecutionStatusType">ProcessTaskExecutionStatusType</a></code></td><td>the status type of this execution of the process task
+</td><td>required</td><td></td></tr>
+<tr><td>2</td><td>information</td><td><code>string</code></td><td>some additonal information about the type (can be empty, used to explain errors and warnings)
+</td><td>required</td><td></td></tr>
+</table><br/>This structure defines a process task execution status (the status of execution of a process task) with its type and a textual message
+<br/></div><div class="definition"><h3 id="Struct_ProcessTaskExecutionParameters">Struct: ProcessTaskExecutionParameters</h3>
+<table class="table-bordered table-striped table-condensed"><thead><th>Key</th><th>Field</th><th>Type</th><th>Description</th><th>Requiredness</th><th>Default value</th></thead>
+<tr><td>1</td><td>processTaskId</td><td><code>string</code></td><td>the process task id to execute
+</td><td>required</td><td></td></tr>
+<tr><td>2</td><td>development</td><td><code>bool</code></td><td>should the process run with development data that should not to be published into the production environment
+</td><td>required</td><td></td></tr>
+<tr><td>3</td><td>delta</td><td><code>bool</code></td><td>is the process a differential process that adds or updates a part of the existing data, otherwise the new data will replace any existing data completely
+</td><td>required</td><td></td></tr>
+<tr><td>4</td><td>forceStart</td><td><code>bool</code></td><td>if another similar process is already running, the forceStart flag will make the new one run, otherwise, the execution will be aborted
+</td><td>required</td><td></td></tr>
+</table><br/>This structure defines the execution parameters of a process task
+<br/></div><div class="definition"><h3 id="Struct_ReferenceCSVFileDescriptor">Struct: ReferenceCSVFileDescriptor</h3>
+<table class="table-bordered table-striped table-condensed"><thead><th>Key</th><th>Field</th><th>Type</th><th>Description</th><th>Requiredness</th><th>Default value</th></thead>
+<tr><td>1</td><td>fileId</td><td><code>string</code></td><td>identifier of the csv file, needs to be unique per account
+</td><td>required</td><td></td></tr>
+<tr><td>2</td><td>fileColumns</td><td><code>map&lt;<code>string</code>, <code><a href="BoxalinoDataIntelligenceV1.html#Enum_CSVFileColumnType">CSVFileColumnType</a></code>&gt;</code></td><td>key-value map of the file columns, where key is a name of the column and value is a column's type
+</td><td>required</td><td></td></tr>
+<tr><td>3</td><td>fileHash</td><td><code>string</code></td><td>internal hash used for csv file upload - this property is set by the API and cannot be changed
+</td><td>optional</td><td></td></tr>
+</table><br/>This structure defines a reference CSV file descriptor with the identifier and schema
+<br/></div><div class="definition"><h3 id="Struct_SchedulingExecutionParameters">Struct: SchedulingExecutionParameters</h3>
+<table class="table-bordered table-striped table-condensed"><thead><th>Key</th><th>Field</th><th>Type</th><th>Description</th><th>Requiredness</th><th>Default value</th></thead>
+<tr><td>1</td><td>schedulingId</td><td><code>string</code></td><td>the scheduling id to execute
+</td><td>required</td><td></td></tr>
+<tr><td>2</td><td>development</td><td><code>bool</code></td><td>should the process tasks run with development version data
+</td><td>required</td><td></td></tr>
+<tr><td>3</td><td>delta</td><td><code>bool</code></td><td>are the process tasks incremental processes (or full)
+</td><td>required</td><td></td></tr>
+<tr><td>4</td><td>forceStart</td><td><code>bool</code></td><td>if similar process tasks are already running, the forceStart will make the new ones run, otherwise, the execution will be aborted
+</td><td>required</td><td></td></tr>
+</table><br/>This structure defines a schedulings execution parameters. A scheduling is a collection of process tasks to be executed one after the other by the system.
+<br/></div><div class="definition"><h3 id="Struct_TimeRange">Struct: TimeRange</h3>
+<table class="table-bordered table-striped table-condensed"><thead><th>Key</th><th>Field</th><th>Type</th><th>Description</th><th>Requiredness</th><th>Default value</th></thead>
+<tr><td>1</td><td>from</td><td><code>i64</code></td><td>UNIX timestamp of a lower boundary of the range
+</td><td>required</td><td></td></tr>
+<tr><td>2</td><td>to</td><td><code>i64</code></td><td>UNIX timestamp of a upper boundary of the range
+</td><td>required</td><td></td></tr>
+</table><br/>This structure defines a time range
+<br/></div><div class="definition"><h3 id="Struct_TimeRangeValue">Struct: TimeRangeValue</h3>
+<table class="table-bordered table-striped table-condensed"><thead><th>Key</th><th>Field</th><th>Type</th><th>Description</th><th>Requiredness</th><th>Default value</th></thead>
+<tr><td>1</td><td>range</td><td><code><a href="BoxalinoDataIntelligenceV1.html#Struct_TimeRange">TimeRange</a></code></td><td>used time range
+</td><td>required</td><td></td></tr>
+<tr><td>2</td><td>value</td><td><code>double</code></td><td>KPI value for this particular range
+</td><td>required</td><td></td></tr>
+</table><br/>This structure defines a time range value of the KPI
+<br/></div><div class="definition"><h3 id="Struct_ReportMetric">Struct: ReportMetric</h3>
+<table class="table-bordered table-striped table-condensed"><thead><th>Key</th><th>Field</th><th>Type</th><th>Description</th><th>Requiredness</th><th>Default value</th></thead>
+<tr><td>1</td><td>type</td><td><code><a href="BoxalinoDataIntelligenceV1.html#Enum_ReportMetricType">ReportMetricType</a></code></td><td>the type of metric
+</td><td>required</td><td></td></tr>
+<tr><td>2</td><td>identifier</td><td><code>string</code></td><td>optional, for the ReportMetricType requiring it (e.g.: goal) the identifier the metric
+</td><td>optional</td><td></td></tr>
+</table><br/>This structure defines a report metric (kpi) which can be standard or custom wiht an identifier (e.g.: for goals)
+<br/></div><div class="definition"><h3 id="Struct_ReportDimension">Struct: ReportDimension</h3>
+<table class="table-bordered table-striped table-condensed"><thead><th>Key</th><th>Field</th><th>Type</th><th>Description</th><th>Requiredness</th><th>Default value</th></thead>
+<tr><td>1</td><td>type</td><td><code><a href="BoxalinoDataIntelligenceV1.html#Enum_ReportDimensionType">ReportDimensionType</a></code></td><td>the type of metric
+</td><td>required</td><td></td></tr>
+<tr><td>2</td><td>identifier</td><td><code>string</code></td><td>optional, for the ReportDimensionType requiring it (e.g.: goal) the identifier the metric
+</td><td>optional</td><td></td></tr>
+<tr><td>3</td><td>param1</td><td><code>string</code></td><td>optional, an additional parameter
+Use cases:
+- for hierarchical product properties for the type PURCHASED_PRODUCT_PROPERTY (e.g.: "categories") provide the level of depth to consider: "0" : first level, "1" : second level, ...
+in the response, this parameter will be replaced with the category id (label will provide the bread crumb as value : "cat1 &gt;&gt; cat2 &gt;&gt; cat3", but the id of this cat3 will be provided in the param1)
+</td><td>optional</td><td></td></tr>
+<tr><td>4</td><td>param2</td><td><code>string</code></td><td>optional, an additional parameter (planned, but not used until now)
+</td><td>optional</td><td></td></tr>
+<tr><td>5</td><td>param3</td><td><code>string</code></td><td>optional, an additional parameter (planned, but not used until now)
+</td><td>optional</td><td></td></tr>
+</table><br/>This structure defines a report dimension (segmentation) which can be standard or custom with an identifier (e.g.: for url parameters)
+<br/></div><div class="definition"><h3 id="Struct_ConditionTarget">Struct: ConditionTarget</h3>
+<table class="table-bordered table-striped table-condensed"><thead><th>Key</th><th>Field</th><th>Type</th><th>Description</th><th>Requiredness</th><th>Default value</th></thead>
+<tr><td>1</td><td>operator</td><td><code><a href="BoxalinoDataIntelligenceV1.html#Enum_ConditionOperator">ConditionOperator</a></code></td><td>the condition target operator ("is", "is not", "greater than", ...)
+</td><td>required</td><td></td></tr>
+<tr><td>2</td><td>value</td><td><code>string</code></td><td>the condition value (will be cast in the proper format, so "123" == 123)
+</td><td>required</td><td></td></tr>
+</table><br/>this structure defines the operator and values required for a condition to be true
+(example: condition "is", value : "123"
+<br/></div><div class="definition"><h3 id="Struct_DimensionCondition">Struct: DimensionCondition</h3>
+<table class="table-bordered table-striped table-condensed"><thead><th>Key</th><th>Field</th><th>Type</th><th>Description</th><th>Requiredness</th><th>Default value</th></thead>
+<tr><td>1</td><td>dimension</td><td><code><a href="BoxalinoDataIntelligenceV1.html#Struct_ReportDimension">ReportDimension</a></code></td><td>the report dimension
+</td><td>required</td><td></td></tr>
+<tr><td>2</td><td>conditionTargets</td><td><code>list&lt;<code><a href="BoxalinoDataIntelligenceV1.html#Struct_ConditionTarget">ConditionTarget</a></code>&gt;</code></td><td>the list of condition targets to be matched
+</td><td>required</td><td></td></tr>
+</table><br/>this structure defines a dimension condition, corresponding to a list of ConditionTargets for a given dimension
+<br/></div><div class="definition"><h3 id="Struct_MetricCondition">Struct: MetricCondition</h3>
+<table class="table-bordered table-striped table-condensed"><thead><th>Key</th><th>Field</th><th>Type</th><th>Description</th><th>Requiredness</th><th>Default value</th></thead>
+<tr><td>1</td><td>metric</td><td><code><a href="BoxalinoDataIntelligenceV1.html#Struct_ReportMetric">ReportMetric</a></code></td><td>the report metric
+</td><td>required</td><td></td></tr>
+<tr><td>2</td><td>conditionTargets</td><td><code>list&lt;<code><a href="BoxalinoDataIntelligenceV1.html#Struct_ConditionTarget">ConditionTarget</a></code>&gt;</code></td><td>the list of condition targets to be matched
+</td><td>required</td><td></td></tr>
+</table><br/>this structure defines a metric condition, corresponding to a list of ConditionTargets for a given metric
+<br/></div><div class="definition"><h3 id="Struct_ReportFilter">Struct: ReportFilter</h3>
+<table class="table-bordered table-striped table-condensed"><thead><th>Key</th><th>Field</th><th>Type</th><th>Description</th><th>Requiredness</th><th>Default value</th></thead>
+<tr><td>1</td><td>dimensionConditions</td><td><code>list&lt;<code><a href="BoxalinoDataIntelligenceV1.html#Struct_DimensionCondition">DimensionCondition</a></code>&gt;</code></td><td>the dimension filters
+</td><td>required</td><td></td></tr>
+<tr><td>2</td><td>metricConditions</td><td><code>list&lt;<code><a href="BoxalinoDataIntelligenceV1.html#Struct_MetricCondition">MetricCondition</a></code>&gt;</code></td><td>the metric filters
+</td><td>required</td><td></td></tr>
+</table><br/>this structure defines a report filter (set of and clauses), all of which must be true
+<br/></div><div class="definition"><h3 id="Struct_ChoiceReportRequest">Struct: ChoiceReportRequest</h3>
+<table class="table-bordered table-striped table-condensed"><thead><th>Key</th><th>Field</th><th>Type</th><th>Description</th><th>Requiredness</th><th>Default value</th></thead>
+<tr><td>1</td><td>choiceSourceId</td><td><code>string</code></td><td>the choice source id (identifying the system being the source of the choices, if you don't have a choice source id already, please contact support@boxalino.com) (must follow the content id format: &lt;= 50 alphanumeric characters without accent or punctuation)
+&gt;</td><td>default</td><td></td></tr>
+<tr><td>2</td><td>choice</td><td><code><a href="BoxalinoDataIntelligenceV1.html#Struct_Choice">Choice</a></code></td><td>the choice to analyse (e.g.: each landing page is a choice and has several variant potentially, even if only one)
+</td><td>required</td><td></td></tr>
+<tr><td>3</td><td>metrics</td><td><code>list&lt;<code><a href="BoxalinoDataIntelligenceV1.html#Struct_ReportMetric">ReportMetric</a></code>&gt;</code></td><td>the metrics to evaluate report (e.g.: kpis to return)
+</td><td>required</td><td></td></tr>
+<tr><td>4</td><td>choiceVariantIds</td><td><code>list&lt;<code>string</code>&gt;</code></td><td>an optional choice variants to use as filters (only return the results for these choicevariants)
+</td><td>optional</td><td></td></tr>
+<tr><td>5</td><td>returnRecommendationStrategies</td><td><code>bool</code></td><td>an optional flag to indicate that the results should display not only the choice variant, but which recommendation strategies have been used for each choice variant (only applicable if the choice is a recommendation choice)
+</td><td>optional</td><td></td></tr>
+<tr><td>6</td><td>dimension</td><td><code><a href="BoxalinoDataIntelligenceV1.html#Struct_ReportDimension">ReportDimension</a></code></td><td>an optional dimension for the report (for segmentation), while groups are different for each type of reporting, the dimension are normally standard (visitor country, device, ...)
+</td><td>optional</td><td></td></tr>
+<tr><td>7</td><td>funnelMetrics</td><td><code>list&lt;<code><a href="BoxalinoDataIntelligenceV1.html#Struct_ReportMetric">ReportMetric</a></code>&gt;</code></td><td>an optional list of metrics to limit the report to only the cases where at least one of the metrics of the list was reached (e.g.: if focusedMetrics are goal-X and goal-Y, then the Metric Transactions will not be returned for all the visits, but only for the visits who did reach goal-X or goal-Y at least once)
+</td><td>optional</td><td></td></tr>
+<tr><td>8</td><td>sortBys</td><td><code>list&lt;<code><a href="BoxalinoDataIntelligenceV1.html#Struct_ReportMetric">ReportMetric</a></code>&gt;</code></td><td>the metrics to use for sorting the results
+</td><td>optional</td><td></td></tr>
+<tr><td>9</td><td>range</td><td><code><a href="BoxalinoDataIntelligenceV1.html#Struct_TimeRange">TimeRange</a></code></td><td>a required date range for the reporting response (precision is only managed per day)
+</td><td>required</td><td></td></tr>
+<tr><td>10</td><td>precision</td><td><code><a href="BoxalinoDataIntelligenceV1.html#Enum_TimeRangePrecision">TimeRangePrecision</a></code></td><td>a required date range precision if the results should be aggregated per week or month, overall or return for each day
+</td><td>required</td><td></td></tr>
+<tr><td>11</td><td>startIndex</td><td><code>i16</code></td><td>an optional starting index (e.g.: if the maximum number of results was exceeded and a second page needs to be displayed). First index is 0.
+</td><td>optional</td><td></td></tr>
+<tr><td>12</td><td>maxResults</td><td><code>i16</code></td><td>an required number of maximum number of results (one result is one source of date rage data in of values for all kpis)
+</td><td>required</td><td></td></tr>
+</table><br/>This structure defines an optimization report request
+<br/></div><div class="definition"><h3 id="Struct_ChoiceReportResult">Struct: ChoiceReportResult</h3>
+<table class="table-bordered table-striped table-condensed"><thead><th>Key</th><th>Field</th><th>Type</th><th>Description</th><th>Requiredness</th><th>Default value</th></thead>
+<tr><td>1</td><td>choiceVariantId</td><td><code>string</code></td><td>the choice variant of the choice
+</td><td>optional</td><td></td></tr>
+<tr><td>2</td><td>recommendationStrategy</td><td><code>string</code></td><td>optional: indicate a specific recommendation strategy which provided the result (only returned for recommendation choices when the flag returnRecommendationStrategies is true)
+</td><td>optional</td><td></td></tr>
+<tr><td>3</td><td>dimensionValue</td><td><code>string</code></td><td>an optional dimension value (in case a dimension has been requested for segmentation)
+</td><td>optional</td><td></td></tr>
+<tr><td>4</td><td>values</td><td><code><a href="BoxalinoDataIntelligenceV1.html#Typedef_ReportResultValues">ReportResultValues</a></code></td><td>the report result values
+</td><td>required</td><td></td></tr>
+</table><br/>This structure defines a map key (signature) of a choice report result (indication about what this result is about)
+The ChoiceReport object contains a map with the results. For each key (i.e.: result group) the system returns a list of report metrics (kpis) and value for each date range requested.
+These keys are, in the case of a ChoiceReport defined by the choice variant and, possibly a specific dimension value of the choice variant.
+It is possible that there is no value for the dimension, but then there must be a value for the choiceVariant.
+It is possible that there is no value for the choiceVariant, but then there must be a value for the choiceVariant.
+It is only possibly that the recommendationStrategy has a value if a choiceVariant value is also provided.
+It is possible that the 3 variables (choiceVariant, recommendationStrategy and dimensionValue) are all set.
+Even if allowed by the fact that all of the variables are optional, it is not possible that none of the variables are set.
+<br/></div><div class="definition"><h3 id="Struct_ReportMetricValue">Struct: ReportMetricValue</h3>
+<table class="table-bordered table-striped table-condensed"><thead><th>Key</th><th>Field</th><th>Type</th><th>Description</th><th>Requiredness</th><th>Default value</th></thead>
+<tr><td>1</td><td>metric</td><td><code><a href="BoxalinoDataIntelligenceV1.html#Struct_ReportMetric">ReportMetric</a></code></td><td>the metric
+</td><td>required</td><td></td></tr>
+<tr><td>2</td><td>value</td><td><code>double</code></td><td>the metric value
+</td><td>required</td><td></td></tr>
+</table><br/>This structure defines a metric value association
+<br/></div><div class="definition"><h3 id="Struct_ReportDimensionValue">Struct: ReportDimensionValue</h3>
+<table class="table-bordered table-striped table-condensed"><thead><th>Key</th><th>Field</th><th>Type</th><th>Description</th><th>Requiredness</th><th>Default value</th></thead>
+<tr><td>1</td><td>dimension</td><td><code><a href="BoxalinoDataIntelligenceV1.html#Struct_ReportDimension">ReportDimension</a></code></td><td>the dimension
+</td><td>required</td><td></td></tr>
+<tr><td>2</td><td>value</td><td><code>string</code></td><td>the dimension value
+</td><td>required</td><td></td></tr>
+</table><br/>This structure defines a dimension value association
+<br/></div><div class="definition"><h3 id="Struct_ReportResultKeyValues">Struct: ReportResultKeyValues</h3>
+<table class="table-bordered table-striped table-condensed"><thead><th>Key</th><th>Field</th><th>Type</th><th>Description</th><th>Requiredness</th><th>Default value</th></thead>
+<tr><td>1</td><td>range</td><td><code><a href="BoxalinoDataIntelligenceV1.html#Struct_TimeRange">TimeRange</a></code></td><td>the time range key
+</td><td>required</td><td></td></tr>
+<tr><td>2</td><td>values</td><td><code>list&lt;<code><a href="BoxalinoDataIntelligenceV1.html#Struct_ReportMetricValue">ReportMetricValue</a></code>&gt;</code></td><td>the metric values for this time range key
+</td><td>required</td><td></td></tr>
+</table><br/>This structure defines one key value set of report results
+<br/></div><div class="definition"><h3 id="Struct_ReportResultValues">Struct: ReportResultValues</h3>
+<table class="table-bordered table-striped table-condensed"><thead><th>Key</th><th>Field</th><th>Type</th><th>Description</th><th>Requiredness</th><th>Default value</th></thead>
+<tr><td>1</td><td>type</td><td><code><a href="BoxalinoDataIntelligenceV1.html#Enum_ReportResultTimeRangeType">ReportResultTimeRangeType</a></code></td><td>the type of report result value time ranges
+For each report result groups, the system returns a map of ReportResultValues object (i.e.:a map of report metric (kpi) with their values) for each time range.
+These time ranges can be of different types (absolute defining exactly form a specific moment to another, or relative, starting at 0 for the first key, for cohort analysis).
+</td><td>required</td><td></td></tr>
+<tr><td>2</td><td>values</td><td><code>list&lt;<code><a href="BoxalinoDataIntelligenceV1.html#Struct_ReportResultKeyValues">ReportResultKeyValues</a></code>&gt;</code></td><td>a map with a key for each time range (each day, each week, each month, ... depending on its meaning provided by the ReportResultTimeRangeType type) providing for each case a map of metric values
+</td><td>required</td><td></td></tr>
+</table><br/>This structure defines the result values (map of metric and values for each requested time ranges)
+<br/></div><div class="definition"><h3 id="Struct_ChoiceReport">Struct: ChoiceReport</h3>
+<table class="table-bordered table-striped table-condensed"><thead><th>Key</th><th>Field</th><th>Type</th><th>Description</th><th>Requiredness</th><th>Default value</th></thead>
+<tr><td>1</td><td>results</td><td><code>list&lt;<code><a href="BoxalinoDataIntelligenceV1.html#Struct_ChoiceReportResult">ChoiceReportResult</a></code>&gt;</code></td><td>the map of reporting results (one result per ChoiceReportResult: indicating choice variant, dimension value, etc.)
+</td><td>required</td><td></td></tr>
+<tr><td>2</td><td>sumResult</td><td><code><a href="BoxalinoDataIntelligenceV1.html#Struct_ReportResultValues">ReportResultValues</a></code></td><td>the sum result
+</td><td>required</td><td></td></tr>
+</table><br/>This structure defines an optimization report returned
+This object is specific to ChoiceReportRequest but is similar to all other type of report responses, as the only difference usually is the key object of the result variable (in this case: ChoiceReportResult)
+<br/></div><div class="definition"><h3 id="Struct_TransactionReportRequest">Struct: TransactionReportRequest</h3>
+<table class="table-bordered table-striped table-condensed"><thead><th>Key</th><th>Field</th><th>Type</th><th>Description</th><th>Requiredness</th><th>Default value</th></thead>
+<tr><td>1</td><td>metrics</td><td><code>list&lt;<code><a href="BoxalinoDataIntelligenceV1.html#Struct_ReportMetric">ReportMetric</a></code>&gt;</code></td><td>the metrics to evaluate report (e.g.: kpis to return)
+</td><td>required</td><td></td></tr>
+<tr><td>2</td><td>dimensions</td><td><code>list&lt;<code><a href="BoxalinoDataIntelligenceV1.html#Struct_ReportDimension">ReportDimension</a></code>&gt;</code></td><td>an optional list of dimensions for the report (for segmentation), while groups are different for each type of reporting, the dimension are normally standard (visitor country, device, ...)
+</td><td>optional</td><td></td></tr>
+<tr><td>3</td><td>filter</td><td><code><a href="BoxalinoDataIntelligenceV1.html#Struct_ReportFilter">ReportFilter</a></code></td><td>the report filter to use
+</td><td>optional</td><td></td></tr>
+<tr><td>4</td><td>cohortIdField</td><td><code><a href="BoxalinoDataIntelligenceV1.html#Struct_Field">Field</a></code></td><td>optional: ONLY FOR COHORT ANALYSIS, the cohort customer id field (will consider all transactions of customers having this property indicating the customer id to belong to the same cohort)
+E.G.: for re-order rate, indicating the customer id field as the cohort customer id field will work, because each time the same customer re-order, then it is the same cohort re-ordering)
+E.G.: for viral-rate, indicating the customer field which contains the id of the customer who originated the suggestion to buy should be used a cohort customer id field
+N.B: Please consider that cohort analysis are basing the cohort time grouping on the precision TimeRangePrecision variable of the TransactionReportRequest)
+</td><td>optional</td><td></td></tr>
+<tr><td>5</td><td>sortBys</td><td><code>list&lt;<code><a href="BoxalinoDataIntelligenceV1.html#Struct_ReportMetric">ReportMetric</a></code>&gt;</code></td><td>the metrics to use for sorting the results
+</td><td>optional</td><td></td></tr>
+<tr><td>6</td><td>range</td><td><code><a href="BoxalinoDataIntelligenceV1.html#Struct_TimeRange">TimeRange</a></code></td><td>a required date range for the reporting response (precision is only managed per day)
+</td><td>required</td><td></td></tr>
+<tr><td>7</td><td>precision</td><td><code><a href="BoxalinoDataIntelligenceV1.html#Enum_TimeRangePrecision">TimeRangePrecision</a></code></td><td>a required date range precision if the results should be aggregated per week or month, overall or return for each day
+</td><td>required</td><td></td></tr>
+<tr><td>8</td><td>startIndex</td><td><code>i16</code></td><td>an optional starting index (e.g.: if the maximum number of results was exceeded and a second page needs to be displayed). First index is 0.
+</td><td>optional</td><td></td></tr>
+<tr><td>9</td><td>maxResults</td><td><code>i16</code></td><td>an required number of maximum number of results (one result is one source of date rage data in of values for all kpis)
+</td><td>required</td><td></td></tr>
+</table><br/>This structure defines a transaction report request
+<br/></div><div class="definition"><h3 id="Struct_TransactionReportResult">Struct: TransactionReportResult</h3>
+<table class="table-bordered table-striped table-condensed"><thead><th>Key</th><th>Field</th><th>Type</th><th>Description</th><th>Requiredness</th><th>Default value</th></thead>
+<tr><td>1</td><td>dimensionValues</td><td><code>list&lt;<code><a href="BoxalinoDataIntelligenceV1.html#Struct_ReportDimensionValue">ReportDimensionValue</a></code>&gt;</code></td><td>an required map of dimension values
+</td><td>required</td><td></td></tr>
+<tr><td>2</td><td>values</td><td><code><a href="BoxalinoDataIntelligenceV1.html#Struct_ReportResultValues">ReportResultValues</a></code></td><td>the report result values
+</td><td>required</td><td></td></tr>
+</table><br/>This structure defines a map key (signature) of a transaction report result (indication about what this result is about)
+The TransactionReport object contains a map with the results. For each key (i.e.: result group) the system returns a list of report metrics (kpis) and value for each date range requested.
+These keys are, in the case of a TransactionReport defined by a map of dimension values for each requested Dimension
+<br/></div><div class="definition"><h3 id="Struct_TransactionReport">Struct: TransactionReport</h3>
+<table class="table-bordered table-striped table-condensed"><thead><th>Key</th><th>Field</th><th>Type</th><th>Description</th><th>Requiredness</th><th>Default value</th></thead>
+<tr><td>1</td><td>results</td><td><code>list&lt;<code><a href="BoxalinoDataIntelligenceV1.html#Struct_TransactionReportResult">TransactionReportResult</a></code>&gt;</code></td><td>the map of reporting results (one result per TransactionReportResult: indicating dimension values)
+</td><td>required</td><td></td></tr>
+<tr><td>2</td><td>sumResult</td><td><code><a href="BoxalinoDataIntelligenceV1.html#Struct_ReportResultValues">ReportResultValues</a></code></td><td>the sum result
+</td><td>required</td><td></td></tr>
+</table><br/>This structure defines a transaction report returned
+This object is specific to TransactionReportRequest but is similar to all other type of report responses, as the only difference usually is the key object of the result variable (in this case: TransactionReportResult)
+<br/></div><div class="definition"><h3 id="Struct_BehaviorReportRequest">Struct: BehaviorReportRequest</h3>
+<table class="table-bordered table-striped table-condensed"><thead><th>Key</th><th>Field</th><th>Type</th><th>Description</th><th>Requiredness</th><th>Default value</th></thead>
+<tr><td>1</td><td>metrics</td><td><code>list&lt;<code><a href="BoxalinoDataIntelligenceV1.html#Struct_ReportMetric">ReportMetric</a></code>&gt;</code></td><td>the metrics to evaluate report (e.g.: kpis to return)
+</td><td>required</td><td></td></tr>
+<tr><td>2</td><td>dimensions</td><td><code>list&lt;<code><a href="BoxalinoDataIntelligenceV1.html#Struct_ReportDimension">ReportDimension</a></code>&gt;</code></td><td>an optional list of dimensions for the report (for segmentation), while groups are different for each type of reporting, the dimension are normally standard (visitor country, device, ...)
+</td><td>optional</td><td></td></tr>
+<tr><td>3</td><td>filter</td><td><code><a href="BoxalinoDataIntelligenceV1.html#Struct_ReportFilter">ReportFilter</a></code></td><td>the report filter to use
+</td><td>optional</td><td></td></tr>
+<tr><td>4</td><td>sortBys</td><td><code>list&lt;<code><a href="BoxalinoDataIntelligenceV1.html#Struct_ReportMetric">ReportMetric</a></code>&gt;</code></td><td>the metrics to use for sorting the results
+</td><td>optional</td><td></td></tr>
+<tr><td>5</td><td>range</td><td><code><a href="BoxalinoDataIntelligenceV1.html#Struct_TimeRange">TimeRange</a></code></td><td>a required date range for the reporting response (precision is only managed per day)
+</td><td>required</td><td></td></tr>
+<tr><td>6</td><td>precision</td><td><code><a href="BoxalinoDataIntelligenceV1.html#Enum_TimeRangePrecision">TimeRangePrecision</a></code></td><td>a required date range precision if the results should be aggregated per week or month, overall or return for each day
+</td><td>required</td><td></td></tr>
+<tr><td>7</td><td>startIndex</td><td><code>i16</code></td><td>an optional starting index (e.g.: if the maximum number of results was exceeded and a second page needs to be displayed). First index is 0.
+</td><td>optional</td><td></td></tr>
+<tr><td>8</td><td>maxResults</td><td><code>i16</code></td><td>an required number of maximum number of results (one result is one source of date rage data in of values for all kpis)
+</td><td>required</td><td></td></tr>
+</table><br/>This structure defines a behavior report request
+<br/></div><div class="definition"><h3 id="Struct_BehaviorReportResult">Struct: BehaviorReportResult</h3>
+<table class="table-bordered table-striped table-condensed"><thead><th>Key</th><th>Field</th><th>Type</th><th>Description</th><th>Requiredness</th><th>Default value</th></thead>
+<tr><td>1</td><td>dimensionValues</td><td><code>list&lt;<code><a href="BoxalinoDataIntelligenceV1.html#Struct_ReportDimensionValue">ReportDimensionValue</a></code>&gt;</code></td><td>an required map of dimension values
+</td><td>required</td><td></td></tr>
+<tr><td>2</td><td>values</td><td><code><a href="BoxalinoDataIntelligenceV1.html#Struct_ReportResultValues">ReportResultValues</a></code></td><td>the report result values
+</td><td>required</td><td></td></tr>
+</table><br/>This structure defines a map key (signature) of a behavior report result (indication about what this result is about)
+The BehaviorReport object contains a map with the results. For each key (i.e.: result group) the system returns a list of report metrics (kpis) and value for each date range requested.
+These keys are, in the case of a BehaviorReport defined by a map of dimension values for each requested Dimension
+<br/></div><div class="definition"><h3 id="Struct_BehaviorReport">Struct: BehaviorReport</h3>
+<table class="table-bordered table-striped table-condensed"><thead><th>Key</th><th>Field</th><th>Type</th><th>Description</th><th>Requiredness</th><th>Default value</th></thead>
+<tr><td>1</td><td>results</td><td><code>list&lt;<code><a href="BoxalinoDataIntelligenceV1.html#Struct_BehaviorReportResult">BehaviorReportResult</a></code>&gt;</code></td><td>the map of reporting results (one result per BehaviorReportResult: indicating dimension values)
+</td><td>required</td><td></td></tr>
+<tr><td>2</td><td>sumResult</td><td><code><a href="BoxalinoDataIntelligenceV1.html#Struct_ReportResultValues">ReportResultValues</a></code></td><td>the sum result
+</td><td>required</td><td></td></tr>
+</table><br/>This structure defines a behavior report returned
+This object is specific to BehaviorReportRequest but is similar to all other type of report responses, as the only difference usually is the key object of the result variable (in this case: BehaviorReportResult)
+<br/></div><hr/><h2 id="Services">Services</h2>
+<h3 id="Svc_BoxalinoDataIntelligence">Service: BoxalinoDataIntelligence</h3>
+<div class="definition"><h4 id="Fn_BoxalinoDataIntelligence_GetAuthentication">Function: BoxalinoDataIntelligence.GetAuthentication</h4>
+<pre><code><a href="BoxalinoDataIntelligenceV1.html#Struct_Authentication">Authentication</a></code> GetAuthentication(<code><a href="BoxalinoDataIntelligenceV1.html#Struct_AuthenticationRequest">AuthenticationRequest</a></code> authentication)
+    throws <code><a href="BoxalinoDataIntelligenceV1.html#Struct_DataIntelligenceServiceException">DataIntelligenceServiceException</a></code>
+</pre>this service function returns a new authentication token
+
+<dl>
+<dt>@param authentication</dt>
+<dd>a fully complete AuthenticationRequest with the content of your credentials</dd>
+<dt>@return</dt>
+<dd>an Authentication object with your new authentication token (valid for 1 hour)</dd>
+<dt>@throws DataIntelligenceServiceException</dt>
+<dd>INVALID_CREDENTIALS:if the provided account / username / password information don't match the records of Boxalino system.</dd>
+<dd>BLOCKED_USER:if the provided user has been blocked.</dd>
+<dd>BLOCKED_ACCOUNT:if the provided account has been blocked.</dd>
+</dl>
+<br/></div><div class="definition"><h4 id="Fn_BoxalinoDataIntelligence_UpdatePassword">Function: BoxalinoDataIntelligence.UpdatePassword</h4>
+<pre><code>void</code> UpdatePassword(<code><a href="BoxalinoDataIntelligenceV1.html#Struct_Authentication">Authentication</a></code> authentication,
+                    <code>string</code> newPassword)
+    throws <code><a href="BoxalinoDataIntelligenceV1.html#Struct_DataIntelligenceServiceException">DataIntelligenceServiceException</a></code>
+</pre>this service function changes the current password
+
+<dl>
+<dt>@param authentication</dt>
+<dd>the authentication object as returned by the GetAuthentication service function in the AuthenticationResponse struct</dd>
+<dt>@param newPassword</dt>
+<dd>the new password to replace the existing one (careful, no forgot the new password, if you lose your password, contact &lt;ahref="mailto:support@boxalino.com"&gt;support@boxalino.com</a></dd>
+<dt>@throws DataIntelligenceServiceException</dt>
+<dd>INVALID_AUTHENTICATION_TOKEN:if the provided authentication token is not valid or has expired (1 hour validity).</dd>
+<dd>INVALID_NEW_PASSWORD:if the provided new password is not properly formatted (should be at least 8 characters long and not contain any punctuation).</dd>
+</dl>
+<br/></div><div class="definition"><h4 id="Fn_BoxalinoDataIntelligence_GetConfigurationVersion">Function: BoxalinoDataIntelligence.GetConfigurationVersion</h4>
+<pre><code><a href="BoxalinoDataIntelligenceV1.html#Struct_ConfigurationVersion">ConfigurationVersion</a></code> GetConfigurationVersion(<code><a href="BoxalinoDataIntelligenceV1.html#Struct_Authentication">Authentication</a></code> authentication,
+                                             <code><a href="BoxalinoDataIntelligenceV1.html#Enum_ConfigurationVersionType">ConfigurationVersionType</a></code> versionType)
+    throws <code><a href="BoxalinoDataIntelligenceV1.html#Struct_DataIntelligenceServiceException">DataIntelligenceServiceException</a></code>
+</pre>this service function returns the configuration version object matching the provided versionType. In general, you should always ask for the CURRENT_DEVELOPMENT_VERSION, unless you want to access directly (at your own risks) the production configuration.
+
+<dl>
+<dt>@param authenticationToken</dt>
+<dd>the authentication object as returned by the GetAuthentication service function in the AuthenticationResponse struct</dd>
+<dt>@throws DataIntelligenceServiceException</dt>
+<dd>INVALID_AUTHENTICATION_TOKEN: if the provided authentication token is not valid or has expired (1 hour validity).</dd>
+<dd>INVALID_CONFIGURATION_VERSION: if the provided configuration version is not valid.</dd>
+<dt>@returns ConfigurationVersion</dt>
+<dd>The configuration object to use in your calls to other service functions which access your configuration parameters</dd>
+</dl>
+<br/></div><div class="definition"><h4 id="Fn_BoxalinoDataIntelligence_SetDataSourcesConfiguration">Function: BoxalinoDataIntelligence.SetDataSourcesConfiguration</h4>
+<pre><code>void</code> SetDataSourcesConfiguration(<code><a href="BoxalinoDataIntelligenceV1.html#Struct_Authentication">Authentication</a></code> authentication,
+                                 <code><a href="BoxalinoDataIntelligenceV1.html#Struct_ConfigurationVersion">ConfigurationVersion</a></code> configurationVersion,
+                                 <code>string</code> dataSourcesConfigurationXML)
+    throws <code><a href="BoxalinoDataIntelligenceV1.html#Struct_DataIntelligenceServiceException">DataIntelligenceServiceException</a></code>
+</pre>this service function udpates your data source configuration.
+
+<dl>
+<dt>@param authenticationToken</dt>
+<dd>the authentication object as returned by the GetAuthentication service function in the AuthenticationResponse struct</dd>
+<dt>@param configurationVersion</dt>
+<dd>a ConfigurationVersion object indicating the configuration version number (as returned by function GetConfigurationVersion)</dd>
+<dt>@param dataSourcesConfigurationXML</dt>
+<dd>the data source XML must follow the strict XML format and content as defined in the Boxalino documentation. This XML defines the way the system must extract data from the various files (typically a list of CSV files compressed in a zip file) to synchronize your product, customers and transactions data (tracker data are direclty provided to Boxalino Javascript tracker and are there not part of the data to be synchronized here. Please make sure that the product id is defined in a coherent way between he product files, the transaction files and the tracker (product View, add to basket and purchase event) (so the mapping can be done); same comment for the customer id: between the customer files, the transaction files and the tracker (set user event). If you don't have the full documentation of the data source XML, please contact <a href="mailto:support@boxalino.com">support@boxalino.com</a></dd>
+<dt>@throws DataIntelligenceServiceException</dt>
+<dd>INVALID_AUTHENTICATION_TOKEN:if the provided authentication token is not valid or has expired (1 hour validity).</dd>
+<dd>INVALID_CONFIGURATION_VERSION: if the provided configuration version is not valid.</dd>
+<dd>INVALID_DATASOURCE:if the provided new data source XML string doesn't match the required format (see documentation of the data source XML format)</dd>
+<dt>@Nota Bene</dt>
+<dd>If you remove fields definition from your data source, they will not be automatically deleted. You need to explicitely delte them through the delete component service function to remove them.</dd>
+</dl>
+<br/></div><div class="definition"><h4 id="Fn_BoxalinoDataIntelligence_GetFields">Function: BoxalinoDataIntelligence.GetFields</h4>
+<pre><code>map&lt;<code>string</code>, <code><a href="BoxalinoDataIntelligenceV1.html#Struct_Field">Field</a></code>&gt;</code> GetFields(<code><a href="BoxalinoDataIntelligenceV1.html#Struct_Authentication">Authentication</a></code> authentication,
+                           <code><a href="BoxalinoDataIntelligenceV1.html#Struct_ConfigurationVersion">ConfigurationVersion</a></code> configuration)
+    throws <code><a href="BoxalinoDataIntelligenceV1.html#Struct_DataIntelligenceServiceException">DataIntelligenceServiceException</a></code>
+</pre>this service function returns the map of all the defined field (key = fieldId, value = Field object).
+
+<dl>
+<dt>@param authenticationToken</dt>
+<dd>the authentication object as returned by the GetAuthentication service function in the AuthenticationResponse struct</dd>
+<dt>@param configurationVersion</dt>
+<dd>a ConfigurationVersion object indicating the configuration version number (as returned by function GetConfigurationVersion)</dd>
+<dt>@throws DataIntelligenceServiceException</dt>
+<dd>INVALID_AUTHENTICATION_TOKEN:if the provided authentication token is not valid or has expired (1 hour validity).</dd>
+<dd>INVALID_CONFIGURATION_VERSION: if the provided configuration version is not valid.</dd>
+<dt>@returns map&lt;string, Field&gt;</dt>
+<dd>A map containing all the defined fields of your account in this configuration version, with the fieldId as key and the Field object as value (key is provided for accessibility only, as the field id is also present in the Field object</dd>
+</dl>
+<br/></div><div class="definition"><h4 id="Fn_BoxalinoDataIntelligence_CreateField">Function: BoxalinoDataIntelligence.CreateField</h4>
+<pre><code>void</code> CreateField(<code><a href="BoxalinoDataIntelligenceV1.html#Struct_Authentication">Authentication</a></code> authentication,
+                 <code><a href="BoxalinoDataIntelligenceV1.html#Struct_ConfigurationVersion">ConfigurationVersion</a></code> configuration,
+                 <code>string</code> fieldId)
+    throws <code><a href="BoxalinoDataIntelligenceV1.html#Struct_DataIntelligenceServiceException">DataIntelligenceServiceException</a></code>
+</pre>this service function creates a new field
+
+<dl>
+<dt>@param authenticationToken</dt>
+<dd>the authentication object as returned by the GetAuthentication service function in the AuthenticationResponse struct</dd>
+<dt>@param configurationVersion</dt>
+<dd>a ConfigurationVersion object indicating the configuration version number (as returned by function GetConfigurationVersion)</dd>
+<dt>@param fieldId</dt>
+<dd>the field id to be created (must follow the content id format: &lt;= 50 alphanumeric characters without accent or punctuation)&lt;/dd&gt;
+<dt>@throws DataIntelligenceServiceException</dt>
+<dd>INVALID_AUTHENTICATION_TOKEN:if the provided authentication token is not valid or has expired (1 hour validity).</dd>
+<dd>INVALID_CONFIGURATION_VERSION: if the provided configuration version is not valid.</dd>
+<dd>ALREADY_EXISTING_CONTENT_ID:if the provided field id already exists.</dd>
+<dd>INVALID_CONTENT_ID:if the provided field id format is not valid.</dd>
+</dl>
+<br/></div><div class="definition"><h4 id="Fn_BoxalinoDataIntelligence_UpdateField">Function: BoxalinoDataIntelligence.UpdateField</h4>
+<pre><code>void</code> UpdateField(<code><a href="BoxalinoDataIntelligenceV1.html#Struct_Authentication">Authentication</a></code> authentication,
+                 <code><a href="BoxalinoDataIntelligenceV1.html#Struct_ConfigurationVersion">ConfigurationVersion</a></code> configuration,
+                 <code><a href="BoxalinoDataIntelligenceV1.html#Struct_Field">Field</a></code> field)
+    throws <code><a href="BoxalinoDataIntelligenceV1.html#Struct_DataIntelligenceServiceException">DataIntelligenceServiceException</a></code>
+</pre>this service function updates a field
+
+<dl>
+<dt>@param authenticationToken</dt>
+<dd>the authentication object as returned by the GetAuthentication service function in the AuthenticationResponse struct</dd>
+<dt>@param configurationVersion</dt>
+<dd>a ConfigurationVersion object indicating the configuration version number (as returned by function GetConfigurationVersion)</dd>
+<dt>@param field</dt>
+<dd>a Field object to be updated (the content of the object will be updated on the content id provided)</dd>
+<dt>@throws DataIntelligenceServiceException</dt>
+<dd>INVALID_AUTHENTICATION_TOKEN:if the provided authentication token is not valid or has expired (1 hour validity).</dd>
+<dd>INVALID_CONFIGURATION_VERSION: if the provided configuration version is not valid.</dd>
+<dd>NON_EXISTING_CONTENT_ID:if the provided field id doesn't already exists.</dd>
+<dd>INVALID_CONTENT:if the provided field content is not valid.</dd>
+<dd>The </dd>
+</dl>
+<br/></div><div class="definition"><h4 id="Fn_BoxalinoDataIntelligence_DeleteField">Function: BoxalinoDataIntelligence.DeleteField</h4>
+<pre><code>void</code> DeleteField(<code><a href="BoxalinoDataIntelligenceV1.html#Struct_Authentication">Authentication</a></code> authentication,
+                 <code><a href="BoxalinoDataIntelligenceV1.html#Struct_ConfigurationVersion">ConfigurationVersion</a></code> configuration,
+                 <code>string</code> fieldId)
+    throws <code><a href="BoxalinoDataIntelligenceV1.html#Struct_DataIntelligenceServiceException">DataIntelligenceServiceException</a></code>
+</pre>this service function deletes a field
+
+<dl>
+<dt>@param authenticationToken</dt>
+<dd>the authentication object as returned by the GetAuthentication service function in the AuthenticationResponse struct</dd>
+<dt>@param configurationVersion</dt>
+<dd>a ConfigurationVersion object indicating the configuration version number (as returned by function GetConfigurationVersion)</dd>
+<dt>@param fieldId</dt>
+<dd>the field id to be deleted</dd>
+<dt>@throws DataIntelligenceServiceException</dt>
+<dd>INVALID_AUTHENTICATION_TOKEN:if the provided authentication token is not valid or has expired (1 hour validity).</dd>
+<dd>INVALID_CONFIGURATION_VERSION: if the provided configuration version is not valid.</dd>
+<dd>NON_EXISTING_CONTENT_ID:if the provided field id doesn't already exists.</dd>
+</dl>
+<br/></div><div class="definition"><h4 id="Fn_BoxalinoDataIntelligence_GetProcessTasks">Function: BoxalinoDataIntelligence.GetProcessTasks</h4>
+<pre><code>map&lt;<code>string</code>, <code><a href="BoxalinoDataIntelligenceV1.html#Struct_ProcessTask">ProcessTask</a></code>&gt;</code> GetProcessTasks(<code><a href="BoxalinoDataIntelligenceV1.html#Struct_Authentication">Authentication</a></code> authentication,
+                                       <code><a href="BoxalinoDataIntelligenceV1.html#Struct_ConfigurationVersion">ConfigurationVersion</a></code> configuration)
+    throws <code><a href="BoxalinoDataIntelligenceV1.html#Struct_DataIntelligenceServiceException">DataIntelligenceServiceException</a></code>
+</pre>this service function returns the map of all the defined process tasks (key = processTaskId, value = ProcessTask object).
+
+<dl>
+<dt>@param authenticationToken</dt>
+<dd>the authentication object as returned by the GetAuthentication service function in the AuthenticationResponse struct</dd>
+<dt>@param configurationVersion</dt>
+<dd>a ConfigurationVersion object indicating the configuration version number (as returned by function GetConfigurationVersion)</dd>
+<dt>@throws DataIntelligenceServiceException</dt>
+<dd>INVALID_AUTHENTICATION_TOKEN:if the provided authentication token is not valid or has expired (1 hour validity).</dd>
+<dd>INVALID_CONFIGURATION_VERSION: if the provided configuration version is not valid.</dd>
+<dt>@returns map&lt;string, ProcessTask&gt;</dt>
+<dd>A map containing all the defined process tasks of your account in this configuration version, with the processTaskId as key and the ProcessTask object as value (key is provided for accessibility only, as the processTaskId is also present in the ProcessTask object</dd>
+</dl>
+<br/></div><div class="definition"><h4 id="Fn_BoxalinoDataIntelligence_CreateProcessTask">Function: BoxalinoDataIntelligence.CreateProcessTask</h4>
+<pre><code>void</code> CreateProcessTask(<code><a href="BoxalinoDataIntelligenceV1.html#Struct_Authentication">Authentication</a></code> authentication,
+                       <code><a href="BoxalinoDataIntelligenceV1.html#Struct_ConfigurationVersion">ConfigurationVersion</a></code> configuration,
+                       <code>string</code> processTaskId)
+    throws <code><a href="BoxalinoDataIntelligenceV1.html#Struct_DataIntelligenceServiceException">DataIntelligenceServiceException</a></code>
+</pre>this service function creates a new process task
+
+<dl>
+<dt>@param authenticationToken</dt>
+<dd>the authentication object as returned by the GetAuthentication service function in the AuthenticationResponse struct</dd>
+<dt>@param configurationVersion</dt>
+<dd>a ConfigurationVersion object indicating the configuration version number (as returned by function GetConfigurationVersion)</dd>
+<dt>@param processTaskId</dt>
+<dd>the process task id to be created (must follow the content id format: &lt;= 50 alphanumeric characters without accent or punctuation)&lt;/dd&gt;
+<dt>@throws DataIntelligenceServiceException</dt>
+<dd>INVALID_AUTHENTICATION_TOKEN:if the provided authentication token is not valid or has expired (1 hour validity).</dd>
+<dd>INVALID_CONFIGURATION_VERSION: if the provided configuration version is not valid.</dd>
+<dd>ALREADY_EXISTING_CONTENT_ID:if the provided process task id already exists.</dd>
+<dd>INVALID_CONTENT_ID:if the provided process task id format is not valid.</dd>
+</dl>
+<br/></div><div class="definition"><h4 id="Fn_BoxalinoDataIntelligence_UpdateProcessTask">Function: BoxalinoDataIntelligence.UpdateProcessTask</h4>
+<pre><code>void</code> UpdateProcessTask(<code><a href="BoxalinoDataIntelligenceV1.html#Struct_Authentication">Authentication</a></code> authentication,
+                       <code><a href="BoxalinoDataIntelligenceV1.html#Struct_ConfigurationVersion">ConfigurationVersion</a></code> configuration,
+                       <code><a href="BoxalinoDataIntelligenceV1.html#Struct_ProcessTask">ProcessTask</a></code> processTask)
+    throws <code><a href="BoxalinoDataIntelligenceV1.html#Struct_DataIntelligenceServiceException">DataIntelligenceServiceException</a></code>
+</pre>this service function updates a process task
+
+<dl>
+<dt>@param authenticationToken</dt>
+<dd>the authentication object as returned by the GetAuthentication service function in the AuthenticationResponse struct</dd>
+<dt>@param configurationVersion</dt>
+<dd>a ConfigurationVersion object indicating the configuration version number (as returned by function GetConfigurationVersion)</dd>
+<dt>@param processTask</dt>
+<dd>a ProcessTask object to be updated (the content of the object will be updated on the content id provided)</dd>
+<dt>@throws DataIntelligenceServiceException</dt>
+<dd>INVALID_AUTHENTICATION_TOKEN:if the provided authentication token is not valid or has expired (1 hour validity).</dd>
+<dd>INVALID_CONFIGURATION_VERSION: if the provided configuration version is not valid.</dd>
+<dd>NON_EXISTING_CONTENT_ID:if the provided process task id doesn't already exists.</dd>
+<dd>INVALID_CONTENT:if the provided process task content is not valid.</dd>
+<dd>The </dd>
+</dl>
+<br/></div><div class="definition"><h4 id="Fn_BoxalinoDataIntelligence_DeleteProcessTask">Function: BoxalinoDataIntelligence.DeleteProcessTask</h4>
+<pre><code>void</code> DeleteProcessTask(<code><a href="BoxalinoDataIntelligenceV1.html#Struct_Authentication">Authentication</a></code> authentication,
+                       <code><a href="BoxalinoDataIntelligenceV1.html#Struct_ConfigurationVersion">ConfigurationVersion</a></code> configuration,
+                       <code>string</code> processTaskId)
+    throws <code><a href="BoxalinoDataIntelligenceV1.html#Struct_DataIntelligenceServiceException">DataIntelligenceServiceException</a></code>
+</pre>this service function deletes a process task
+
+<dl>
+<dt>@param authenticationToken</dt>
+<dd>the authentication object as returned by the GetAuthentication service function in the AuthenticationResponse struct</dd>
+<dt>@param configurationVersion</dt>
+<dd>a ConfigurationVersion object indicating the configuration version number (as returned by function GetConfigurationVersion)</dd>
+<dt>@param processTaskId</dt>
+<dd>the process task id to be deleted</dd>
+<dt>@throws DataIntelligenceServiceException</dt>
+<dd>INVALID_AUTHENTICATION_TOKEN:if the provided authentication token is not valid or has expired (1 hour validity).</dd>
+<dd>INVALID_CONFIGURATION_VERSION: if the provided configuration version is not valid.</dd>
+<dd>NON_EXISTING_CONTENT_ID:if the provided process task id doesn't already exists.</dd>
+</dl>
+<br/></div><div class="definition"><h4 id="Fn_BoxalinoDataIntelligence_RunProcessTask">Function: BoxalinoDataIntelligence.RunProcessTask</h4>
+<pre><code>string</code> RunProcessTask(<code><a href="BoxalinoDataIntelligenceV1.html#Struct_Authentication">Authentication</a></code> authentication,
+                      <code><a href="BoxalinoDataIntelligenceV1.html#Struct_ConfigurationVersion">ConfigurationVersion</a></code> configuration,
+                      <code><a href="BoxalinoDataIntelligenceV1.html#Struct_ProcessTaskExecutionParameters">ProcessTaskExecutionParameters</a></code> parameters)
+    throws <code><a href="BoxalinoDataIntelligenceV1.html#Struct_DataIntelligenceServiceException">DataIntelligenceServiceException</a></code>
+</pre>this service function executes a process task
+
+<dl>
+<dt>@param authenticationToken</dt>
+<dd>the authentication object as returned by the GetAuthentication service function in the AuthenticationResponse struct</dd>
+<dt>@param configurationVersion</dt>
+<dd>a ConfigurationVersion object indicating the configuration version number (as returned by function GetConfigurationVersion)</dd>
+<dt>@param processTaskId</dt>
+<dd>the process task id to be executed</dd>
+<dt>@throws DataIntelligenceServiceException</dt>
+<dd>INVALID_AUTHENTICATION_TOKEN:if the provided authentication token is not valid or has expired (1 hour validity).</dd>
+<dd>INVALID_CONFIGURATION_VERSION: if the provided configuration version is not valid.</dd>
+<dd>NON_EXISTING_CONTENT_ID:if the provided process task id doesn't already exists.</dd>
+<dt>@return process id</dt>
+<dd>the processs task execution id of this process task execution (to be used to get an updated status through GetProcessStatus)</dd>
+</dl>
+<br/></div><div class="definition"><h4 id="Fn_BoxalinoDataIntelligence_GetEmailCampaigns">Function: BoxalinoDataIntelligence.GetEmailCampaigns</h4>
+<pre><code>map&lt;<code>string</code>, <code><a href="BoxalinoDataIntelligenceV1.html#Struct_EmailCampaign">EmailCampaign</a></code>&gt;</code> GetEmailCampaigns(<code><a href="BoxalinoDataIntelligenceV1.html#Struct_Authentication">Authentication</a></code> authentication,
+                                           <code><a href="BoxalinoDataIntelligenceV1.html#Struct_ConfigurationVersion">ConfigurationVersion</a></code> configuration)
+    throws <code><a href="BoxalinoDataIntelligenceV1.html#Struct_DataIntelligenceServiceException">DataIntelligenceServiceException</a></code>
+</pre>this service function returns the map of all the defined email campaigns (key = emailCampaignId, value = EmailCampaign object).
+
+<dl>
+<dt>@param authenticationToken</dt>
+<dd>the authentication object as returned by the GetAuthentication service function in the AuthenticationResponse struct</dd>
+<dt>@param configurationVersion</dt>
+<dd>a ConfigurationVersion object indicating the configuration version number (as returned by function GetConfigurationVersion)</dd>
+<dt>@throws DataIntelligenceServiceException</dt>
+<dd>INVALID_AUTHENTICATION_TOKEN:if the provided authentication token is not valid or has expired (1 hour validity).</dd>
+<dd>INVALID_CONFIGURATION_VERSION: if the provided configuration version is not valid.</dd>
+<dt>@returns map&lt;string, EmailCampaign&gt;</dt>
+<dd>A map containing all the defined email campaigns of your account in this configuration version, with the emailCampaignId as key and the EmailCampaign object as value (key is provided for accessibility only, as the emailCampaignId is also present in the EmailCampaign object</dd>
+</dl>
+<br/></div><div class="definition"><h4 id="Fn_BoxalinoDataIntelligence_CreateEmailCampaign">Function: BoxalinoDataIntelligence.CreateEmailCampaign</h4>
+<pre><code>void</code> CreateEmailCampaign(<code><a href="BoxalinoDataIntelligenceV1.html#Struct_Authentication">Authentication</a></code> authentication,
+                         <code><a href="BoxalinoDataIntelligenceV1.html#Struct_ConfigurationVersion">ConfigurationVersion</a></code> configuration,
+                         <code>string</code> emailCampaignId)
+    throws <code><a href="BoxalinoDataIntelligenceV1.html#Struct_DataIntelligenceServiceException">DataIntelligenceServiceException</a></code>
+</pre>this service function creates a new email campaign. a campaign is something permanent , so you shouldn't create one for each sending of a newsletter (but instead update the cmpid parameter of a permanent campaign e.g.: 'newsletter')
+
+<dl>
+<dt>@param authenticationToken</dt>
+<dd>the authentication object as returned by the GetAuthentication service function in the AuthenticationResponse struct</dd>
+<dt>@param configurationVersion</dt>
+<dd>a ConfigurationVersion object indicating the configuration version number (as returned by function GetConfigurationVersion)</dd>
+<dt>@param emailCampaignId</dt>
+<dd>the email campaign id to be created (must follow the content id format: &lt;= 50 alphanumeric characters without accent or punctuation)&lt;/dd&gt;
+<dt>@throws DataIntelligenceServiceException</dt>
+<dd>INVALID_AUTHENTICATION_TOKEN:if the provided authentication token is not valid or has expired (1 hour validity).</dd>
+<dd>INVALID_CONFIGURATION_VERSION: if the provided configuration version is not valid.</dd>
+<dd>ALREADY_EXISTING_CONTENT_ID:if the provided email campaign id already exists.</dd>
+<dd>INVALID_CONTENT_ID:if the provided email campaign id format is not valid.</dd>
+</dl>
+<br/></div><div class="definition"><h4 id="Fn_BoxalinoDataIntelligence_UpdateEmailCampaign">Function: BoxalinoDataIntelligence.UpdateEmailCampaign</h4>
+<pre><code>void</code> UpdateEmailCampaign(<code><a href="BoxalinoDataIntelligenceV1.html#Struct_Authentication">Authentication</a></code> authentication,
+                         <code><a href="BoxalinoDataIntelligenceV1.html#Struct_ConfigurationVersion">ConfigurationVersion</a></code> configuration,
+                         <code><a href="BoxalinoDataIntelligenceV1.html#Struct_EmailCampaign">EmailCampaign</a></code> emailCampaign)
+    throws <code><a href="BoxalinoDataIntelligenceV1.html#Struct_DataIntelligenceServiceException">DataIntelligenceServiceException</a></code>
+</pre>this service function updates a email campaign
+
+<dl>
+<dt>@param authenticationToken</dt>
+<dd>the authentication object as returned by the GetAuthentication service function in the AuthenticationResponse struct</dd>
+<dt>@param configurationVersion</dt>
+<dd>a ConfigurationVersion object indicating the configuration version number (as returned by function GetConfigurationVersion)</dd>
+<dt>@param emailCampaign</dt>
+<dd>a EmailCampaign object to be updated (the content of the object will be updated on the content id provided)</dd>
+<dt>@throws DataIntelligenceServiceException</dt>
+<dd>INVALID_AUTHENTICATION_TOKEN:if the provided authentication token is not valid or has expired (1 hour validity).</dd>
+<dd>INVALID_CONFIGURATION_VERSION: if the provided configuration version is not valid.</dd>
+<dd>NON_EXISTING_CONTENT_ID:if the provided email campaign id doesn't already exists.</dd>
+<dd>INVALID_CONTENT:if the provided email campaign content is not valid.</dd>
+<dd>The </dd>
+</dl>
+<br/></div><div class="definition"><h4 id="Fn_BoxalinoDataIntelligence_DeleteEmailCampaign">Function: BoxalinoDataIntelligence.DeleteEmailCampaign</h4>
+<pre><code>void</code> DeleteEmailCampaign(<code><a href="BoxalinoDataIntelligenceV1.html#Struct_Authentication">Authentication</a></code> authentication,
+                         <code><a href="BoxalinoDataIntelligenceV1.html#Struct_ConfigurationVersion">ConfigurationVersion</a></code> configuration,
+                         <code>string</code> emailCampaignId)
+    throws <code><a href="BoxalinoDataIntelligenceV1.html#Struct_DataIntelligenceServiceException">DataIntelligenceServiceException</a></code>
+</pre>this service function deletes a email campaign
+
+<dl>
+<dt>@param authenticationToken</dt>
+<dd>the authentication object as returned by the GetAuthentication service function in the AuthenticationResponse struct</dd>
+<dt>@param configurationVersion</dt>
+<dd>a ConfigurationVersion object indicating the configuration version number (as returned by function GetConfigurationVersion)</dd>
+<dt>@param emailCampaignId</dt>
+<dd>the email campaign id to be deleted</dd>
+<dt>@throws DataIntelligenceServiceException</dt>
+<dd>INVALID_AUTHENTICATION_TOKEN:if the provided authentication token is not valid or has expired (1 hour validity).</dd>
+<dd>INVALID_CONFIGURATION_VERSION: if the provided configuration version is not valid.</dd>
+<dd>NON_EXISTING_CONTENT_ID:if the provided email campaign id doesn't already exists.</dd>
+</dl>
+<br/></div><div class="definition"><h4 id="Fn_BoxalinoDataIntelligence_GetChoices">Function: BoxalinoDataIntelligence.GetChoices</h4>
+<pre><code>map&lt;<code>string</code>, <code><a href="BoxalinoDataIntelligenceV1.html#Struct_Choice">Choice</a></code>&gt;</code> GetChoices(<code><a href="BoxalinoDataIntelligenceV1.html#Struct_Authentication">Authentication</a></code> authentication,
+                             <code><a href="BoxalinoDataIntelligenceV1.html#Struct_ConfigurationVersion">ConfigurationVersion</a></code> configuration,
+                             <code>string</code> choiceSourceId)
+    throws <code><a href="BoxalinoDataIntelligenceV1.html#Struct_DataIntelligenceServiceException">DataIntelligenceServiceException</a></code>
+</pre>this service function returns the map of all the defined choices (key = choiceId, value = Choice object).
+
+<dl>
+<dt>@param authenticationToken</dt>
+<dd>the authentication object as returned by the GetAuthentication service function in the AuthenticationResponse struct</dd>
+<dt>@param configurationVersion</dt>
+<dd>a ConfigurationVersion object indicating the configuration version number (as returned by function GetConfigurationVersion)</dd>
+<dt>@param choiceSourceId</dt>
+<dd>the choice source id (identifying the system being the source of the choices, if you don't have a choice source id already, please contact support@boxalino.com) (must follow the content id format: &lt;= 50 alphanumeric characters without accent or punctuation)&lt;/dd&gt;
+<dt>@throws DataIntelligenceServiceException</dt>
+<dd>INVALID_AUTHENTICATION_TOKEN:if the provided authentication token is not valid or has expired (1 hour validity).</dd>
+<dd>INVALID_CONFIGURATION_VERSION: if the provided configuration version is not valid.</dd>
+<dt>@returns map&lt;string, Choice&gt;</dt>
+<dd>A map containing all the defined choices of your account in this configuration version, with the choiceId as key and the Choice object as value (key is provided for accessibility only, as the choiceId is also present in the Choice object</dd>
+</dl>
+<br/></div><div class="definition"><h4 id="Fn_BoxalinoDataIntelligence_CreateChoice">Function: BoxalinoDataIntelligence.CreateChoice</h4>
+<pre><code>void</code> CreateChoice(<code><a href="BoxalinoDataIntelligenceV1.html#Struct_Authentication">Authentication</a></code> authentication,
+                  <code><a href="BoxalinoDataIntelligenceV1.html#Struct_ConfigurationVersion">ConfigurationVersion</a></code> configuration,
+                  <code>string</code> choiceSourceId,
+                  <code>string</code> choiceId)
+    throws <code><a href="BoxalinoDataIntelligenceV1.html#Struct_DataIntelligenceServiceException">DataIntelligenceServiceException</a></code>
+</pre>this service function creates a new choice
+
+<dl>
+<dt>@param authenticationToken</dt>
+<dd>the authentication object as returned by the GetAuthentication service function in the AuthenticationResponse struct</dd>
+<dt>@param configurationVersion</dt>
+<dd>a ConfigurationVersion object indicating the configuration version number (as returned by function GetConfigurationVersion)</dd>
+<dd>the choice source id (identifying the system being the source of the choices, if you don't have a choice source id already, please contact support@boxalino.com) (must follow the content id format: &lt;= 50 alphanumeric characters without accent or punctuation)&lt;/dd&gt;
+<dt>@param choiceId</dt>
+<dd>the choice id to be created (must follow the content id format: &lt;= 50 alphanumeric characters without accent or punctuation)&lt;/dd&gt;
+<dt>@throws DataIntelligenceServiceException</dt>
+<dd>INVALID_AUTHENTICATION_TOKEN:if the provided authentication token is not valid or has expired (1 hour validity).</dd>
+<dd>INVALID_CONFIGURATION_VERSION: if the provided configuration version is not valid.</dd>
+<dd>ALREADY_EXISTING_CONTENT_ID:if the provided choice id already exists.</dd>
+<dd>INVALID_CONTENT_ID:if the provided choice id format is not valid.</dd>
+</dl>
+<br/></div><div class="definition"><h4 id="Fn_BoxalinoDataIntelligence_UpdateChoice">Function: BoxalinoDataIntelligence.UpdateChoice</h4>
+<pre><code>void</code> UpdateChoice(<code><a href="BoxalinoDataIntelligenceV1.html#Struct_Authentication">Authentication</a></code> authentication,
+                  <code><a href="BoxalinoDataIntelligenceV1.html#Struct_ConfigurationVersion">ConfigurationVersion</a></code> configuration,
+                  <code>string</code> choiceSourceId,
+                  <code><a href="BoxalinoDataIntelligenceV1.html#Struct_Choice">Choice</a></code> choice)
+    throws <code><a href="BoxalinoDataIntelligenceV1.html#Struct_DataIntelligenceServiceException">DataIntelligenceServiceException</a></code>
+</pre>this service function updates a choice
+
+<dl>
+<dt>@param authenticationToken</dt>
+<dd>the authentication object as returned by the GetAuthentication service function in the AuthenticationResponse struct</dd>
+<dt>@param configurationVersion</dt>
+<dd>a ConfigurationVersion object indicating the configuration version number (as returned by function GetConfigurationVersion)</dd>
+<dd>the choice source id (identifying the system being the source of the choices, if you don't have a choice source id already, please contact support@boxalino.com) (must follow the content id format: &lt;= 50 alphanumeric characters without accent or punctuation)&lt;/dd&gt;
+<dt>@param choice</dt>
+<dd>a Choice object to be updated (the content of the object will be updated on the content id provided)</dd>
+<dt>@throws DataIntelligenceServiceException</dt>
+<dd>INVALID_AUTHENTICATION_TOKEN:if the provided authentication token is not valid or has expired (1 hour validity).</dd>
+<dd>INVALID_CONFIGURATION_VERSION: if the provided configuration version is not valid.</dd>
+<dd>NON_EXISTING_CONTENT_ID:if the provided choice id doesn't already exists.</dd>
+<dd>INVALID_CONTENT:if the provided choice content is not valid.</dd>
+<dd>The </dd>
+</dl>
+<br/></div><div class="definition"><h4 id="Fn_BoxalinoDataIntelligence_DeleteChoice">Function: BoxalinoDataIntelligence.DeleteChoice</h4>
+<pre><code>void</code> DeleteChoice(<code><a href="BoxalinoDataIntelligenceV1.html#Struct_Authentication">Authentication</a></code> authentication,
+                  <code><a href="BoxalinoDataIntelligenceV1.html#Struct_ConfigurationVersion">ConfigurationVersion</a></code> configuration,
+                  <code>string</code> choiceSourceId,
+                  <code>string</code> choiceId)
+    throws <code><a href="BoxalinoDataIntelligenceV1.html#Struct_DataIntelligenceServiceException">DataIntelligenceServiceException</a></code>
+</pre>this service function deletes a choice
+
+<dl>
+<dt>@param authenticationToken</dt>
+<dd>the authentication object as returned by the GetAuthentication service function in the AuthenticationResponse struct</dd>
+<dt>@param configurationVersion</dt>
+<dd>a ConfigurationVersion object indicating the configuration version number (as returned by function GetConfigurationVersion)</dd>
+<dd>the choice source id (identifying the system being the source of the choices, if you don't have a choice source id already, please contact support@boxalino.com) (must follow the content id format: &lt;= 50 alphanumeric characters without accent or punctuation)&lt;/dd&gt;
+<dt>@param choiceId</dt>
+<dd>the choice id to be deleted</dd>
+<dt>@throws DataIntelligenceServiceException</dt>
+<dd>INVALID_AUTHENTICATION_TOKEN:if the provided authentication token is not valid or has expired (1 hour validity).</dd>
+<dd>INVALID_CONFIGURATION_VERSION: if the provided configuration version is not valid.</dd>
+<dd>NON_EXISTING_CONTENT_ID:if the provided choice id doesn't already exists.</dd>
+</dl>
+<br/></div><div class="definition"><h4 id="Fn_BoxalinoDataIntelligence_GetChoiceVariants">Function: BoxalinoDataIntelligence.GetChoiceVariants</h4>
+<pre><code>map&lt;<code>string</code>, <code><a href="BoxalinoDataIntelligenceV1.html#Struct_ChoiceVariant">ChoiceVariant</a></code>&gt;</code> GetChoiceVariants(<code><a href="BoxalinoDataIntelligenceV1.html#Struct_Authentication">Authentication</a></code> authentication,
+                                           <code><a href="BoxalinoDataIntelligenceV1.html#Struct_ConfigurationVersion">ConfigurationVersion</a></code> configuration,
+                                           <code>string</code> choiceSourceId,
+                                           <code>string</code> choiceId)
+    throws <code><a href="BoxalinoDataIntelligenceV1.html#Struct_DataIntelligenceServiceException">DataIntelligenceServiceException</a></code>
+</pre>this service function returns the map of all the defined choices (key = choiceId, value = Choice object).
+
+<dl>
+<dt>@param authenticationToken</dt>
+<dd>the authentication object as returned by the GetAuthentication service function in the AuthenticationResponse struct</dd>
+<dt>@param configurationVersion</dt>
+<dd>a ConfigurationVersion object indicating the configuration version number (as returned by function GetConfigurationVersion)</dd>
+<dd>the choice source id (identifying the system being the source of the choices, if you don't have a choice source id already, please contact support@boxalino.com) (must follow the content id format: &lt;= 50 alphanumeric characters without accent or punctuation)&lt;/dd&gt;
+<dt>@param choiceId</dt>
+<dd>the choice id on which to get the choice variants from</dd>
+<dt>@throws DataIntelligenceServiceException</dt>
+<dd>INVALID_AUTHENTICATION_TOKEN:if the provided authentication token is not valid or has expired (1 hour validity).</dd>
+<dd>INVALID_CONFIGURATION_VERSION: if the provided configuration version is not valid.</dd>
+<dd>NON_EXISTING_CONTENT_ID:if the provided choice id doesn't already exists.</dd>
+<dt>@returns map&lt;string, Choice&gt;</dt>
+<dd>A map containing all the defined choice variants of your account in this configuration version and for this specific choice, with the choiceVariantId as key and the ChoiceVariant object as value (key is provided for accessibility only, as the choiceVariantId is also present in the ChoiceVariant object</dd>
+</dl>
+<br/></div><div class="definition"><h4 id="Fn_BoxalinoDataIntelligence_CreateChoiceVariant">Function: BoxalinoDataIntelligence.CreateChoiceVariant</h4>
+<pre><code>void</code> CreateChoiceVariant(<code><a href="BoxalinoDataIntelligenceV1.html#Struct_Authentication">Authentication</a></code> authentication,
+                         <code><a href="BoxalinoDataIntelligenceV1.html#Struct_ConfigurationVersion">ConfigurationVersion</a></code> configuration,
+                         <code>string</code> choiceSourceId,
+                         <code>string</code> choiceId,
+                         <code>string</code> choiceVariantId)
+    throws <code><a href="BoxalinoDataIntelligenceV1.html#Struct_DataIntelligenceServiceException">DataIntelligenceServiceException</a></code>
+</pre>this service function creates a new choice
+
+<dl>
+<dt>@param authenticationToken</dt>
+<dd>the authentication object as returned by the GetAuthentication service function in the AuthenticationResponse struct</dd>
+<dt>@param configurationVersion</dt>
+<dd>a ConfigurationVersion object indicating the configuration version number (as returned by function GetConfigurationVersion)</dd>
+<dd>the choice source id (identifying the system being the source of the choices, if you don't have a choice source id already, please contact support@boxalino.com) (must follow the content id format: &lt;= 50 alphanumeric characters without accent or punctuation)&lt;/dd&gt;
+<dt>@param choiceId</dt>
+<dd>the choice id on which to create a new choice variant (must exists)</dd>
+<dt>@param choiceVariantId</dt>
+<dd>the choice variant id to be created (must follow the content id format: &lt;= 50 alphanumeric characters without accent or punctuation)&lt;/dd&gt;
+<dt>@throws DataIntelligenceServiceException</dt>
+<dd>INVALID_AUTHENTICATION_TOKEN:if the provided authentication token is not valid or has expired (1 hour validity).</dd>
+<dd>INVALID_CONFIGURATION_VERSION: if the provided configuration version is not valid.</dd>
+<dd>NON_EXISTING_CONTENT_ID:if the provided choice id doesn't already exists.</dd>
+<dd>ALREADY_EXISTING_CONTENT_ID:if the provided choice variant id already exists.</dd>
+<dd>INVALID_CONTENT_ID:if the provided choice variant id format is not valid.</dd>
+</dl>
+<br/></div><div class="definition"><h4 id="Fn_BoxalinoDataIntelligence_UpdateChoiceVariant">Function: BoxalinoDataIntelligence.UpdateChoiceVariant</h4>
+<pre><code>void</code> UpdateChoiceVariant(<code><a href="BoxalinoDataIntelligenceV1.html#Struct_Authentication">Authentication</a></code> authentication,
+                         <code><a href="BoxalinoDataIntelligenceV1.html#Struct_ConfigurationVersion">ConfigurationVersion</a></code> configuration,
+                         <code>string</code> choiceSourceId,
+                         <code><a href="BoxalinoDataIntelligenceV1.html#Struct_ChoiceVariant">ChoiceVariant</a></code> choiceVariant)
+    throws <code><a href="BoxalinoDataIntelligenceV1.html#Struct_DataIntelligenceServiceException">DataIntelligenceServiceException</a></code>
+</pre>this service function updates a choice
+
+<dl>
+<dt>@param authenticationToken</dt>
+<dd>the authentication object as returned by the GetAuthentication service function in the AuthenticationResponse struct</dd>
+<dt>@param configurationVersion</dt>
+<dd>a ConfigurationVersion object indicating the configuration version number (as returned by function GetConfigurationVersion)</dd>
+<dd>the choice source id (identifying the system being the source of the choices, if you don't have a choice source id already, please contact support@boxalino.com) (must follow the content id format: &lt;= 50 alphanumeric characters without accent or punctuation)&lt;/dd&gt;
+<dt>@param choiceVariant</dt>
+<dd>a ChoiceVariant object to be updated (the content of the object will be updated on the content id provided)</dd>
+<dt>@throws DataIntelligenceServiceException</dt>
+<dd>INVALID_AUTHENTICATION_TOKEN:if the provided authentication token is not valid or has expired (1 hour validity).</dd>
+<dd>INVALID_CONFIGURATION_VERSION: if the provided configuration version is not valid.</dd>
+<dd>NON_EXISTING_CONTENT_ID:if the provided choice variant id doesn't already exists.</dd>
+<dd>INVALID_CONTENT:if the provided choice variant content is not valid.</dd>
+<dd>The </dd>
+</dl>
+<br/></div><div class="definition"><h4 id="Fn_BoxalinoDataIntelligence_DeleteChoiceVariant">Function: BoxalinoDataIntelligence.DeleteChoiceVariant</h4>
+<pre><code>void</code> DeleteChoiceVariant(<code><a href="BoxalinoDataIntelligenceV1.html#Struct_Authentication">Authentication</a></code> authentication,
+                         <code><a href="BoxalinoDataIntelligenceV1.html#Struct_ConfigurationVersion">ConfigurationVersion</a></code> configuration,
+                         <code>string</code> choiceSourceId,
+                         <code>string</code> choiceId,
+                         <code>string</code> choiceVariantId)
+    throws <code><a href="BoxalinoDataIntelligenceV1.html#Struct_DataIntelligenceServiceException">DataIntelligenceServiceException</a></code>
+</pre>this service function deletes a choice
+
+<dl>
+<dt>@param authenticationToken</dt>
+<dd>the authentication object as returned by the GetAuthentication service function in the AuthenticationResponse struct</dd>
+<dt>@param configurationVersion</dt>
+<dd>a ConfigurationVersion object indicating the configuration version number (as returned by function GetConfigurationVersion)</dd>
+<dd>the choice source id (identifying the system being the source of the choices, if you don't have a choice source id already, please contact support@boxalino.com) (must follow the content id format: &lt;= 50 alphanumeric characters without accent or punctuation)&lt;/dd&gt;
+<dt>@param choiceId</dt>
+<dd>the choice id on which to delete the choice variant id</dd>
+<dt>@param choiceId</dt>
+<dd>the choice variant id to be deleted</dd>
+<dt>@throws DataIntelligenceServiceException</dt>
+<dd>INVALID_AUTHENTICATION_TOKEN:if the provided authentication token is not valid or has expired (1 hour validity).</dd>
+<dd>INVALID_CONFIGURATION_VERSION: if the provided configuration version is not valid.</dd>
+<dd>NON_EXISTING_CONTENT_ID:if the provided choice or choice variant id doesn't already exists.</dd>
+</dl>
+<br/></div><div class="definition"><h4 id="Fn_BoxalinoDataIntelligence_GetProcessStatus">Function: BoxalinoDataIntelligence.GetProcessStatus</h4>
+<pre><code><a href="BoxalinoDataIntelligenceV1.html#Struct_ProcessTaskExecutionStatus">ProcessTaskExecutionStatus</a></code> GetProcessStatus(<code><a href="BoxalinoDataIntelligenceV1.html#Struct_Authentication">Authentication</a></code> authentication,
+                                            <code><a href="BoxalinoDataIntelligenceV1.html#Struct_ConfigurationVersion">ConfigurationVersion</a></code> configuration,
+                                            <code>string</code> processTaskExecutionId)
+    throws <code><a href="BoxalinoDataIntelligenceV1.html#Struct_DataIntelligenceServiceException">DataIntelligenceServiceException</a></code>
+</pre>this service function retrieves a process status
+
+<dl>
+<dt>@param authenticationToken</dt>
+<dd>the authentication object as returned by the GetAuthentication service function in the AuthenticationResponse struct</dd>
+<dt>@param configurationVersion</dt>
+<dd>a ConfigurationVersion object indicating the configuration version number (as returned by function GetConfigurationVersion)</dd>
+<dt>@param processTaskExecutionId</dt>
+<dd>the process task execution status id to retrieve the status of</dd>
+<dt>@return process task execution status</dt>
+<dd>the current status of this process task execution id</dd>
+</dl>
+<br/></div><div class="definition"><h4 id="Fn_BoxalinoDataIntelligence_GetConfigurationDifferences">Function: BoxalinoDataIntelligence.GetConfigurationDifferences</h4>
+<pre><code>list&lt;<code><a href="BoxalinoDataIntelligenceV1.html#Struct_ConfigurationDifference">ConfigurationDifference</a></code>&gt;</code> GetConfigurationDifferences(<code><a href="BoxalinoDataIntelligenceV1.html#Struct_Authentication">Authentication</a></code> authentication,
+                                                          <code><a href="BoxalinoDataIntelligenceV1.html#Struct_ConfigurationVersion">ConfigurationVersion</a></code> configurationVersionSource,
+                                                          <code><a href="BoxalinoDataIntelligenceV1.html#Struct_ConfigurationVersion">ConfigurationVersion</a></code> configurationVersionDestination)
+    throws <code><a href="BoxalinoDataIntelligenceV1.html#Struct_DataIntelligenceServiceException">DataIntelligenceServiceException</a></code>
+</pre>this service retrieves the list of configuration changes between two versions (typically between dev and prod versions)
+
+<dl>
+<dt>@param authenticationToken</dt>
+<dd>the authentication object as returned by the GetAuthentication service function in the AuthenticationResponse struct</dd>
+<dt>@param configurationVersionSource</dt>
+<dd>a ConfigurationVersion object indicating the configuration version number (as returned by function GetConfigurationVersion) to be considered as the source (typically the version returned by GetConfigurationVersion with the ConfigurationVersionType CURRENT_DEVELOPMENT_VERSION)</dd>
+<dt>@param configurationVersionDestination</dt>
+<dd>a ConfigurationVersion object indicating the configuration version number (as returned by function GetConfigurationVersion) to be considered as the destination (typically the  version returned by GetConfigurationVersion with the ConfigurationVersionType CURRENT_PRODUCTION_VERSION)</dd>
+<dt>@throws DataIntelligenceServiceException</dt>
+<dd>INVALID_AUTHENTICATION_TOKEN:if the provided authentication token is not valid or has expired (1 hour validity).</dd>
+<dd>INVALID_CONFIGURATION_VERSION: if one of provided configuration versions is not valid.</dd>
+</dl>
+<br/></div><div class="definition"><h4 id="Fn_BoxalinoDataIntelligence_PublishConfiguration">Function: BoxalinoDataIntelligence.PublishConfiguration</h4>
+<pre><code>void</code> PublishConfiguration(<code><a href="BoxalinoDataIntelligenceV1.html#Struct_Authentication">Authentication</a></code> authentication,
+                          <code><a href="BoxalinoDataIntelligenceV1.html#Struct_ConfigurationVersion">ConfigurationVersion</a></code> configuration)
+    throws <code><a href="BoxalinoDataIntelligenceV1.html#Struct_DataIntelligenceServiceException">DataIntelligenceServiceException</a></code>
+</pre>this service retrieves publishes the provided configuration version. The result is that this configuration will become the CURRENT_PRODUCTION_VERSION version and will be used automatically by all running processes. Also, as a consequence, a copy of the provided configuration version will be done and will become the new CURRENT_DEVELOPMENT_VERSION.
+
+<dl>
+<dt>@param authenticationToken</dt>
+<dd>the authentication object as returned by the GetAuthentication service function in the AuthenticationResponse struct</dd>
+<dt>@param configurationVersion</dt>
+<dd>a ConfigurationVersion object indicating the configuration version number (as returned by function GetConfigurationVersion)</dd>
+<dt>@throws DataIntelligenceServiceException</dt>
+<dd>INVALID_AUTHENTICATION_TOKEN:if the provided authentication token is not valid or has expired (1 hour validity).</dd>
+<dd>INVALID_CONFIGURATION_VERSION: if the provided configuration version is not valid.</dd>
+</dl>
+<br/></div><div class="definition"><h4 id="Fn_BoxalinoDataIntelligence_CloneConfiguration">Function: BoxalinoDataIntelligence.CloneConfiguration</h4>
+<pre><code>void</code> CloneConfiguration(<code><a href="BoxalinoDataIntelligenceV1.html#Struct_Authentication">Authentication</a></code> authentication,
+                        <code><a href="BoxalinoDataIntelligenceV1.html#Struct_ConfigurationVersion">ConfigurationVersion</a></code> configuration)
+    throws <code><a href="BoxalinoDataIntelligenceV1.html#Struct_DataIntelligenceServiceException">DataIntelligenceServiceException</a></code>
+</pre>this service copies the provided configuration version. The result is that this new configuration will become the CURRENT_DEVELOPMENT_VERSION.
+
+<dl>
+<dt>@param authenticationToken</dt>
+<dd>the authentication object as returned by the GetAuthentication service function in the AuthenticationResponse struct</dd>
+<dt>@param configurationVersion</dt>
+<dd>a ConfigurationVersion object indicating the configuration version number (as returned by function GetConfigurationVersion)</dd>
+<dt>@throws DataIntelligenceServiceException</dt>
+<dd>INVALID_AUTHENTICATION_TOKEN:if the provided authentication token is not valid or has expired (1 hour validity).</dd>
+<dd>INVALID_CONFIGURATION_VERSION: if the provided configuration version is not valid.</dd>
+</dl>
+<br/></div><div class="definition"><h4 id="Fn_BoxalinoDataIntelligence_CreateReferenceCSVFile">Function: BoxalinoDataIntelligence.CreateReferenceCSVFile</h4>
+<pre><code><a href="BoxalinoDataIntelligenceV1.html#Struct_ReferenceCSVFileDescriptor">ReferenceCSVFileDescriptor</a></code> CreateReferenceCSVFile(<code><a href="BoxalinoDataIntelligenceV1.html#Struct_Authentication">Authentication</a></code> authentication,
+                                                  <code><a href="BoxalinoDataIntelligenceV1.html#Struct_ConfigurationVersion">ConfigurationVersion</a></code> configuration,
+                                                  <code><a href="BoxalinoDataIntelligenceV1.html#Struct_ReferenceCSVFileDescriptor">ReferenceCSVFileDescriptor</a></code> fileDescriptor)
+    throws <code><a href="BoxalinoDataIntelligenceV1.html#Struct_DataIntelligenceServiceException">DataIntelligenceServiceException</a></code>
+</pre>This service is responsible for reference csv file creation. It allows to configure csv schema which will be imported as fields in DI.
+File should be uploaded as an attachement to the POST HTTP request sent to the following URL:
+     http://di1.bx-cloud.com/frontend/dbmind/_/en/dbmind/api/reference/csv/file/upload?iframeAccount={account}&fileHash={ReferenceCSVFileDescriptor.fileHash}
+File hash is set by the API internally and cannot be changed.
+
+<dl>
+<dt>@param authentication</dt>
+<dd>the authentication object as returned by the GetAuthentication service function in the AuthenticationResponse struct</dd>
+<dt>@param configuration</dt>
+<dd>a ConfigurationVersion object indicating the configuration version number (as returned by function GetConfigurationVersion)</dd>
+<dt>@param fileDescriptor</dt>
+<dd>a ReferenceCSVFileDescriptor object describing the file that we want to create</dd>
+<dt>@return</dt>
+<dd>updated copy of ReferenceCSVFileDescriptor object describing the created file, with the file hash set</dd>
+<dt>@throws DataIntelligenceServiceException</dt>
+<dd>INVALID_AUTHENTICATION_TOKEN:if the provided authentication token is not valid or has expired (1 hour validity).</dd>
+<dd>INVALID_CONFIGURATION_VERSION: if the provided configuration version is not valid.</dd>
+<dd>DUPLICATED_FILE_ID: if the given file identifier already exists</dd>
+<dd>EMPTY_COLUMNS_LIST: if the given columns list is empty</dd>
+</dl>
+<br/></div><div class="definition"><h4 id="Fn_BoxalinoDataIntelligence_UpdateReferenceCSVFile">Function: BoxalinoDataIntelligence.UpdateReferenceCSVFile</h4>
+<pre><code>void</code> UpdateReferenceCSVFile(<code><a href="BoxalinoDataIntelligenceV1.html#Struct_Authentication">Authentication</a></code> authentication,
+                            <code><a href="BoxalinoDataIntelligenceV1.html#Struct_ConfigurationVersion">ConfigurationVersion</a></code> configuration,
+                            <code><a href="BoxalinoDataIntelligenceV1.html#Struct_ReferenceCSVFileDescriptor">ReferenceCSVFileDescriptor</a></code> fileDescriptor)
+    throws <code><a href="BoxalinoDataIntelligenceV1.html#Struct_DataIntelligenceServiceException">DataIntelligenceServiceException</a></code>
+</pre>This service is responsible for updating reference csv file.
+
+<dl>
+<dt>@param authentication</dt>
+<dd>the authentication object as returned by the GetAuthentication service function in the AuthenticationResponse struct</dd>
+<dt>@param configuration</dt>
+<dd>a ConfigurationVersion object indicating the configuration version number (as returned by function GetConfigurationVersion)</dd>
+<dt>@param fileDescriptor</dt>
+<dd>an updated ReferenceCSVFileDescriptor object</dd>
+<dt>@throws DataIntelligenceServiceException</dt>
+<dd>INVALID_AUTHENTICATION_TOKEN: if the provided authentication token is not valid or has expired (1 hour validity).</dd>
+<dd>INVALID_CONFIGURATION_VERSION: if the provided configuration version is not valid.</dd>
+<dd>EMPTY_COLUMNS_LIST: if the given columns list is empty</dd>
+<dd>NON_EXISTING_FILE: if the file does not exist</dd>
+</dl>
+<br/></div><div class="definition"><h4 id="Fn_BoxalinoDataIntelligence_DeleteReferenceCSVFile">Function: BoxalinoDataIntelligence.DeleteReferenceCSVFile</h4>
+<pre><code>void</code> DeleteReferenceCSVFile(<code><a href="BoxalinoDataIntelligenceV1.html#Struct_Authentication">Authentication</a></code> authentication,
+                            <code><a href="BoxalinoDataIntelligenceV1.html#Struct_ConfigurationVersion">ConfigurationVersion</a></code> configuration,
+                            <code><a href="BoxalinoDataIntelligenceV1.html#Struct_ReferenceCSVFileDescriptor">ReferenceCSVFileDescriptor</a></code> fileDescriptor)
+    throws <code><a href="BoxalinoDataIntelligenceV1.html#Struct_DataIntelligenceServiceException">DataIntelligenceServiceException</a></code>
+</pre>This service is responsible for reference csv file removal.
+
+<dl>
+<dt>@param authentication</dt>
+<dd>the authentication object as returned by the GetAuthentication service function in the AuthenticationResponse struct</dd>
+<dt>@param configuration</dt>
+<dd>a ConfigurationVersion object indicating the configuration version number (as returned by function GetConfigurationVersion)</dd>
+<dt>@param fileDescriptor</dt>
+<dd>the ReferenceCSVFileDescriptor object to be removed</dd>
+<dt>@throws DataIntelligenceServiceException</dt>
+<dd>INVALID_AUTHENTICATION_TOKEN: if the provided authentication token is not valid or has expired (1 hour validity).</dd>
+<dd>INVALID_CONFIGURATION_VERSION: if the provided configuration version is not valid.</dd>
+<dd>NON_EXISTING_FILE: if the file does not exist</dd>
+</dl>
+<br/></div><div class="definition"><h4 id="Fn_BoxalinoDataIntelligence_GetAllReferenceCSVFiles">Function: BoxalinoDataIntelligence.GetAllReferenceCSVFiles</h4>
+<pre><code>list&lt;<code><a href="BoxalinoDataIntelligenceV1.html#Struct_ReferenceCSVFileDescriptor">ReferenceCSVFileDescriptor</a></code>&gt;</code> GetAllReferenceCSVFiles(<code><a href="BoxalinoDataIntelligenceV1.html#Struct_Authentication">Authentication</a></code> authentication,
+                                                         <code><a href="BoxalinoDataIntelligenceV1.html#Struct_ConfigurationVersion">ConfigurationVersion</a></code> configuration)
+    throws <code><a href="BoxalinoDataIntelligenceV1.html#Struct_DataIntelligenceServiceException">DataIntelligenceServiceException</a></code>
+</pre>This service is responsible for getting all registered csv files.
+
+<dl>
+<dt>@param authentication</dt>
+<dd>the authentication object as returned by the GetAuthentication service function in the AuthenticationResponse struct</dd>
+<dt>@param configuration</dt>
+<dd>a ConfigurationVersion object indicating the configuration version number (as returned by function GetConfigurationVersion)</dd>
+<dt>@return</dt>
+<dd>list of all reference csv files assigned to the current account</dd>
+<dt>@throws DataIntelligenceServiceException</dt>
+<dd>INVALID_AUTHENTICATION_TOKEN: if the provided authentication token is not valid or has expired (1 hour validity).</dd>
+<dd>INVALID_CONFIGURATION_VERSION: if the provided configuration version is not valid.</dd>
+</dl>
+<br/></div><div class="definition"><h4 id="Fn_BoxalinoDataIntelligence_CreateFieldsFromReferenceCSVFile">Function: BoxalinoDataIntelligence.CreateFieldsFromReferenceCSVFile</h4>
+<pre><code>void</code> CreateFieldsFromReferenceCSVFile(<code><a href="BoxalinoDataIntelligenceV1.html#Struct_Authentication">Authentication</a></code> authentication,
+                                      <code><a href="BoxalinoDataIntelligenceV1.html#Struct_ConfigurationVersion">ConfigurationVersion</a></code> configurationVersion,
+                                      <code>string</code> fieldsConfigurationXML)
+    throws <code><a href="BoxalinoDataIntelligenceV1.html#Struct_DataIntelligenceServiceException">DataIntelligenceServiceException</a></code>
+</pre>this service function creates additional fields
+
+<dl>
+<dt>@param authentication</dt>
+<dd>the authentication object as returned by the GetAuthentication service function in the AuthenticationResponse struct</dd>
+<dt>@param configuration</dt>
+<dd>a ConfigurationVersion object indicating the configuration version number (as returned by function GetConfigurationVersion)</dd>
+<dt>@param fieldsConfigurationXML</dt>
+<dd>the fields configuration XML must follow the strict XML format and content as defined in the Boxalino documentation. This XML described fields which have to be created by parsing existing reference csv file.</dd>
+<dt>@throws DataIntelligenceServiceException</dt>
+<dd>INVALID_AUTHENTICATION_TOKEN:if the provided authentication token is not valid or has expired (1 hour validity).</dd>
+<dd>INVALID_CONFIGURATION_VERSION: if the provided configuration version is not valid.</dd>
+<dd>INVALID_DATASOURCE_XML:if the provided new data source XML string doesn't match the required format (see documentation of the data source XML format)</dd>
+</dl>
+<br/></div><div class="definition"><h4 id="Fn_BoxalinoDataIntelligence_GetSchedulings">Function: BoxalinoDataIntelligence.GetSchedulings</h4>
+<pre><code>map&lt;<code>string</code>, <code><a href="BoxalinoDataIntelligenceV1.html#Struct_Scheduling">Scheduling</a></code>&gt;</code> GetSchedulings(<code><a href="BoxalinoDataIntelligenceV1.html#Struct_Authentication">Authentication</a></code> authentication,
+                                     <code><a href="BoxalinoDataIntelligenceV1.html#Struct_ConfigurationVersion">ConfigurationVersion</a></code> configuration)
+    throws <code><a href="BoxalinoDataIntelligenceV1.html#Struct_DataIntelligenceServiceException">DataIntelligenceServiceException</a></code>
+</pre>this service function returns the map of all the defined schedulings (key = schedulingId, value = Scheduling object).
+
+<dl>
+<dt>@param authenticationToken</dt>
+<dd>the authentication object as returned by the GetAuthentication service function in the AuthenticationResponse struct</dd>
+<dt>@param configurationVersion</dt>
+<dd>a ConfigurationVersion object indicating the configuration version number (as returned by function GetConfigurationVersion)</dd>
+<dt>@throws DataIntelligenceServiceException</dt>
+<dd>INVALID_AUTHENTICATION_TOKEN:if the provided authentication token is not valid or has expired (1 hour validity).</dd>
+<dd>INVALID_CONFIGURATION_VERSION: if the provided configuration version is not valid.</dd>
+<dt>@returns map&lt;string, Scheduling&gt;</dt>
+<dd>A map containing all the defined schedulings of your account in this configuration version, with the schedulingId as key and the Scheduling object as value (key is provided for accessibility only, as the schedulingId is also present in the Scheduling object</dd>
+</dl>
+<br/></div><div class="definition"><h4 id="Fn_BoxalinoDataIntelligence_CreateScheduling">Function: BoxalinoDataIntelligence.CreateScheduling</h4>
+<pre><code>void</code> CreateScheduling(<code><a href="BoxalinoDataIntelligenceV1.html#Struct_Authentication">Authentication</a></code> authentication,
+                      <code><a href="BoxalinoDataIntelligenceV1.html#Struct_ConfigurationVersion">ConfigurationVersion</a></code> configuration,
+                      <code>string</code> schedulingId)
+    throws <code><a href="BoxalinoDataIntelligenceV1.html#Struct_DataIntelligenceServiceException">DataIntelligenceServiceException</a></code>
+</pre>this service function creates a new scheduling. A scheduling is a collection of process tasks to be executed one after the other by the system.
+
+<dl>
+<dt>@param authenticationToken</dt>
+<dd>the authentication object as returned by the GetAuthentication service function in the AuthenticationResponse struct</dd>
+<dt>@param configurationVersion</dt>
+<dd>a ConfigurationVersion object indicating the configuration version number (as returned by function GetConfigurationVersion)</dd>
+<dt>@param schedulingId</dt>
+<dd>the scheduling id to be created (must follow the content id format: &lt;= 50 alphanumeric characters without accent or punctuation)&lt;/dd&gt;
+<dt>@throws DataIntelligenceServiceException</dt>
+<dd>INVALID_AUTHENTICATION_TOKEN:if the provided authentication token is not valid or has expired (1 hour validity).</dd>
+<dd>INVALID_CONFIGURATION_VERSION: if the provided configuration version is not valid.</dd>
+<dd>ALREADY_EXISTING_CONTENT_ID:if the provided  scheduling id already exists.</dd>
+<dd>INVALID_CONTENT_ID:if the provided scheduling id format is not valid.</dd>
+</dl>
+<br/></div><div class="definition"><h4 id="Fn_BoxalinoDataIntelligence_UpdateScheduling">Function: BoxalinoDataIntelligence.UpdateScheduling</h4>
+<pre><code>void</code> UpdateScheduling(<code><a href="BoxalinoDataIntelligenceV1.html#Struct_Authentication">Authentication</a></code> authentication,
+                      <code><a href="BoxalinoDataIntelligenceV1.html#Struct_ConfigurationVersion">ConfigurationVersion</a></code> configuration,
+                      <code><a href="BoxalinoDataIntelligenceV1.html#Struct_Scheduling">Scheduling</a></code> scheduling)
+    throws <code><a href="BoxalinoDataIntelligenceV1.html#Struct_DataIntelligenceServiceException">DataIntelligenceServiceException</a></code>
+</pre>this service function updates a scheduling. A scheduling is a collection of process tasks to be executed one after the other by the system.
+
+<dl>
+<dt>@param authenticationToken</dt>
+<dd>the authentication object as returned by the GetAuthentication service function in the AuthenticationResponse struct</dd>
+<dt>@param configurationVersion</dt>
+<dd>a ConfigurationVersion object indicating the configuration version number (as returned by function GetConfigurationVersion)</dd>
+<dt>@param scheduling</dt>
+<dd>a Scheduling object to be updated (the content of the object will be updated on the content id provided)</dd>
+<dt>@throws DataIntelligenceServiceException</dt>
+<dd>INVALID_AUTHENTICATION_TOKEN:if the provided authentication token is not valid or has expired (1 hour validity).</dd>
+<dd>INVALID_CONFIGURATION_VERSION: if the provided configuration version is not valid.</dd>
+<dd>NON_EXISTING_CONTENT_ID:if the provided Scheduling id doesn't already exists.</dd>
+<dd>INVALID_CONTENT:if the provided Scheduling content is not valid.</dd>
+<dd>The </dd>
+</dl>
+<br/></div><div class="definition"><h4 id="Fn_BoxalinoDataIntelligence_DeleteScheduling">Function: BoxalinoDataIntelligence.DeleteScheduling</h4>
+<pre><code>void</code> DeleteScheduling(<code><a href="BoxalinoDataIntelligenceV1.html#Struct_Authentication">Authentication</a></code> authentication,
+                      <code><a href="BoxalinoDataIntelligenceV1.html#Struct_ConfigurationVersion">ConfigurationVersion</a></code> configuration,
+                      <code>string</code> schedulingId)
+    throws <code><a href="BoxalinoDataIntelligenceV1.html#Struct_DataIntelligenceServiceException">DataIntelligenceServiceException</a></code>
+</pre>this service function deletes a scheduling. A scheduling is a collection of process tasks to be executed one after the other by the system.
+
+<dl>
+<dt>@param authenticationToken</dt>
+<dd>the authentication object as returned by the GetAuthentication service function in the AuthenticationResponse struct</dd>
+<dt>@param configurationVersion</dt>
+<dd>a ConfigurationVersion object indicating the configuration version number (as returned by function GetConfigurationVersion)</dd>
+<dt>@param schedulingId</dt>
+<dd>the schedulingId to be deleted</dd>
+<dt>@throws DataIntelligenceServiceException</dt>
+<dd>INVALID_AUTHENTICATION_TOKEN:if the provided authentication token is not valid or has expired (1 hour validity).</dd>
+<dd>INVALID_CONFIGURATION_VERSION: if the provided configuration version is not valid.</dd>
+<dd>NON_EXISTING_CONTENT_ID:if the provided schedulingId id doesn't already exists.</dd>
+</dl>
+<br/></div><div class="definition"><h4 id="Fn_BoxalinoDataIntelligence_RunScheduling">Function: BoxalinoDataIntelligence.RunScheduling</h4>
+<pre><code>void</code> RunScheduling(<code><a href="BoxalinoDataIntelligenceV1.html#Struct_Authentication">Authentication</a></code> authentication,
+                   <code><a href="BoxalinoDataIntelligenceV1.html#Struct_ConfigurationVersion">ConfigurationVersion</a></code> configuration,
+                   <code><a href="BoxalinoDataIntelligenceV1.html#Struct_SchedulingExecutionParameters">SchedulingExecutionParameters</a></code> parameters)
+    throws <code><a href="BoxalinoDataIntelligenceV1.html#Struct_DataIntelligenceServiceException">DataIntelligenceServiceException</a></code>
+</pre>this service function executes a scheduling. A scheduling is a collection of process tasks to be executed one after the other by the system.
+
+<dl>
+<dt>@param authentication</dt>
+<dd>the authentication object as returned by the GetAuthentication service function in the AuthenticationResponse struct</dd>
+<dt>@param configuration</dt>
+<dd>a ConfigurationVersion object indicating the configuration version number (as returned by function GetConfigurationVersion)</dd>
+<dt>@param parameters</dt>
+<dd>parameters describing the scheduling which we want to execute</dd>
+<dt>@throws DataIntelligenceServiceException</dt>
+<dd>INVALID_AUTHENTICATION_TOKEN:if the provided authentication token is not valid or has expired (1 hour validity).</dd>
+<dd>INVALID_CONFIGURATION_VERSION: if the provided configuration version is not valid.</dd>
+<dd>NON_EXISTING_CONTENT_ID:if the provided scheduling id doesn't already exists.</dd>
+</dl>
+<br/></div><div class="definition"><h4 id="Fn_BoxalinoDataIntelligence_GetRecommendationBlocks">Function: BoxalinoDataIntelligence.GetRecommendationBlocks</h4>
+<pre><code>map&lt;<code>string</code>, <code><a href="BoxalinoDataIntelligenceV1.html#Struct_RecommendationBlock">RecommendationBlock</a></code>&gt;</code> GetRecommendationBlocks(<code><a href="BoxalinoDataIntelligenceV1.html#Struct_Authentication">Authentication</a></code> authentication,
+                                                       <code><a href="BoxalinoDataIntelligenceV1.html#Struct_ConfigurationVersion">ConfigurationVersion</a></code> configuration)
+    throws <code><a href="BoxalinoDataIntelligenceV1.html#Struct_DataIntelligenceServiceException">DataIntelligenceServiceException</a></code>
+</pre>this service function returns the map of all the defined recommendation blocks (key = recommendationBlockId, value = RecommendationBlock object).
+
+<dl>
+<dt>@param authenticationToken</dt>
+<dd>the authentication object as returned by the GetAuthentication service function in the AuthenticationResponse struct</dd>
+<dt>@param configurationVersion</dt>
+<dd>a ConfigurationVersion object indicating the configuration version number (as returned by function GetConfigurationVersion)</dd>
+<dt>@throws DataIntelligenceServiceException</dt>
+<dd>INVALID_AUTHENTICATION_TOKEN:if the provided authentication token is not valid or has expired (1 hour validity).</dd>
+<dd>INVALID_CONFIGURATION_VERSION: if the provided configuration version is not valid.</dd>
+<dt>@returns map&lt;string, RecommendationBlock&gt;</dt>
+<dd>A map containing all the defined RecommendationBlocks of your account in this configuration version, with the RecommendationBlock id as key and the RecommendationBlock object as value (key is provided for accessibility only, as the RecommendationBlock id is also present in the RecommendationBlock object</dd>
+</dl>
+<br/></div><div class="definition"><h4 id="Fn_BoxalinoDataIntelligence_CreateRecommendationBlock">Function: BoxalinoDataIntelligence.CreateRecommendationBlock</h4>
+<pre><code>void</code> CreateRecommendationBlock(<code><a href="BoxalinoDataIntelligenceV1.html#Struct_Authentication">Authentication</a></code> authentication,
+                               <code><a href="BoxalinoDataIntelligenceV1.html#Struct_ConfigurationVersion">ConfigurationVersion</a></code> configuration,
+                               <code>string</code> recommendationBlockId)
+    throws <code><a href="BoxalinoDataIntelligenceV1.html#Struct_DataIntelligenceServiceException">DataIntelligenceServiceException</a></code>
+</pre>this service function creates a new RecommendationBlock. A RecommendationBlock is a visual block of recommendation for one page of your web-site (product detail page, basket page, etc.) you can have several recommendation blocks on the same page.
+
+<dl>
+<dt>@param authenticationToken</dt>
+<dd>the authentication object as returned by the GetAuthentication service function in the AuthenticationResponse struct</dd>
+<dt>@param configurationVersion</dt>
+<dd>a ConfigurationVersion object indicating the configuration version number (as returned by function GetConfigurationVersion)</dd>
+<dt>@param recommendationBlockId</dt>
+<dd>the recommendation block id to be created (must follow the content id format: &lt;= 50 alphanumeric characters without accent or punctuation)&lt;/dd&gt;
+<dt>@throws DataIntelligenceServiceException</dt>
+<dd>INVALID_AUTHENTICATION_TOKEN:if the provided authentication token is not valid or has expired (1 hour validity).</dd>
+<dd>INVALID_CONFIGURATION_VERSION: if the provided configuration version is not valid.</dd>
+<dd>ALREADY_EXISTING_CONTENT_ID:if the provided  recommendationBlock id already exists.</dd>
+<dd>INVALID_CONTENT_ID:if the provided recommendationBlock id format is not valid.</dd>
+</dl>
+<br/></div><div class="definition"><h4 id="Fn_BoxalinoDataIntelligence_UpdateRecommendationBlock">Function: BoxalinoDataIntelligence.UpdateRecommendationBlock</h4>
+<pre><code>void</code> UpdateRecommendationBlock(<code><a href="BoxalinoDataIntelligenceV1.html#Struct_Authentication">Authentication</a></code> authentication,
+                               <code><a href="BoxalinoDataIntelligenceV1.html#Struct_ConfigurationVersion">ConfigurationVersion</a></code> configuration,
+                               <code><a href="BoxalinoDataIntelligenceV1.html#Struct_RecommendationBlock">RecommendationBlock</a></code> recommendationBlock)
+    throws <code><a href="BoxalinoDataIntelligenceV1.html#Struct_DataIntelligenceServiceException">DataIntelligenceServiceException</a></code>
+</pre>this service function updates a RecommendationBlock. A RecommendationBlock is a visual block of recommendation for one page of your web-site (product detail page, basket page, etc.) you can have several recommendation blocks on the same page.
+
+<dl>
+<dt>@param authenticationToken</dt>
+<dd>the authentication object as returned by the GetAuthentication service function in the AuthenticationResponse struct</dd>
+<dt>@param configurationVersion</dt>
+<dd>a ConfigurationVersion object indicating the configuration version number (as returned by function GetConfigurationVersion)</dd>
+<dt>@param recommendationBlock</dt>
+<dd>a recommendationBlock object to be updated (the content of the object will be updated on the content id provided)</dd>
+<dt>@throws DataIntelligenceServiceException</dt>
+<dd>INVALID_AUTHENTICATION_TOKEN:if the provided authentication token is not valid or has expired (1 hour validity).</dd>
+<dd>INVALID_CONFIGURATION_VERSION: if the provided configuration version is not valid.</dd>
+<dd>NON_EXISTING_CONTENT_ID:if the provided RecommendationBlock id doesn't already exists.</dd>
+<dd>INVALID_CONTENT:if the provided RecommendationBlock content is not valid.</dd>
+<dd>The </dd>
+</dl>
+<br/></div><div class="definition"><h4 id="Fn_BoxalinoDataIntelligence_DeleteRecommendationBlock">Function: BoxalinoDataIntelligence.DeleteRecommendationBlock</h4>
+<pre><code>void</code> DeleteRecommendationBlock(<code><a href="BoxalinoDataIntelligenceV1.html#Struct_Authentication">Authentication</a></code> authentication,
+                               <code><a href="BoxalinoDataIntelligenceV1.html#Struct_ConfigurationVersion">ConfigurationVersion</a></code> configuration,
+                               <code>string</code> recommendationBlockId)
+    throws <code><a href="BoxalinoDataIntelligenceV1.html#Struct_DataIntelligenceServiceException">DataIntelligenceServiceException</a></code>
+</pre>this service function deletes a RecommendationBlock. A RecommendationBlock is a visual block of recommendation for one page of your web-site (product detail page, basket page, etc.) you can have several recommendation blocks on the same page.
+
+<dl>
+<dt>@param authenticationToken</dt>
+<dd>the authentication object as returned by the GetAuthentication service function in the AuthenticationResponse struct</dd>
+<dt>@param configurationVersion</dt>
+<dd>a ConfigurationVersion object indicating the configuration version number (as returned by function GetConfigurationVersion)</dd>
+<dt>@param recommendationBlockId</dt>
+<dd>the recommendationBlockId to be deleted</dd>
+<dt>@throws DataIntelligenceServiceException</dt>
+<dd>INVALID_AUTHENTICATION_TOKEN:if the provided authentication token is not valid or has expired (1 hour validity).</dd>
+<dd>INVALID_CONFIGURATION_VERSION: if the provided configuration version is not valid.</dd>
+<dd>NON_EXISTING_CONTENT_ID:if the provided recommendationBlockId id doesn't already exists.</dd>
+</dl>
+<br/></div><div class="definition"><h4 id="Fn_BoxalinoDataIntelligence_GetDataSources">Function: BoxalinoDataIntelligence.GetDataSources</h4>
+<pre><code>map&lt;<code>string</code>, <code><a href="BoxalinoDataIntelligenceV1.html#Struct_DataSource">DataSource</a></code>&gt;</code> GetDataSources(<code><a href="BoxalinoDataIntelligenceV1.html#Struct_Authentication">Authentication</a></code> authentication,
+                                     <code><a href="BoxalinoDataIntelligenceV1.html#Struct_ConfigurationVersion">ConfigurationVersion</a></code> configuration)
+    throws <code><a href="BoxalinoDataIntelligenceV1.html#Struct_DataIntelligenceServiceException">DataIntelligenceServiceException</a></code>
+</pre>this service function gets all data sources defined for the account
+
+<dl>
+<dt>@param authenticationToken</dt>
+<dd>the authentication object as returned by the GetAuthentication service function in the AuthenticationResponse struct</dd>
+<dt>@param configurationVersion</dt>
+<dd>a ConfigurationVersion object indicating the configuration version number (as returned by function GetConfigurationVersion)</dd>
+<dt>@throws DataIntelligenceServiceException</dt>
+<dd>INVALID_AUTHENTICATION_TOKEN:if the provided authentication token is not valid or has expired (1 hour validity).</dd>
+<dd>INVALID_CONFIGURATION_VERSION: if the provided configuration version is not valid.</dd>
+</dl>
+<br/></div><div class="definition"><h4 id="Fn_BoxalinoDataIntelligence_CreateDataSource">Function: BoxalinoDataIntelligence.CreateDataSource</h4>
+<pre><code>void</code> CreateDataSource(<code><a href="BoxalinoDataIntelligenceV1.html#Struct_Authentication">Authentication</a></code> authentication,
+                      <code><a href="BoxalinoDataIntelligenceV1.html#Struct_ConfigurationVersion">ConfigurationVersion</a></code> configuration,
+                      <code>string</code> dataSourceId)
+    throws <code><a href="BoxalinoDataIntelligenceV1.html#Struct_DataIntelligenceServiceException">DataIntelligenceServiceException</a></code>
+</pre>this service function creates a new data source
+
+<dl>
+<dt>@param authenticationToken</dt>
+<dd>the authentication object as returned by the GetAuthentication service function in the AuthenticationResponse struct</dd>
+<dt>@param configurationVersion</dt>
+<dd>a ConfigurationVersion object indicating the configuration version number (as returned by function GetConfigurationVersion)</dd>
+<dt>@throws DataIntelligenceServiceException</dt>
+<dd>INVALID_AUTHENTICATION_TOKEN:if the provided authentication token is not valid or has expired (1 hour validity).</dd>
+<dd>INVALID_CONFIGURATION_VERSION: if the provided configuration version is not valid.</dd>
+<dd>ALREADY_EXISTING_CONTENT_ID: if the provided dataSourceId already exists.</dd>
+</dl>
+<br/></div><div class="definition"><h4 id="Fn_BoxalinoDataIntelligence_UpdateDataSource">Function: BoxalinoDataIntelligence.UpdateDataSource</h4>
+<pre><code>void</code> UpdateDataSource(<code><a href="BoxalinoDataIntelligenceV1.html#Struct_Authentication">Authentication</a></code> authentication,
+                      <code><a href="BoxalinoDataIntelligenceV1.html#Struct_ConfigurationVersion">ConfigurationVersion</a></code> configuration,
+                      <code><a href="BoxalinoDataIntelligenceV1.html#Struct_DataSource">DataSource</a></code> dataSource)
+    throws <code><a href="BoxalinoDataIntelligenceV1.html#Struct_DataIntelligenceServiceException">DataIntelligenceServiceException</a></code>
+</pre>this service function updates a DataSource
+
+<dl>
+<dt>@param authenticationToken</dt>
+<dd>the authentication object as returned by the GetAuthentication service function in the AuthenticationResponse struct</dd>
+<dt>@param configurationVersion</dt>
+<dd>a ConfigurationVersion object indicating the configuration version number (as returned by function GetConfigurationVersion)</dd>
+<dt>@param dataSource</dt>
+<dd>a DataSource object to be updated (the content of the object will be updated on the content id provided)</dd>
+<dt>@throws DataIntelligenceServiceException</dt>
+<dd>INVALID_AUTHENTICATION_TOKEN:if the provided authentication token is not valid or has expired (1 hour validity).</dd>
+<dd>INVALID_CONFIGURATION_VERSION: if the provided configuration version is not valid.</dd>
+<dd>NON_EXISTING_CONTENT_ID:if the provided DataSource id doesn't already exists.</dd>
+<dd>The </dd>
+</dl>
+<br/></div><div class="definition"><h4 id="Fn_BoxalinoDataIntelligence_DeleteDataSource">Function: BoxalinoDataIntelligence.DeleteDataSource</h4>
+<pre><code>void</code> DeleteDataSource(<code><a href="BoxalinoDataIntelligenceV1.html#Struct_Authentication">Authentication</a></code> authentication,
+                      <code><a href="BoxalinoDataIntelligenceV1.html#Struct_ConfigurationVersion">ConfigurationVersion</a></code> configuration,
+                      <code>string</code> dataSourceId)
+    throws <code><a href="BoxalinoDataIntelligenceV1.html#Struct_DataIntelligenceServiceException">DataIntelligenceServiceException</a></code>
+</pre>this service function removes provided data source
+
+<dl>
+<dt>@param authenticationToken</dt>
+<dd>the authentication object as returned by the GetAuthentication service function in the AuthenticationResponse struct</dd>
+<dt>@param configurationVersion</dt>
+<dd>a ConfigurationVersion object indicating the configuration version number (as returned by function GetConfigurationVersion)</dd>
+<dt>@param dataSourceId</dt>
+<dd>the identifier of the data source to be deleted</dd>
+<dt>@throws DataIntelligenceServiceException</dt>
+<dd>INVALID_AUTHENTICATION_TOKEN:if the provided authentication token is not valid or has expired (1 hour validity).</dd>
+<dd>INVALID_CONFIGURATION_VERSION: if the provided configuration version is not valid.</dd>
+<dd>NON_EXISTING_CONTENT_ID:if the provided dataSourceId id doesn't already exists.</dd>
+</dl>
+<br/></div><div class="definition"><h4 id="Fn_BoxalinoDataIntelligence_GetDataExports">Function: BoxalinoDataIntelligence.GetDataExports</h4>
+<pre><code>map&lt;<code>string</code>, <code><a href="BoxalinoDataIntelligenceV1.html#Struct_DataExport">DataExport</a></code>&gt;</code> GetDataExports(<code><a href="BoxalinoDataIntelligenceV1.html#Struct_Authentication">Authentication</a></code> authentication,
+                                     <code><a href="BoxalinoDataIntelligenceV1.html#Struct_ConfigurationVersion">ConfigurationVersion</a></code> configuration)
+    throws <code><a href="BoxalinoDataIntelligenceV1.html#Struct_DataIntelligenceServiceException">DataIntelligenceServiceException</a></code>
+</pre>this service function gets all data exports defined for the account
+
+<dl>
+<dt>@param authenticationToken</dt>
+<dd>the authentication object as returned by the GetAuthentication service function in the AuthenticationResponse struct</dd>
+<dt>@param configurationVersion</dt>
+<dd>a ConfigurationVersion object indicating the configuration version number (as returned by function GetConfigurationVersion)</dd>
+<dt>@throws DataIntelligenceServiceException</dt>
+<dd>INVALID_AUTHENTICATION_TOKEN:if the provided authentication token is not valid or has expired (1 hour validity).</dd>
+<dd>INVALID_CONFIGURATION_VERSION: if the provided configuration version is not valid.</dd>
+</dl>
+<br/></div><div class="definition"><h4 id="Fn_BoxalinoDataIntelligence_CreateDataExport">Function: BoxalinoDataIntelligence.CreateDataExport</h4>
+<pre><code>void</code> CreateDataExport(<code><a href="BoxalinoDataIntelligenceV1.html#Struct_Authentication">Authentication</a></code> authentication,
+                      <code><a href="BoxalinoDataIntelligenceV1.html#Struct_ConfigurationVersion">ConfigurationVersion</a></code> configuration,
+                      <code>string</code> dataExportId)
+    throws <code><a href="BoxalinoDataIntelligenceV1.html#Struct_DataIntelligenceServiceException">DataIntelligenceServiceException</a></code>
+</pre>this service function creates new data export
+
+<dl>
+<dt>@param authenticationToken</dt>
+<dd>the authentication object as returned by the GetAuthentication service function in the AuthenticationResponse struct</dd>
+<dt>@param configurationVersion</dt>
+<dd>a ConfigurationVersion object indicating the configuration version number (as returned by function GetConfigurationVersion)</dd>
+<dt>@param dataExportId</dt>
+<dd>the identifier of the data export to be deleted</dd>
+<dt>@throws DataIntelligenceServiceException</dt>
+<dd>INVALID_AUTHENTICATION_TOKEN:if the provided authentication token is not valid or has expired (1 hour validity).</dd>
+<dd>INVALID_CONFIGURATION_VERSION: if the provided configuration version is not valid.</dd>
+<dd>ALREADY_EXISTING_CONTENT_ID: if the provided dataExportId already exists.</dd>
+</dl>
+<br/></div><div class="definition"><h4 id="Fn_BoxalinoDataIntelligence_UpdateDataExport">Function: BoxalinoDataIntelligence.UpdateDataExport</h4>
+<pre><code>void</code> UpdateDataExport(<code><a href="BoxalinoDataIntelligenceV1.html#Struct_Authentication">Authentication</a></code> authentication,
+                      <code><a href="BoxalinoDataIntelligenceV1.html#Struct_ConfigurationVersion">ConfigurationVersion</a></code> configuration,
+                      <code><a href="BoxalinoDataIntelligenceV1.html#Struct_DataExport">DataExport</a></code> dataExport)
+    throws <code><a href="BoxalinoDataIntelligenceV1.html#Struct_DataIntelligenceServiceException">DataIntelligenceServiceException</a></code>
+</pre>this service function updates a DataExport
+
+<dl>
+<dt>@param authenticationToken</dt>
+<dd>the authentication object as returned by the GetAuthentication service function in the AuthenticationResponse struct</dd>
+<dt>@param configurationVersion</dt>
+<dd>a ConfigurationVersion object indicating the configuration version number (as returned by function GetConfigurationVersion)</dd>
+<dt>@param dataExport</dt>
+<dd>a DataExport object to be updated (the content of the object will be updated on the content id provided)</dd>
+<dt>@throws DataIntelligenceServiceException</dt>
+<dd>INVALID_AUTHENTICATION_TOKEN:if the provided authentication token is not valid or has expired (1 hour validity).</dd>
+<dd>INVALID_CONFIGURATION_VERSION: if the provided configuration version is not valid.</dd>
+<dd>NON_EXISTING_CONTENT_ID:if the provided DataExport id doesn't already exists.</dd>
+<dd>The </dd>
+</dl>
+<br/></div><div class="definition"><h4 id="Fn_BoxalinoDataIntelligence_DeleteDataExport">Function: BoxalinoDataIntelligence.DeleteDataExport</h4>
+<pre><code>void</code> DeleteDataExport(<code><a href="BoxalinoDataIntelligenceV1.html#Struct_Authentication">Authentication</a></code> authentication,
+                      <code><a href="BoxalinoDataIntelligenceV1.html#Struct_ConfigurationVersion">ConfigurationVersion</a></code> configuration,
+                      <code>string</code> dataExportId)
+    throws <code><a href="BoxalinoDataIntelligenceV1.html#Struct_DataIntelligenceServiceException">DataIntelligenceServiceException</a></code>
+</pre>this service function removes provided data export
+
+<dl>
+<dt>@param authenticationToken</dt>
+<dd>the authentication object as returned by the GetAuthentication service function in the AuthenticationResponse struct</dd>
+<dt>@param configurationVersion</dt>
+<dd>a ConfigurationVersion object indicating the configuration version number (as returned by function GetConfigurationVersion)</dd>
+<dt>@param dataExportId</dt>
+<dd>the identifier of the data export to be deleted</dd>
+<dt>@throws DataIntelligenceServiceException</dt>
+<dd>INVALID_AUTHENTICATION_TOKEN:if the provided authentication token is not valid or has expired (1 hour validity).</dd>
+<dd>INVALID_CONFIGURATION_VERSION: if the provided configuration version is not valid.</dd>
+<dd>NON_EXISTING_CONTENT_ID:if the provided dataSourceId id doesn't already exists.</dd>
+</dl>
+<br/></div><div class="definition"><h4 id="Fn_BoxalinoDataIntelligence_GetReferenceCSVFileDataSources">Function: BoxalinoDataIntelligence.GetReferenceCSVFileDataSources</h4>
+<pre><code>map&lt;<code>string</code>, <code><a href="BoxalinoDataIntelligenceV1.html#Struct_ReferenceCSVDataSource">ReferenceCSVDataSource</a></code>&gt;</code> GetReferenceCSVFileDataSources(<code><a href="BoxalinoDataIntelligenceV1.html#Struct_Authentication">Authentication</a></code> authentication,
+                                                                 <code><a href="BoxalinoDataIntelligenceV1.html#Struct_ConfigurationVersion">ConfigurationVersion</a></code> configuration)
+    throws <code><a href="BoxalinoDataIntelligenceV1.html#Struct_DataIntelligenceServiceException">DataIntelligenceServiceException</a></code>
+</pre>this service function gets all data source defined for the account, but only these ones which use reference CSV files to retrieve the data
+
+<dl>
+<dt>@param authenticationToken</dt>
+<dd>the authentication object as returned by the GetAuthentication service function in the AuthenticationResponse struct</dd>
+<dt>@param configurationVersion</dt>
+<dd>a ConfigurationVersion object indicating the configuration version number (as returned by function GetConfigurationVersion)</dd>
+<dt>@throws DataIntelligenceServiceException</dt>
+<dd>INVALID_AUTHENTICATION_TOKEN:if the provided authentication token is not valid or has expired (1 hour validity).</dd>
+<dd>INVALID_CONFIGURATION_VERSION: if the provided configuration version is not valid.</dd>
+</dl>
+<br/></div><div class="definition"><h4 id="Fn_BoxalinoDataIntelligence_CreateReferenceCSVDataSource">Function: BoxalinoDataIntelligence.CreateReferenceCSVDataSource</h4>
+<pre><code>void</code> CreateReferenceCSVDataSource(<code><a href="BoxalinoDataIntelligenceV1.html#Struct_Authentication">Authentication</a></code> authentication,
+                                  <code><a href="BoxalinoDataIntelligenceV1.html#Struct_ConfigurationVersion">ConfigurationVersion</a></code> configuration,
+                                  <code>string</code> dataSourceId)
+    throws <code><a href="BoxalinoDataIntelligenceV1.html#Struct_DataIntelligenceServiceException">DataIntelligenceServiceException</a></code>
+</pre>this service function creates new reference csv data source
+
+<dl>
+<dt>@param authenticationToken</dt>
+<dd>the authentication object as returned by the GetAuthentication service function in the AuthenticationResponse struct</dd>
+<dt>@param configurationVersion</dt>
+<dd>a ConfigurationVersion object indicating the configuration version number (as returned by function GetConfigurationVersion)</dd>
+<dt>@param dataExportId</dt>
+<dd>the identifier of the data export to be deleted</dd>
+<dt>@throws DataIntelligenceServiceException</dt>
+<dd>INVALID_AUTHENTICATION_TOKEN:if the provided authentication token is not valid or has expired (1 hour validity).</dd>
+<dd>INVALID_CONFIGURATION_VERSION: if the provided configuration version is not valid.</dd>
+<dd>ALREADY_EXISTING_CONTENT_ID: if the provided dataSourceId already exists.</dd>
+</dl>
+<br/></div><div class="definition"><h4 id="Fn_BoxalinoDataIntelligence_UpdateReferenceCSVDataSource">Function: BoxalinoDataIntelligence.UpdateReferenceCSVDataSource</h4>
+<pre><code>void</code> UpdateReferenceCSVDataSource(<code><a href="BoxalinoDataIntelligenceV1.html#Struct_Authentication">Authentication</a></code> authentication,
+                                  <code><a href="BoxalinoDataIntelligenceV1.html#Struct_ConfigurationVersion">ConfigurationVersion</a></code> configuration,
+                                  <code><a href="BoxalinoDataIntelligenceV1.html#Struct_ReferenceCSVDataSource">ReferenceCSVDataSource</a></code> dataSource)
+    throws <code><a href="BoxalinoDataIntelligenceV1.html#Struct_DataIntelligenceServiceException">DataIntelligenceServiceException</a></code>
+</pre>this service function updates a reference CSV data source
+
+<dl>
+<dt>@param authenticationToken</dt>
+<dd>the authentication object as returned by the GetAuthentication service function in the AuthenticationResponse struct</dd>
+<dt>@param configurationVersion</dt>
+<dd>a ConfigurationVersion object indicating the configuration version number (as returned by function GetConfigurationVersion)</dd>
+<dt>@param dataSource</dt>
+<dd>a ReferenceCSVDataSource object to be updated (the content of the object will be updated on the content id provided)</dd>
+<dt>@throws DataIntelligenceServiceException</dt>
+<dd>INVALID_AUTHENTICATION_TOKEN:if the provided authentication token is not valid or has expired (1 hour validity).</dd>
+<dd>INVALID_CONFIGURATION_VERSION: if the provided configuration version is not valid.</dd>
+<dd>NON_EXISTING_CONTENT_ID:if the provided ReferenceCSVDataSource id doesn't already exists.</dd>
+<dd>The </dd>
+</dl>
+<br/></div><div class="definition"><h4 id="Fn_BoxalinoDataIntelligence_DeleteReferenceCSVDataSource">Function: BoxalinoDataIntelligence.DeleteReferenceCSVDataSource</h4>
+<pre><code>void</code> DeleteReferenceCSVDataSource(<code><a href="BoxalinoDataIntelligenceV1.html#Struct_Authentication">Authentication</a></code> authentication,
+                                  <code><a href="BoxalinoDataIntelligenceV1.html#Struct_ConfigurationVersion">ConfigurationVersion</a></code> configuration,
+                                  <code>string</code> dataSourceId)
+    throws <code><a href="BoxalinoDataIntelligenceV1.html#Struct_DataIntelligenceServiceException">DataIntelligenceServiceException</a></code>
+</pre>this service function removes provided reference CSV data source
+
+<dl>
+<dt>@param authenticationToken</dt>
+<dd>the authentication object as returned by the GetAuthentication service function in the AuthenticationResponse struct</dd>
+<dt>@param configurationVersion</dt>
+<dd>a ConfigurationVersion object indicating the configuration version number (as returned by function GetConfigurationVersion)</dd>
+<dt>@param dataSourceId</dt>
+<dd>the identifier of the data source to be deleted</dd>
+<dt>@throws DataIntelligenceServiceException</dt>
+<dd>INVALID_AUTHENTICATION_TOKEN:if the provided authentication token is not valid or has expired (1 hour validity).</dd>
+<dd>INVALID_CONFIGURATION_VERSION: if the provided configuration version is not valid.</dd>
+<dd>NON_EXISTING_CONTENT_ID:if the provided dataSourceId id doesn't already exists.</dd>
+</dl>
+<br/></div><div class="definition"><h4 id="Fn_BoxalinoDataIntelligence_GetLastTransactionID">Function: BoxalinoDataIntelligence.GetLastTransactionID</h4>
+<pre><code>string</code> GetLastTransactionID(<code><a href="BoxalinoDataIntelligenceV1.html#Struct_Authentication">Authentication</a></code> authentication,
+                            <code><a href="BoxalinoDataIntelligenceV1.html#Struct_ConfigurationVersion">ConfigurationVersion</a></code> configuration)
+    throws <code><a href="BoxalinoDataIntelligenceV1.html#Struct_DataIntelligenceServiceException">DataIntelligenceServiceException</a></code>
+</pre>This service function gets an identifier of last imported transaction. It can be useful for differential data synchronization.
+
+<dl>
+<dt>@param authenticationToken</dt>
+<dd>the authentication object as returned by the GetAuthentication service function in the AuthenticationResponse struct</dd>
+<dt>@param configurationVersion</dt>
+<dd>a ConfigurationVersion object indicating the configuration version number (as returned by function GetConfigurationVersion)</dd>
+<dt>@returns string</dt>
+<dd>an identifier of the last transaction</dd>
+<dt>@throws DataIntelligenceServiceException</dt>
+<dd>INVALID_AUTHENTICATION_TOKEN:if the provided authentication token is not valid or has expired (1 hour validity).</dd>
+<dd>INVALID_CONFIGURATION_VERSION: if the provided configuration version is not valid.</dd>
+</dl>
+<br/></div><div class="definition"><h4 id="Fn_BoxalinoDataIntelligence_GetPageViews">Function: BoxalinoDataIntelligence.GetPageViews</h4>
+<pre><code>list&lt;<code><a href="BoxalinoDataIntelligenceV1.html#Struct_TimeRangeValue">TimeRangeValue</a></code>&gt;</code> GetPageViews(<code><a href="BoxalinoDataIntelligenceV1.html#Struct_Authentication">Authentication</a></code> authentication,
+                                  <code><a href="BoxalinoDataIntelligenceV1.html#Struct_ConfigurationVersion">ConfigurationVersion</a></code> configuration,
+                                  <code><a href="BoxalinoDataIntelligenceV1.html#Struct_TimeRange">TimeRange</a></code> range,
+                                  <code><a href="BoxalinoDataIntelligenceV1.html#Enum_TimeRangePrecision">TimeRangePrecision</a></code> precision)
+    throws <code><a href="BoxalinoDataIntelligenceV1.html#Struct_DataIntelligenceServiceException">DataIntelligenceServiceException</a></code>
+</pre>DEPRECITATED: USE GetChoiceReport service instead with ReportMetric: PAGE_VIEWS
+This service function retrieves number of visits for each time range with selected precision.
+
+<dl>
+<dt>@param authenticationToken</dt>
+<dd>the authentication object as returned by the GetAuthentication service function in the AuthenticationResponse struct</dd>
+<dt>@param configurationVersion</dt>
+<dd>a ConfigurationVersion object indicating the configuration version number (as returned by function GetConfigurationVersion)</dd>
+<dt>@param range</dt>
+<dd>a time range of generated reports</dd>
+<dt>@param precision</dt>
+<dd>a level of granularity</dd>
+<dt>@throws DataIntelligenceServiceException</dt>
+<dd>INVALID_AUTHENTICATION_TOKEN:if the provided authentication token is not valid or has expired (1 hour validity).</dd>
+<dd>INVALID_CONFIGURATION_VERSION: if the provided configuration version is not valid.</dd>
+<dd>INVALID_RANGE: if the given time range is incorrect</dd>
+</dl>
+<br/></div><div class="definition"><h4 id="Fn_BoxalinoDataIntelligence_GetChoiceReport">Function: BoxalinoDataIntelligence.GetChoiceReport</h4>
+<pre><code><a href="BoxalinoDataIntelligenceV1.html#Struct_ChoiceReport">ChoiceReport</a></code> GetChoiceReport(<code><a href="BoxalinoDataIntelligenceV1.html#Struct_Authentication">Authentication</a></code> authentication,
+                             <code><a href="BoxalinoDataIntelligenceV1.html#Struct_ConfigurationVersion">ConfigurationVersion</a></code> configuration,
+                             <code><a href="BoxalinoDataIntelligenceV1.html#Struct_ChoiceReportRequest">ChoiceReportRequest</a></code> request)
+    throws <code><a href="BoxalinoDataIntelligenceV1.html#Struct_DataIntelligenceServiceException">DataIntelligenceServiceException</a></code>
+</pre>This service function provides an choice statistical report.
+
+<dl>
+<dt>@param authenticationToken</dt>
+<dd>the authentication object as returned by the GetAuthentication service function in the AuthenticationResponse struct</dd>
+<dt>@param configurationVersion</dt>
+<dd>a ConfigurationVersion object indicating the configuration version number (as returned by function GetConfigurationVersion)</dd>
+<dt>@param request</dt>
+<dd>The statistical report request indicating the parameters of the requested report: dimension, metrics, etc.</dd>
+<dt>@throws DataIntelligenceServiceException</dt>
+<dd>INVALID_AUTHENTICATION_TOKEN:if the provided authentication token is not valid or has expired (1 hour validity).</dd>
+<dd>INVALID_CONFIGURATION_VERSION: if the provided configuration version is not valid.</dd>
+<dd>INVALID_REPORT_REQUEST: if the provided report request is not valid.</dd>
+</dl>
+<br/></div><div class="definition"><h4 id="Fn_BoxalinoDataIntelligence_GetTransactionReport">Function: BoxalinoDataIntelligence.GetTransactionReport</h4>
+<pre><code><a href="BoxalinoDataIntelligenceV1.html#Struct_TransactionReport">TransactionReport</a></code> GetTransactionReport(<code><a href="BoxalinoDataIntelligenceV1.html#Struct_Authentication">Authentication</a></code> authentication,
+                                       <code><a href="BoxalinoDataIntelligenceV1.html#Struct_ConfigurationVersion">ConfigurationVersion</a></code> configuration,
+                                       <code><a href="BoxalinoDataIntelligenceV1.html#Struct_TransactionReportRequest">TransactionReportRequest</a></code> request)
+    throws <code><a href="BoxalinoDataIntelligenceV1.html#Struct_DataIntelligenceServiceException">DataIntelligenceServiceException</a></code>
+</pre>This service function provides an transaction statistical report.
+
+<dl>
+<dt>@param authenticationToken</dt>
+<dd>the authentication object as returned by the GetAuthentication service function in the AuthenticationResponse struct</dd>
+<dt>@param configurationVersion</dt>
+<dd>a ConfigurationVersion object indicating the configuration version number (as returned by function GetConfigurationVersion)</dd>
+<dt>@param request</dt>
+<dd>The statistical report request indicating the parameters of the requested report: dimension, metrics, etc.</dd>
+<dt>@throws DataIntelligenceServiceException</dt>
+<dd>INVALID_AUTHENTICATION_TOKEN:if the provided authentication token is not valid or has expired (1 hour validity).</dd>
+<dd>INVALID_CONFIGURATION_VERSION: if the provided configuration version is not valid.</dd>
+<dd>INVALID_REPORT_REQUEST: if the provided report request is not valid.</dd>
+</dl>
+<br/></div><div class="definition"><h4 id="Fn_BoxalinoDataIntelligence_GetBehaviorReport">Function: BoxalinoDataIntelligence.GetBehaviorReport</h4>
+<pre><code><a href="BoxalinoDataIntelligenceV1.html#Struct_BehaviorReport">BehaviorReport</a></code> GetBehaviorReport(<code><a href="BoxalinoDataIntelligenceV1.html#Struct_Authentication">Authentication</a></code> authentication,
+                                 <code><a href="BoxalinoDataIntelligenceV1.html#Struct_ConfigurationVersion">ConfigurationVersion</a></code> configuration,
+                                 <code><a href="BoxalinoDataIntelligenceV1.html#Struct_BehaviorReportRequest">BehaviorReportRequest</a></code> request)
+    throws <code><a href="BoxalinoDataIntelligenceV1.html#Struct_DataIntelligenceServiceException">DataIntelligenceServiceException</a></code>
+</pre>This service function provides an behavior statistical report.
+
+<dl>
+<dt>@param authenticationToken</dt>
+<dd>the authentication object as returned by the GetAuthentication service function in the AuthenticationResponse struct</dd>
+<dt>@param configurationVersion</dt>
+<dd>a ConfigurationVersion object indicating the configuration version number (as returned by function GetConfigurationVersion)</dd>
+<dt>@param request</dt>
+<dd>The statistical report request indicating the parameters of the requested report: dimension, metrics, etc.</dd>
+<dt>@throws DataIntelligenceServiceException</dt>
+<dd>INVALID_AUTHENTICATION_TOKEN:if the provided authentication token is not valid or has expired (1 hour validity).</dd>
+<dd>INVALID_CONFIGURATION_VERSION: if the provided configuration version is not valid.</dd>
+<dd>INVALID_REPORT_REQUEST: if the provided report request is not valid.</dd>
+</dl>
+<br/></div></div></body></html>
