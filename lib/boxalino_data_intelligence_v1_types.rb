@@ -145,7 +145,9 @@ module ReportMetricType
   PAGE_VIEWS = 5
   # PAGE_VIEWS / VISITS
   PAGE_VIEWS_PER_VISIT = 6
-  # average time of visits
+  # total time on site in secods
+  TIME_ON_SITE = 31
+  # TIME_ON_SITE / VISITS
   AVERAGE_TIME_ON_SITE = 7
   # number of product views
   PRODUCT_VIEWS = 8
@@ -248,8 +250,8 @@ module ReportMetricType
 # if a ReportDimension is on a Choice, then only for this choice
 # if a ReportDimension is on a ChoiceVariant, then only for this choice variant
   VISITS_WITH_GOALS_FROM_CHOICE_DISPLAY = 118
-  VALUE_MAP = {1 => "VISITORS", 2 => "VISITS", 3 => "BOUNCES", 4 => "BOUNCE_RATE", 5 => "PAGE_VIEWS", 6 => "PAGE_VIEWS_PER_VISIT", 7 => "AVERAGE_TIME_ON_SITE", 8 => "PRODUCT_VIEWS", 9 => "PRODUCT_VIEWS_PER_VISIT", 10 => "VISITS_WITH_PRODUCT_VIEWS", 11 => "VISITS_WITH_PRODUCT_VIEWS_RATE", 12 => "SEARCHES", 13 => "SEARCHES_PER_VISIT", 14 => "VISITS_WITH_SEARCHES", 15 => "VISITS_WITH_SEARCHES_RATE", 16 => "GOALS", 17 => "GOALS_PER_VISIT", 18 => "VISITS_WITH_GOALS", 19 => "VISITS_WITH_GOALS_RATE", 20 => "TRANSACTIONS", 21 => "TRANSACTIONS_PER_VISIT", 22 => "VISITS_WITH_TRANSACTIONS", 23 => "VISITS_WITH_TRANSACTIONS_RATE", 28 => "TRANSACTIONS_TURNOVER", 29 => "TRANSACTIONS_PARAMETER_SUM", 30 => "TRANSACTIONS_QUANTITY", 24 => "ADD_TO_BASKETS", 25 => "ADD_TO_BASKETS_PER_VISIT", 26 => "VISITS_WITH_ADD_TO_BASKETS", 27 => "VISITS_WITH_ADD_TO_BASKETS_RATE", 40 => "EVENT_COUNT", 100 => "CHOICE_DISPLAYS", 101 => "VISITS_WITH_CHOICE_DISPLAYS", 110 => "PRODUCT_VIEWS_FROM_CHOICE_DISPLAY", 111 => "VISITS_WITH_PRODUCT_VIEWS_FROM_CHOICE_DISPLAY", 112 => "TRANSACTIONS_FROM_CHOICE_DISPLAY", 113 => "TRANSACTIONS_PARAMETER_SUM_FROM_CHOICE_DISPLAY", 114 => "VISITS_WITH_TRANSACTIONS_FROM_CHOICE_DISPLAY", 115 => "ADD_TO_BASKETS_FROM_CHOICE_DISPLAY", 116 => "VISITS_WITH_ADD_TO_BASKETS_FROM_CHOICE_DISPLAY", 117 => "GOALS_FROM_CHOICE_DISPLAY", 118 => "VISITS_WITH_GOALS_FROM_CHOICE_DISPLAY"}
-  VALID_VALUES = Set.new([VISITORS, VISITS, BOUNCES, BOUNCE_RATE, PAGE_VIEWS, PAGE_VIEWS_PER_VISIT, AVERAGE_TIME_ON_SITE, PRODUCT_VIEWS, PRODUCT_VIEWS_PER_VISIT, VISITS_WITH_PRODUCT_VIEWS, VISITS_WITH_PRODUCT_VIEWS_RATE, SEARCHES, SEARCHES_PER_VISIT, VISITS_WITH_SEARCHES, VISITS_WITH_SEARCHES_RATE, GOALS, GOALS_PER_VISIT, VISITS_WITH_GOALS, VISITS_WITH_GOALS_RATE, TRANSACTIONS, TRANSACTIONS_PER_VISIT, VISITS_WITH_TRANSACTIONS, VISITS_WITH_TRANSACTIONS_RATE, TRANSACTIONS_TURNOVER, TRANSACTIONS_PARAMETER_SUM, TRANSACTIONS_QUANTITY, ADD_TO_BASKETS, ADD_TO_BASKETS_PER_VISIT, VISITS_WITH_ADD_TO_BASKETS, VISITS_WITH_ADD_TO_BASKETS_RATE, EVENT_COUNT, CHOICE_DISPLAYS, VISITS_WITH_CHOICE_DISPLAYS, PRODUCT_VIEWS_FROM_CHOICE_DISPLAY, VISITS_WITH_PRODUCT_VIEWS_FROM_CHOICE_DISPLAY, TRANSACTIONS_FROM_CHOICE_DISPLAY, TRANSACTIONS_PARAMETER_SUM_FROM_CHOICE_DISPLAY, VISITS_WITH_TRANSACTIONS_FROM_CHOICE_DISPLAY, ADD_TO_BASKETS_FROM_CHOICE_DISPLAY, VISITS_WITH_ADD_TO_BASKETS_FROM_CHOICE_DISPLAY, GOALS_FROM_CHOICE_DISPLAY, VISITS_WITH_GOALS_FROM_CHOICE_DISPLAY]).freeze
+  VALUE_MAP = {1 => "VISITORS", 2 => "VISITS", 3 => "BOUNCES", 4 => "BOUNCE_RATE", 5 => "PAGE_VIEWS", 6 => "PAGE_VIEWS_PER_VISIT", 31 => "TIME_ON_SITE", 7 => "AVERAGE_TIME_ON_SITE", 8 => "PRODUCT_VIEWS", 9 => "PRODUCT_VIEWS_PER_VISIT", 10 => "VISITS_WITH_PRODUCT_VIEWS", 11 => "VISITS_WITH_PRODUCT_VIEWS_RATE", 12 => "SEARCHES", 13 => "SEARCHES_PER_VISIT", 14 => "VISITS_WITH_SEARCHES", 15 => "VISITS_WITH_SEARCHES_RATE", 16 => "GOALS", 17 => "GOALS_PER_VISIT", 18 => "VISITS_WITH_GOALS", 19 => "VISITS_WITH_GOALS_RATE", 20 => "TRANSACTIONS", 21 => "TRANSACTIONS_PER_VISIT", 22 => "VISITS_WITH_TRANSACTIONS", 23 => "VISITS_WITH_TRANSACTIONS_RATE", 28 => "TRANSACTIONS_TURNOVER", 29 => "TRANSACTIONS_PARAMETER_SUM", 30 => "TRANSACTIONS_QUANTITY", 24 => "ADD_TO_BASKETS", 25 => "ADD_TO_BASKETS_PER_VISIT", 26 => "VISITS_WITH_ADD_TO_BASKETS", 27 => "VISITS_WITH_ADD_TO_BASKETS_RATE", 40 => "EVENT_COUNT", 100 => "CHOICE_DISPLAYS", 101 => "VISITS_WITH_CHOICE_DISPLAYS", 110 => "PRODUCT_VIEWS_FROM_CHOICE_DISPLAY", 111 => "VISITS_WITH_PRODUCT_VIEWS_FROM_CHOICE_DISPLAY", 112 => "TRANSACTIONS_FROM_CHOICE_DISPLAY", 113 => "TRANSACTIONS_PARAMETER_SUM_FROM_CHOICE_DISPLAY", 114 => "VISITS_WITH_TRANSACTIONS_FROM_CHOICE_DISPLAY", 115 => "ADD_TO_BASKETS_FROM_CHOICE_DISPLAY", 116 => "VISITS_WITH_ADD_TO_BASKETS_FROM_CHOICE_DISPLAY", 117 => "GOALS_FROM_CHOICE_DISPLAY", 118 => "VISITS_WITH_GOALS_FROM_CHOICE_DISPLAY"}
+  VALID_VALUES = Set.new([VISITORS, VISITS, BOUNCES, BOUNCE_RATE, PAGE_VIEWS, PAGE_VIEWS_PER_VISIT, TIME_ON_SITE, AVERAGE_TIME_ON_SITE, PRODUCT_VIEWS, PRODUCT_VIEWS_PER_VISIT, VISITS_WITH_PRODUCT_VIEWS, VISITS_WITH_PRODUCT_VIEWS_RATE, SEARCHES, SEARCHES_PER_VISIT, VISITS_WITH_SEARCHES, VISITS_WITH_SEARCHES_RATE, GOALS, GOALS_PER_VISIT, VISITS_WITH_GOALS, VISITS_WITH_GOALS_RATE, TRANSACTIONS, TRANSACTIONS_PER_VISIT, VISITS_WITH_TRANSACTIONS, VISITS_WITH_TRANSACTIONS_RATE, TRANSACTIONS_TURNOVER, TRANSACTIONS_PARAMETER_SUM, TRANSACTIONS_QUANTITY, ADD_TO_BASKETS, ADD_TO_BASKETS_PER_VISIT, VISITS_WITH_ADD_TO_BASKETS, VISITS_WITH_ADD_TO_BASKETS_RATE, EVENT_COUNT, CHOICE_DISPLAYS, VISITS_WITH_CHOICE_DISPLAYS, PRODUCT_VIEWS_FROM_CHOICE_DISPLAY, VISITS_WITH_PRODUCT_VIEWS_FROM_CHOICE_DISPLAY, TRANSACTIONS_FROM_CHOICE_DISPLAY, TRANSACTIONS_PARAMETER_SUM_FROM_CHOICE_DISPLAY, VISITS_WITH_TRANSACTIONS_FROM_CHOICE_DISPLAY, ADD_TO_BASKETS_FROM_CHOICE_DISPLAY, VISITS_WITH_ADD_TO_BASKETS_FROM_CHOICE_DISPLAY, GOALS_FROM_CHOICE_DISPLAY, VISITS_WITH_GOALS_FROM_CHOICE_DISPLAY]).freeze
 end
 
 module ReportDimensionType
@@ -295,31 +297,33 @@ module ReportDimensionType
   VISITOR_ID = 27
   # the visitor id (internal id of Boxalino)
   INTERNAL_VISITOR_ID = 28
+  # the different page view urls
+  PAGE_VIEW_URL = 29
   # the different values of a URL parameter (require identifier to be provided with url parameter name)
   URL_PARAMETER = 50
   # the different values of a transaction property (requires identifier to be provided with the transaction property name)
-# N.B.: a connection to the transaction property must be available (e.g.: For visit&visitor-based reporting, like ChoiceReport, will only work for the visits/visitors with a transaction)
+# N.B.: a connection to the transaction property must be available (e.g.: For visit&visitor-based reporting, like BehaviorReport, will only work for the visits/visitors with a transaction)
   TRANSACTION_PROPERTY = 100
   # the different values of a customer property (requires identifier to be provided with the customer property name)
-# N.B.: a connection to the transaction property must be available (e.g.: For visit&visitor-based reporting, like ChoiceReport, will only work for the visits/visitors with a login or other ways to link the customer id to the visitor id)
+# N.B.: a connection to the transaction property must be available (e.g.: For visit&visitor-based reporting, like BehaviorReport, will only work for the visits/visitors with a login or other ways to link the customer id to the visitor id)
   CUSTOMER_PROPERTY = 150
   # the different values of a product property (requires identifier to be provided with the product property name)
-# N.B.: a connection to the transaction property must be available (e.g.: For visit&visitor-based reporting, like ChoiceReport, will only work for the visits/visitors with a product purchased)
+# N.B.: a connection to the transaction property must be available (e.g.: For visit&visitor-based reporting, like BehaviorReport, will only work for the visits/visitors with a product purchased)
   PURCHASED_PRODUCT_PROPERTY = 200
   # the different values of a product property (requires identifier to be provided with the product property name)
-# N.B.: a connection to the product property must be available (e.g.: For visit&visitor-based reporting, like ChoiceReport, will only work for the visits/visitors with a product displayed in the choice variant)
+# N.B.: a connection to the product property must be available (e.g.: For visit&visitor-based reporting, like BehaviorReport, will only work for the visits/visitors with a product displayed in the choice variant)
   PRODUCT_PROPERTY = 201
   # the different possible choice ids (requires identifier to be provided with the choiceId as indicated in the structure Choice)
-# N.B.: a connection to the product property must be available (e.g.: For visit&visitor-based reporting, like ChoiceReport, will only work for the visits/visitors with a product displayed in the choice variant)
+# N.B.: a connection to the product property must be available (e.g.: For visit&visitor-based reporting, like BehaviorReport, will only work for the visits/visitors with a product displayed in the choice variant)
   CHOICE = 300
   # the different possible choice variant ids (requires identifier to be provided with the choiceVariantIdId as indicated in the structure ChoiceVariant)
-# N.B.: a connection to the product property must be available (e.g.: For visit&visitor-based reporting, like ChoiceReport, will only work for the visits/visitors with a product displayed in the choice variant)
+# N.B.: a connection to the product property must be available (e.g.: For visit&visitor-based reporting, like BehaviorReport, will only work for the visits/visitors with a product displayed in the choice variant)
   CHOICE_VARIANT = 301
   #  * The index of the returned time serie (starting at zero) related to this result (requires identifier to be provided with the cohort id field requested)
 # * N.B.: the ReportDimensionValue value will indicate the index as a number 0->n-1, n-1 being the last time range of the cohort report
   COHORT_INDEX = 1000
-  VALUE_MAP = {1 => "NEW_VISITOR", 2 => "GEO_COUNTRY", 3 => "GEO_ZIP", 4 => "GEO_SUBDIVISION", 4 => "GEO_CITY", 5 => "BROWSER_NAME", 5 => "BROWSER_VERSION", 6 => "OPERATING_SYSTEM", 7 => "DEVICE_CATEGORY", 8 => "ADWORDS_CREATIVE", 9 => "ADWORDS_KEYWORD", 15 => "ONSITE_SEARCH_QUERY", 20 => "HOUR_OF_DAY", 21 => "MOMENT_OF_DAY", 22 => "DAY_OF_WEEK", 23 => "MOMENT_OF_WEEK", 24 => "SESSION_START_TIMESTAMP", 25 => "SESSION_ID", 26 => "INTERNAL_SESSION_ID", 27 => "VISITOR_ID", 28 => "INTERNAL_VISITOR_ID", 50 => "URL_PARAMETER", 100 => "TRANSACTION_PROPERTY", 150 => "CUSTOMER_PROPERTY", 200 => "PURCHASED_PRODUCT_PROPERTY", 201 => "PRODUCT_PROPERTY", 300 => "CHOICE", 301 => "CHOICE_VARIANT", 1000 => "COHORT_INDEX"}
-  VALID_VALUES = Set.new([NEW_VISITOR, GEO_COUNTRY, GEO_ZIP, GEO_SUBDIVISION, GEO_CITY, BROWSER_NAME, BROWSER_VERSION, OPERATING_SYSTEM, DEVICE_CATEGORY, ADWORDS_CREATIVE, ADWORDS_KEYWORD, ONSITE_SEARCH_QUERY, HOUR_OF_DAY, MOMENT_OF_DAY, DAY_OF_WEEK, MOMENT_OF_WEEK, SESSION_START_TIMESTAMP, SESSION_ID, INTERNAL_SESSION_ID, VISITOR_ID, INTERNAL_VISITOR_ID, URL_PARAMETER, TRANSACTION_PROPERTY, CUSTOMER_PROPERTY, PURCHASED_PRODUCT_PROPERTY, PRODUCT_PROPERTY, CHOICE, CHOICE_VARIANT, COHORT_INDEX]).freeze
+  VALUE_MAP = {1 => "NEW_VISITOR", 2 => "GEO_COUNTRY", 3 => "GEO_ZIP", 4 => "GEO_SUBDIVISION", 4 => "GEO_CITY", 5 => "BROWSER_NAME", 5 => "BROWSER_VERSION", 6 => "OPERATING_SYSTEM", 7 => "DEVICE_CATEGORY", 8 => "ADWORDS_CREATIVE", 9 => "ADWORDS_KEYWORD", 15 => "ONSITE_SEARCH_QUERY", 20 => "HOUR_OF_DAY", 21 => "MOMENT_OF_DAY", 22 => "DAY_OF_WEEK", 23 => "MOMENT_OF_WEEK", 24 => "SESSION_START_TIMESTAMP", 25 => "SESSION_ID", 26 => "INTERNAL_SESSION_ID", 27 => "VISITOR_ID", 28 => "INTERNAL_VISITOR_ID", 29 => "PAGE_VIEW_URL", 50 => "URL_PARAMETER", 100 => "TRANSACTION_PROPERTY", 150 => "CUSTOMER_PROPERTY", 200 => "PURCHASED_PRODUCT_PROPERTY", 201 => "PRODUCT_PROPERTY", 300 => "CHOICE", 301 => "CHOICE_VARIANT", 1000 => "COHORT_INDEX"}
+  VALID_VALUES = Set.new([NEW_VISITOR, GEO_COUNTRY, GEO_ZIP, GEO_SUBDIVISION, GEO_CITY, BROWSER_NAME, BROWSER_VERSION, OPERATING_SYSTEM, DEVICE_CATEGORY, ADWORDS_CREATIVE, ADWORDS_KEYWORD, ONSITE_SEARCH_QUERY, HOUR_OF_DAY, MOMENT_OF_DAY, DAY_OF_WEEK, MOMENT_OF_WEEK, SESSION_START_TIMESTAMP, SESSION_ID, INTERNAL_SESSION_ID, VISITOR_ID, INTERNAL_VISITOR_ID, PAGE_VIEW_URL, URL_PARAMETER, TRANSACTION_PROPERTY, CUSTOMER_PROPERTY, PURCHASED_PRODUCT_PROPERTY, PRODUCT_PROPERTY, CHOICE, CHOICE_VARIANT, COHORT_INDEX]).freeze
 end
 
 module ConditionOperator
@@ -1076,100 +1080,6 @@ class ReportFilter
   ::Thrift::Struct.generate_accessors self
 end
 
-# This structure defines an optimization report request
-class ChoiceReportRequest
-  include ::Thrift::Struct, ::Thrift::Struct_Union
-  CHOICESOURCEID = 1
-  CHOICE = 2
-  METRICS = 3
-  CHOICEVARIANTIDS = 4
-  RETURNRECOMMENDATIONSTRATEGIES = 5
-  DIMENSION = 6
-  FUNNELMETRICS = 7
-  SORTBYS = 8
-  RANGE = 9
-  PRECISION = 10
-  STARTINDEX = 11
-  MAXRESULTS = 12
-
-  FIELDS = {
-    # the choice source id (identifying the system being the source of the choices, if you don't have a choice source id already, please contact support@boxalino.com) (must follow the content id format: <= 50 alphanumeric characters without accent or punctuation)
-    CHOICESOURCEID => {:type => ::Thrift::Types::STRING, :name => 'choiceSourceId'},
-    # the choice to analyse (e.g.: each landing page is a choice and has several variant potentially, even if only one)
-    CHOICE => {:type => ::Thrift::Types::STRUCT, :name => 'choice', :class => ::Choice},
-    # the metrics to evaluate report (e.g.: kpis to return)
-    METRICS => {:type => ::Thrift::Types::LIST, :name => 'metrics', :element => {:type => ::Thrift::Types::STRUCT, :class => ::ReportMetric}},
-    # an optional choice variants to use as filters (only return the results for these choicevariants)
-    CHOICEVARIANTIDS => {:type => ::Thrift::Types::LIST, :name => 'choiceVariantIds', :element => {:type => ::Thrift::Types::STRING}, :optional => true},
-    # an optional flag to indicate that the results should display not only the choice variant, but which recommendation strategies have been used for each choice variant (only applicable if the choice is a recommendation choice)
-    RETURNRECOMMENDATIONSTRATEGIES => {:type => ::Thrift::Types::BOOL, :name => 'returnRecommendationStrategies', :optional => true},
-    # an optional dimension for the report (for segmentation), while groups are different for each type of reporting, the dimension are normally standard (visitor country, device, ...)
-    DIMENSION => {:type => ::Thrift::Types::STRUCT, :name => 'dimension', :class => ::ReportDimension, :optional => true},
-    # an optional list of metrics to limit the report to only the cases where at least one of the metrics of the list was reached (e.g.: if focusedMetrics are goal-X and goal-Y, then the Metric Transactions will not be returned for all the visits, but only for the visits who did reach goal-X or goal-Y at least once)
-    FUNNELMETRICS => {:type => ::Thrift::Types::LIST, :name => 'funnelMetrics', :element => {:type => ::Thrift::Types::STRUCT, :class => ::ReportMetric}, :optional => true},
-    # the metrics to use for sorting the results
-    SORTBYS => {:type => ::Thrift::Types::LIST, :name => 'sortBys', :element => {:type => ::Thrift::Types::STRUCT, :class => ::ReportMetric}, :optional => true},
-    # a required date range for the reporting response (precision is only managed per day)
-    RANGE => {:type => ::Thrift::Types::STRUCT, :name => 'range', :class => ::TimeRange},
-    # a required date range precision if the results should be aggregated per week or month, overall or return for each day
-    PRECISION => {:type => ::Thrift::Types::I32, :name => 'precision', :enum_class => ::TimeRangePrecision},
-    # an optional starting index (e.g.: if the maximum number of results was exceeded and a second page needs to be displayed). First index is 0.
-    STARTINDEX => {:type => ::Thrift::Types::I16, :name => 'startIndex', :optional => true},
-    # an required number of maximum number of results (one result is one source of date rage data in of values for all kpis)
-    MAXRESULTS => {:type => ::Thrift::Types::I16, :name => 'maxResults'}
-  }
-
-  def struct_fields; FIELDS; end
-
-  def validate
-    raise ::Thrift::ProtocolException.new(::Thrift::ProtocolException::UNKNOWN, 'Required field choice is unset!') unless @choice
-    raise ::Thrift::ProtocolException.new(::Thrift::ProtocolException::UNKNOWN, 'Required field metrics is unset!') unless @metrics
-    raise ::Thrift::ProtocolException.new(::Thrift::ProtocolException::UNKNOWN, 'Required field range is unset!') unless @range
-    raise ::Thrift::ProtocolException.new(::Thrift::ProtocolException::UNKNOWN, 'Required field precision is unset!') unless @precision
-    raise ::Thrift::ProtocolException.new(::Thrift::ProtocolException::UNKNOWN, 'Required field maxResults is unset!') unless @maxResults
-    unless @precision.nil? || ::TimeRangePrecision::VALID_VALUES.include?(@precision)
-      raise ::Thrift::ProtocolException.new(::Thrift::ProtocolException::UNKNOWN, 'Invalid value of field precision!')
-    end
-  end
-
-  ::Thrift::Struct.generate_accessors self
-end
-
-# This structure defines a map key (signature) of a choice report result (indication about what this result is about)
-# The ChoiceReport object contains a map with the results. For each key (i.e.: result group) the system returns a list of report metrics (kpis) and value for each date range requested.
-# These keys are, in the case of a ChoiceReport defined by the choice variant and, possibly a specific dimension value of the choice variant.
-# It is possible that there is no value for the dimension, but then there must be a value for the choiceVariant.
-# It is possible that there is no value for the choiceVariant, but then there must be a value for the choiceVariant.
-# It is only possibly that the recommendationStrategy has a value if a choiceVariant value is also provided.
-# It is possible that the 3 variables (choiceVariant, recommendationStrategy and dimensionValue) are all set.
-# Even if allowed by the fact that all of the variables are optional, it is not possible that none of the variables are set.
-class ChoiceReportResult
-  include ::Thrift::Struct, ::Thrift::Struct_Union
-  CHOICEVARIANTID = 1
-  RECOMMENDATIONSTRATEGY = 2
-  DIMENSIONVALUE = 3
-  VALUES = 4
-
-  FIELDS = {
-    # the choice variant of the choice
-    CHOICEVARIANTID => {:type => ::Thrift::Types::STRING, :name => 'choiceVariantId', :optional => true},
-    # optional: indicate a specific recommendation strategy which provided the result (only returned for recommendation choices when the flag returnRecommendationStrategies is true)
-    RECOMMENDATIONSTRATEGY => {:type => ::Thrift::Types::STRING, :name => 'recommendationStrategy', :optional => true},
-    # an optional dimension value (in case a dimension has been requested for segmentation)
-    DIMENSIONVALUE => {:type => ::Thrift::Types::STRING, :name => 'dimensionValue', :optional => true},
-    # the report result values
-    VALUES => {:type => ::Thrift::Types::STRUCT, :name => 'values', :class => ::ReportResultValues}
-  }
-
-  def struct_fields; FIELDS; end
-
-  def validate
-    raise ::Thrift::ProtocolException.new(::Thrift::ProtocolException::UNKNOWN, 'Required field values is unset!') unless @values
-  end
-
-  ::Thrift::Struct.generate_accessors self
-end
-
 # This structure defines a metric value association
 class ReportMetricValue
   include ::Thrift::Struct, ::Thrift::Struct_Union
@@ -1267,30 +1177,6 @@ class ReportResultValues
   ::Thrift::Struct.generate_accessors self
 end
 
-# This structure defines an optimization report returned
-# This object is specific to ChoiceReportRequest but is similar to all other type of report responses, as the only difference usually is the key object of the result variable (in this case: ChoiceReportResult)
-class ChoiceReport
-  include ::Thrift::Struct, ::Thrift::Struct_Union
-  RESULTS = 1
-  SUMRESULT = 2
-
-  FIELDS = {
-    # the map of reporting results (one result per ChoiceReportResult: indicating choice variant, dimension value, etc.)
-    RESULTS => {:type => ::Thrift::Types::LIST, :name => 'results', :element => {:type => ::Thrift::Types::STRUCT, :class => ::ChoiceReportResult}},
-    # the sum result
-    SUMRESULT => {:type => ::Thrift::Types::STRUCT, :name => 'sumResult', :class => ::ReportResultValues}
-  }
-
-  def struct_fields; FIELDS; end
-
-  def validate
-    raise ::Thrift::ProtocolException.new(::Thrift::ProtocolException::UNKNOWN, 'Required field results is unset!') unless @results
-    raise ::Thrift::ProtocolException.new(::Thrift::ProtocolException::UNKNOWN, 'Required field sumResult is unset!') unless @sumResult
-  end
-
-  ::Thrift::Struct.generate_accessors self
-end
-
 # This structure defines a transaction report request
 class TransactionReportRequest
   include ::Thrift::Struct, ::Thrift::Struct_Union
@@ -1303,6 +1189,7 @@ class TransactionReportRequest
   PRECISION = 7
   STARTINDEX = 8
   MAXRESULTS = 9
+  IGNOREFILLMISSINGTIMEVALUESWITHZEROS = 10
 
   FIELDS = {
     # the metrics to evaluate report (e.g.: kpis to return)
@@ -1325,7 +1212,9 @@ class TransactionReportRequest
     # an optional starting index (e.g.: if the maximum number of results was exceeded and a second page needs to be displayed). First index is 0.
     STARTINDEX => {:type => ::Thrift::Types::I16, :name => 'startIndex', :optional => true},
     # an required number of maximum number of results (one result is one source of date rage data in of values for all kpis)
-    MAXRESULTS => {:type => ::Thrift::Types::I16, :name => 'maxResults'}
+    MAXRESULTS => {:type => ::Thrift::Types::I16, :name => 'maxResults'},
+    # an optional flag to avoid filling up with zero all possible time precision
+    IGNOREFILLMISSINGTIMEVALUESWITHZEROS => {:type => ::Thrift::Types::BOOL, :name => 'ignoreFillMissingTimeValuesWithZeros', :optional => true}
   }
 
   def struct_fields; FIELDS; end
@@ -1403,6 +1292,7 @@ class BehaviorReportRequest
   PRECISION = 6
   STARTINDEX = 7
   MAXRESULTS = 8
+  IGNOREFILLMISSINGTIMEVALUESWITHZEROS = 9
 
   FIELDS = {
     # the metrics to evaluate report (e.g.: kpis to return)
@@ -1420,7 +1310,9 @@ class BehaviorReportRequest
     # an optional starting index (e.g.: if the maximum number of results was exceeded and a second page needs to be displayed). First index is 0.
     STARTINDEX => {:type => ::Thrift::Types::I16, :name => 'startIndex', :optional => true},
     # an required number of maximum number of results (one result is one source of date rage data in of values for all kpis)
-    MAXRESULTS => {:type => ::Thrift::Types::I16, :name => 'maxResults'}
+    MAXRESULTS => {:type => ::Thrift::Types::I16, :name => 'maxResults'},
+    # an optional flag to avoid filling up with zero all possible time precision
+    IGNOREFILLMISSINGTIMEVALUESWITHZEROS => {:type => ::Thrift::Types::BOOL, :name => 'ignoreFillMissingTimeValuesWithZeros', :optional => true}
   }
 
   def struct_fields; FIELDS; end

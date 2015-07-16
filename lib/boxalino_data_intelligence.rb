@@ -885,22 +885,6 @@ module BoxalinoDataIntelligence
       raise ::Thrift::ApplicationException.new(::Thrift::ApplicationException::MISSING_RESULT, 'GetPageViews failed: unknown result')
     end
 
-    def GetChoiceReport(authentication, configuration, request)
-      send_GetChoiceReport(authentication, configuration, request)
-      return recv_GetChoiceReport()
-    end
-
-    def send_GetChoiceReport(authentication, configuration, request)
-      send_message('GetChoiceReport', GetChoiceReport_args, :authentication => authentication, :configuration => configuration, :request => request)
-    end
-
-    def recv_GetChoiceReport()
-      result = receive_message(GetChoiceReport_result)
-      return result.success unless result.success.nil?
-      raise result.e unless result.e.nil?
-      raise ::Thrift::ApplicationException.new(::Thrift::ApplicationException::MISSING_RESULT, 'GetChoiceReport failed: unknown result')
-    end
-
     def GetTransactionReport(authentication, configuration, request)
       send_GetTransactionReport(authentication, configuration, request)
       return recv_GetTransactionReport()
@@ -1563,17 +1547,6 @@ module BoxalinoDataIntelligence
         result.e = e
       end
       write_result(result, oprot, 'GetPageViews', seqid)
-    end
-
-    def process_GetChoiceReport(seqid, iprot, oprot)
-      args = read_args(iprot, GetChoiceReport_args)
-      result = GetChoiceReport_result.new()
-      begin
-        result.success = @handler.GetChoiceReport(args.authentication, args.configuration, args.request)
-      rescue ::DataIntelligenceServiceException => e
-        result.e = e
-      end
-      write_result(result, oprot, 'GetChoiceReport', seqid)
     end
 
     def process_GetTransactionReport(seqid, iprot, oprot)
@@ -3675,44 +3648,6 @@ module BoxalinoDataIntelligence
 
     FIELDS = {
       SUCCESS => {:type => ::Thrift::Types::LIST, :name => 'success', :element => {:type => ::Thrift::Types::STRUCT, :class => ::TimeRangeValue}},
-      E => {:type => ::Thrift::Types::STRUCT, :name => 'e', :class => ::DataIntelligenceServiceException}
-    }
-
-    def struct_fields; FIELDS; end
-
-    def validate
-    end
-
-    ::Thrift::Struct.generate_accessors self
-  end
-
-  class GetChoiceReport_args
-    include ::Thrift::Struct, ::Thrift::Struct_Union
-    AUTHENTICATION = 1
-    CONFIGURATION = 2
-    REQUEST = 3
-
-    FIELDS = {
-      AUTHENTICATION => {:type => ::Thrift::Types::STRUCT, :name => 'authentication', :class => ::Authentication},
-      CONFIGURATION => {:type => ::Thrift::Types::STRUCT, :name => 'configuration', :class => ::ConfigurationVersion},
-      REQUEST => {:type => ::Thrift::Types::STRUCT, :name => 'request', :class => ::ChoiceReportRequest}
-    }
-
-    def struct_fields; FIELDS; end
-
-    def validate
-    end
-
-    ::Thrift::Struct.generate_accessors self
-  end
-
-  class GetChoiceReport_result
-    include ::Thrift::Struct, ::Thrift::Struct_Union
-    SUCCESS = 0
-    E = 1
-
-    FIELDS = {
-      SUCCESS => {:type => ::Thrift::Types::STRUCT, :name => 'success', :class => ::ChoiceReport},
       E => {:type => ::Thrift::Types::STRUCT, :name => 'e', :class => ::DataIntelligenceServiceException}
     }
 

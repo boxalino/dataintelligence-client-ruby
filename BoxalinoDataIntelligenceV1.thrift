@@ -594,7 +594,11 @@ enum ReportMetricType {
 	 */
 	PAGE_VIEWS_PER_VISIT = 6,
 	/**
-	 * average time of visits
+	 * total time on site in secods
+	 */
+	TIME_ON_SITE = 31,
+	/**
+	 * TIME_ON_SITE / VISITS
 	 */
 	AVERAGE_TIME_ON_SITE = 7,
 	/**
@@ -873,37 +877,41 @@ enum ReportDimensionType {
 	 */
 	INTERNAL_VISITOR_ID = 28,
 	/**
+	 * the different page view urls
+	 */
+	PAGE_VIEW_URL = 29,
+	/**
 	 * the different values of a URL parameter (require identifier to be provided with url parameter name)
 	 */
 	URL_PARAMETER = 50,
 	/**
 	 * the different values of a transaction property (requires identifier to be provided with the transaction property name)
-	 * N.B.: a connection to the transaction property must be available (e.g.: For visit&visitor-based reporting, like ChoiceReport, will only work for the visits/visitors with a transaction)
+	 * N.B.: a connection to the transaction property must be available (e.g.: For visit&visitor-based reporting, like BehaviorReport, will only work for the visits/visitors with a transaction)
 	 */
 	TRANSACTION_PROPERTY = 100,
 	/**
 	 * the different values of a customer property (requires identifier to be provided with the customer property name)
-	 * N.B.: a connection to the transaction property must be available (e.g.: For visit&visitor-based reporting, like ChoiceReport, will only work for the visits/visitors with a login or other ways to link the customer id to the visitor id)
+	 * N.B.: a connection to the transaction property must be available (e.g.: For visit&visitor-based reporting, like BehaviorReport, will only work for the visits/visitors with a login or other ways to link the customer id to the visitor id)
 	 */
 	CUSTOMER_PROPERTY = 150,
 	/**
 	 * the different values of a product property (requires identifier to be provided with the product property name)
-	 * N.B.: a connection to the transaction property must be available (e.g.: For visit&visitor-based reporting, like ChoiceReport, will only work for the visits/visitors with a product purchased)
+	 * N.B.: a connection to the transaction property must be available (e.g.: For visit&visitor-based reporting, like BehaviorReport, will only work for the visits/visitors with a product purchased)
 	 */
 	PURCHASED_PRODUCT_PROPERTY = 200,
 	/**
 	 * the different values of a product property (requires identifier to be provided with the product property name)
-	 * N.B.: a connection to the product property must be available (e.g.: For visit&visitor-based reporting, like ChoiceReport, will only work for the visits/visitors with a product displayed in the choice variant)
+	 * N.B.: a connection to the product property must be available (e.g.: For visit&visitor-based reporting, like BehaviorReport, will only work for the visits/visitors with a product displayed in the choice variant)
 	 */
 	PRODUCT_PROPERTY = 201,
 	/**
 	 * the different possible choice ids (requires identifier to be provided with the choiceId as indicated in the structure Choice)
-	 * N.B.: a connection to the product property must be available (e.g.: For visit&visitor-based reporting, like ChoiceReport, will only work for the visits/visitors with a product displayed in the choice variant)
+	 * N.B.: a connection to the product property must be available (e.g.: For visit&visitor-based reporting, like BehaviorReport, will only work for the visits/visitors with a product displayed in the choice variant)
 	 */
 	CHOICE = 300,
 	/**
 	 * the different possible choice variant ids (requires identifier to be provided with the choiceVariantIdId as indicated in the structure ChoiceVariant)
-	 * N.B.: a connection to the product property must be available (e.g.: For visit&visitor-based reporting, like ChoiceReport, will only work for the visits/visitors with a product displayed in the choice variant)
+	 * N.B.: a connection to the product property must be available (e.g.: For visit&visitor-based reporting, like BehaviorReport, will only work for the visits/visitors with a product displayed in the choice variant)
 	 */
 	CHOICE_VARIANT = 301,
 	/**
@@ -1054,90 +1062,6 @@ struct ReportFilter {
 }
 
 /**
- * This structure defines an optimization report request
- */
-struct ChoiceReportRequest {
-	/**
-	 * the choice source id (identifying the system being the source of the choices, if you don't have a choice source id already, please contact support@boxalino.com) (must follow the content id format: <= 50 alphanumeric characters without accent or punctuation)
-	 */
-	1: string choiceSourceId,
-	/**
-	 * the choice to analyse (e.g.: each landing page is a choice and has several variant potentially, even if only one)
-	 */
-	2: required Choice choice,
-	/**
-	 * the metrics to evaluate report (e.g.: kpis to return)
-	 */
-	3: required list<ReportMetric> metrics,
-	/**
-	 * an optional choice variants to use as filters (only return the results for these choicevariants)
-	 */
-	4: optional list<string> choiceVariantIds,
-	/**
-	 * an optional flag to indicate that the results should display not only the choice variant, but which recommendation strategies have been used for each choice variant (only applicable if the choice is a recommendation choice)
-	 */
-	5: optional bool returnRecommendationStrategies,
-	/**
-	 * an optional dimension for the report (for segmentation), while groups are different for each type of reporting, the dimension are normally standard (visitor country, device, ...)
-	 */
-	6: optional ReportDimension dimension,
-	/**
-	 * an optional list of metrics to limit the report to only the cases where at least one of the metrics of the list was reached (e.g.: if focusedMetrics are goal-X and goal-Y, then the Metric Transactions will not be returned for all the visits, but only for the visits who did reach goal-X or goal-Y at least once)
-	 */
-	7: optional list<ReportMetric> funnelMetrics,
-	/**
-	 * the metrics to use for sorting the results
-	 */
-	8: optional list<ReportMetric> sortBys,
-	/**
-	 * a required date range for the reporting response (precision is only managed per day)
-	 */
-	9: required TimeRange range,
-	/**
-	 * a required date range precision if the results should be aggregated per week or month, overall or return for each day
-	 */
-	10: required TimeRangePrecision precision,
-	/**
-	 * an optional starting index (e.g.: if the maximum number of results was exceeded and a second page needs to be displayed). First index is 0.
-	 */
-	11: optional i16 startIndex,
-	/**
-	 * an required number of maximum number of results (one result is one source of date rage data in of values for all kpis)
-	 */
-	12: required i16 maxResults
-}
-
-/** 
- * This structure defines a map key (signature) of a choice report result (indication about what this result is about)
- * The ChoiceReport object contains a map with the results. For each key (i.e.: result group) the system returns a list of report metrics (kpis) and value for each date range requested.
- * These keys are, in the case of a ChoiceReport defined by the choice variant and, possibly a specific dimension value of the choice variant.
- * It is possible that there is no value for the dimension, but then there must be a value for the choiceVariant.
- * It is possible that there is no value for the choiceVariant, but then there must be a value for the choiceVariant.
- * It is only possibly that the recommendationStrategy has a value if a choiceVariant value is also provided.
- * It is possible that the 3 variables (choiceVariant, recommendationStrategy and dimensionValue) are all set.
- * Even if allowed by the fact that all of the variables are optional, it is not possible that none of the variables are set.
- */
-struct ChoiceReportResult {
-	/**
-	* the choice variant of the choice
-	*/
-	1: optional string choiceVariantId,
-	/**
-	* optional: indicate a specific recommendation strategy which provided the result (only returned for recommendation choices when the flag returnRecommendationStrategies is true)
-	*/
-	2: optional string recommendationStrategy,
-	/**
-	 * an optional dimension value (in case a dimension has been requested for segmentation)
-	 */
-	3: optional string dimensionValue,	
-	/**
-	* the report result values
-	*/
-	4: required ReportResultValues values
-}
-
-
-/**
  * This enumeration defines possible report result value key types.
  * For each report result groups, the system returns a map of ReportResultValues object (i.e.:a map of report metric (kpi) with their values) for each time range. 
  * These time ranges can be of different types (absolute defining exactly form a specific moment to another, or relative, starting at 0 for the first key, for cohort analysis).
@@ -1213,21 +1137,6 @@ struct ReportResultValues {
 	2: required list<ReportResultKeyValues> values
 }
 
-/** 
- * This structure defines an optimization report returned
- * This object is specific to ChoiceReportRequest but is similar to all other type of report responses, as the only difference usually is the key object of the result variable (in this case: ChoiceReportResult)
-*/
-struct ChoiceReport {
-	/**
-	* the map of reporting results (one result per ChoiceReportResult: indicating choice variant, dimension value, etc.)
-	*/
-	1: required list<ChoiceReportResult> results,
-	/**
-	* the sum result
-	*/
-	2: required ReportResultValues sumResult
-}
-
 /**
  * This structure defines a transaction report request
  */
@@ -1270,7 +1179,11 @@ struct TransactionReportRequest {
 	/**
 	 * an required number of maximum number of results (one result is one source of date rage data in of values for all kpis)
 	 */
-	9: required i16 maxResults
+	9: required i16 maxResults,
+	/**
+	 * an optional flag to avoid filling up with zero all possible time precision
+	 */
+	10: optional bool ignoreFillMissingTimeValuesWithZeros
 }
 
 /** 
@@ -1339,7 +1252,11 @@ struct BehaviorReportRequest {
 	/**
 	 * an required number of maximum number of results (one result is one source of date rage data in of values for all kpis)
 	 */
-	8: required i16 maxResults
+	8: required i16 maxResults,
+	/**
+	 * an optional flag to avoid filling up with zero all possible time precision
+	 */
+	9: optional bool ignoreFillMissingTimeValuesWithZeros
 }
 
 /** 
@@ -2401,7 +2318,7 @@ service BoxalinoDataIntelligence {
         string GetLastTransactionID(1: Authentication authentication, 2: ConfigurationVersion configuration) throws (1: DataIntelligenceServiceException e),
 
 /**
- * DEPRECITATED: USE GetChoiceReport service instead with ReportMetric: PAGE_VIEWS
+ * DEPRECITATED: USE GetBehaviorReport service instead with ReportMetric: PAGE_VIEWS
  * This service function retrieves number of visits for each time range with selected precision.
  * 
  * <dl>
@@ -2420,24 +2337,6 @@ service BoxalinoDataIntelligence {
  * </dl>
  */
 	list<TimeRangeValue> GetPageViews(1: Authentication authentication, 2: ConfigurationVersion configuration, 3: TimeRange range, 4: TimeRangePrecision precision) throws (1: DataIntelligenceServiceException e),
-	
-/**
- * This service function provides an choice statistical report. 
- * 
- * <dl>
- * <dt>@param authenticationToken</dt>
- * <dd>the authentication object as returned by the GetAuthentication service function in the AuthenticationResponse struct</dd>
- * <dt>@param configurationVersion</dt>
- * <dd>a ConfigurationVersion object indicating the configuration version number (as returned by function GetConfigurationVersion)</dd>
- * <dt>@param request</dt>
- * <dd>The statistical report request indicating the parameters of the requested report: dimension, metrics, etc.</dd>
- * <dt>@throws DataIntelligenceServiceException</dt>
- * <dd>INVALID_AUTHENTICATION_TOKEN:if the provided authentication token is not valid or has expired (1 hour validity).</dd>
- * <dd>INVALID_CONFIGURATION_VERSION: if the provided configuration version is not valid.</dd>
- * <dd>INVALID_REPORT_REQUEST: if the provided report request is not valid.</dd>
- * </dl>
- */
-	ChoiceReport GetChoiceReport(1: Authentication authentication, 2: ConfigurationVersion configuration, 3: ChoiceReportRequest request) throws (1: DataIntelligenceServiceException e),
 	
 /**
  * This service function provides an transaction statistical report. 
