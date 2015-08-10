@@ -700,6 +700,18 @@ enum ReportMetricType {
 	 */
 	EVENT_COUNT = 40,
 	/**
+	 * number of e-mails sent
+	 */
+	MAIL_SENT = 50,
+	/**
+	 * number of e-mails opened
+	 */
+	MAIL_OPENED = 51,
+	/**
+	 * number of e-mails clicked
+	 */
+	MAIL_CLICKED = 52,
+	/**
 	 * number of display of a choice
 	 */
 	CHOICE_DISPLAYS = 100,
@@ -807,7 +819,7 @@ enum ReportDimensionType {
 	/**
 	 * the detected subdivision (Kanton for Switzerland) of the visitor (NULL if none detected)
 	 */
-	GEO_SUBDIVISION = 4,
+	GEO_SUBDIVISION = 10,
 	/**
 	 * the detected city of the visitor (NULL if none detected)
 	 */
@@ -815,7 +827,7 @@ enum ReportDimensionType {
 	/**
 	 * the user agent name (most common values: IE,Mobile Safari,Chrome,Firefox,Safari,Android browser,Chrome Mobile,Java,IE Mobile,Opera,Mobile Firefox)
 	 */
-	BROWSER_NAME = 5,
+	BROWSER_NAME = 11,
 	/**
 	 * the user agent version
 	 */
