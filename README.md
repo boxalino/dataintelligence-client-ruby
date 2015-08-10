@@ -12,4 +12,6 @@ Usage
 To use the Personalization client in your Ruby project, take the following steps:
 
 #1) Copy lib/ into your Ruby codebase
-#2) require 'boxalino_data_intelligence'
+#2) After that, you have to include the client to use it:
+
+    require 'boxalino_data_intelligence'
