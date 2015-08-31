@@ -680,6 +680,10 @@ enum ReportMetricType {
 	 */
 	TRANSACTIONS_QUANTITY = 30,
 	/**
+	 * number of transactions customers (different customers having made transactions)
+	 */
+	TRANSACTIONS_CUSTOMERS = 32,
+	/**
 	 * number of add-to-basket events
 	 */
 	ADD_TO_BASKETS = 24,
@@ -716,56 +720,92 @@ enum ReportMetricType {
 	 */
 	CHOICE_DISPLAYS = 100,
 	/**
+	 * CHOICE_DISPLAYS / VISITS
+	 */
+	CHOICE_DISPLAYS_PER_VISIT = 101,
+	/**
 	 * number of visits having at least one choice display
 	 */
-	VISITS_WITH_CHOICE_DISPLAYS = 101,
+	VISITS_WITH_CHOICE_DISPLAYS = 102,
+	/**
+	 * VISITS_WITH_CHOICE_DISPLAYS / VISITS
+	 */
+	VISITS_WITH_CHOICE_DISPLAYS_RATE = 103,
 	/**
 	 * number of product views event related to product displayed in a choice display
 	 * if a ReportDimension is on the product id, then only for this product id
 	 */
 	PRODUCT_VIEWS_FROM_CHOICE_DISPLAY = 110,
 	/**
+	 * PRODUCT_VIEWS_FROM_CHOICE_DISPLAY / VISITS
+	 */
+	PRODUCT_VIEWS_FROM_CHOICE_DISPLAY_PER_VISIT = 111,
+	/**
 	 * number of visits having at least one product views event related to product displayed in a choice display
 	 * if a ReportDimension is on the product id, then only for this product id
 	 * if a ReportDimension is on a Choice, then only for this choice
 	 * if a ReportDimension is on a ChoiceVariant, then only for this choice variant
 	 */
-	VISITS_WITH_PRODUCT_VIEWS_FROM_CHOICE_DISPLAY = 111,
+	VISITS_WITH_PRODUCT_VIEWS_FROM_CHOICE_DISPLAY = 112,
+	/**
+	 * VISITS_WITH_PRODUCT_VIEWS_FROM_CHOICE_DISPLAY / VISITS
+	 */
+	VISITS_WITH_PRODUCT_VIEWS_FROM_CHOICE_DISPLAY_RATE = 113,
 	/**
 	 * number of transactions related to product displayed in a choice display
 	 * if a ReportDimension is on the product id, then only for this product id
 	 * if a ReportDimension is on a Choice, then only for this choice
 	 * if a ReportDimension is on a ChoiceVariant, then only for this choice variant
 	 */
-	TRANSACTIONS_FROM_CHOICE_DISPLAY = 112,
+	TRANSACTIONS_FROM_CHOICE_DISPLAY = 120,
+	/**
+	 * TRANSACTIONS_FROM_CHOICE_DISPLAY / VISITS
+	 */
+	TRANSACTIONS_FROM_CHOICE_DISPLAY_PER_VISIT = 121,
 	/**
 	 * sum of transaction property value of transactions related to product displayed in a choice display
 	 * if a ReportDimension is on the product id, then only for this product id
 	 * if a ReportDimension is on a Choice, then only for this choice
 	 * if a ReportDimension is on a ChoiceVariant, then only for this choice variant
 	 */
-	TRANSACTIONS_PARAMETER_SUM_FROM_CHOICE_DISPLAY = 113,
+	TRANSACTIONS_PARAMETER_SUM_FROM_CHOICE_DISPLAY = 122,
+	/**
+	 * TRANSACTIONS_PARAMETER_SUM_FROM_CHOICE_DISPLAY / VISITS
+	 */
+	TRANSACTIONS_PARAMETER_SUM_FROM_CHOICE_DISPLAY_PER_VISIT = 123,
 	/**
 	 * number of visits having at least one transaction event related to product displayed in a choice display
 	 * if a ReportDimension is on the product id, then only for this product id
 	 * if a ReportDimension is on a Choice, then only for this choice
 	 * if a ReportDimension is on a ChoiceVariant, then only for this choice variant
 	 */
-	VISITS_WITH_TRANSACTIONS_FROM_CHOICE_DISPLAY = 114,
+	VISITS_WITH_TRANSACTIONS_FROM_CHOICE_DISPLAY = 130,
+	/**
+	 * VISITS_WITH_TRANSACTIONS_FROM_CHOICE_DISPLAY / VISITS
+	 */
+	VISITS_WITH_TRANSACTIONS_FROM_CHOICE_DISPLAY_RATE = 131,
 	/**
 	 * number of add to baskets related to product displayed in a choice display
 	 * if a ReportDimension is on the product id, then only for this product id
 	 * if a ReportDimension is on a Choice, then only for this choice
 	 * if a ReportDimension is on a ChoiceVariant, then only for this choice variant
 	 */
-	ADD_TO_BASKETS_FROM_CHOICE_DISPLAY = 115,
+	ADD_TO_BASKETS_FROM_CHOICE_DISPLAY = 132,
+	/**
+	 * ADD_TO_BASKETS_FROM_CHOICE_DISPLAY / VISITS
+	 */
+	ADD_TO_BASKETS_FROM_CHOICE_DISPLAY_PER_VISIT = 133,
 	/**
 	 * number of visits having at least one add to basket related to product displayed in a choice display
 	 * if a ReportDimension is on the product id, then only for this product id
 	 * if a ReportDimension is on a Choice, then only for this choice
 	 * if a ReportDimension is on a ChoiceVariant, then only for this choice variant
 	 */
-	VISITS_WITH_ADD_TO_BASKETS_FROM_CHOICE_DISPLAY = 116,
+	VISITS_WITH_ADD_TO_BASKETS_FROM_CHOICE_DISPLAY = 134,
+	/**
+	 * VISITS_WITH_ADD_TO_BASKETS_FROM_CHOICE_DISPLAY / VISITS
+	 */
+	VISITS_WITH_ADD_TO_BASKETS_FROM_CHOICE_DISPLAY_RATE = 135,
 	/**
 	 * number of goals related to product displayed in a choice display
 	 * (require identifier to be provided with the choice identifier)
@@ -774,7 +814,11 @@ enum ReportMetricType {
 	 * if a ReportDimension is on a Choice, then only for this choice
 	 * if a ReportDimension is on a ChoiceVariant, then only for this choice variant
 	 */
-	GOALS_FROM_CHOICE_DISPLAY = 117,
+	GOALS_FROM_CHOICE_DISPLAY = 140,
+	/**
+	 * GOALS_FROM_CHOICE_DISPLAY / VISITS
+	 */
+	GOALS_FROM_CHOICE_DISPLAY_PER_VISIT = 141,
 	/**
 	 * number of visits having at least goal related to product displayed in a choice display
 	 * (require identifier to be provided with the choice identifier)
@@ -783,7 +827,11 @@ enum ReportMetricType {
 	 * if a ReportDimension is on a Choice, then only for this choice
 	 * if a ReportDimension is on a ChoiceVariant, then only for this choice variant
 	 */
-	VISITS_WITH_GOALS_FROM_CHOICE_DISPLAY = 118
+	VISITS_WITH_GOALS_FROM_CHOICE_DISPLAY = 142
+	/**
+	 * VISITS_WITH_GOALS_FROM_CHOICE_DISPLAY / VISITS
+	 */
+	VISITS_WITH_GOALS_FROM_CHOICE_DISPLAY_RATE = 143,
 }
 
 /**
@@ -1224,9 +1272,9 @@ struct TransactionReport {
 	*/
 	1: required list<TransactionReportResult> results,
 	/**
-	* the sum result
+	* the total results (over all the time periods) (one result per TransactionReportResult: indicating dimension values)
 	*/
-	2: required ReportResultValues sumResult
+	2: required list<TransactionReportResult> totalResult
 }
 
 /**
@@ -1297,9 +1345,9 @@ struct BehaviorReport {
 	*/
 	1: required list<BehaviorReportResult> results,
 	/**
-	* the sum result
+	* the total results (over all the time periods) (one result per BehaviorReportResult: indicating dimension values)
 	*/
-	2: required ReportResultValues sumResult
+	2: required list<BehaviorReportResult> totalResult
 }
 
 service BoxalinoDataIntelligence {

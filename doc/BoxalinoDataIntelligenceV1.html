@@ -386,6 +386,9 @@ N.B.: will return zero for all cases which cannot be mapped to any transaction
 <tr><td><code>TRANSACTIONS_QUANTITY</code></td><td><code>30</code></td><td>
 count of the total number of transaction items (one product with quantity one is one item)
 <br/></td></tr>
+<tr><td><code>TRANSACTIONS_CUSTOMERS</code></td><td><code>32</code></td><td>
+number of transactions customers (different customers having made transactions)
+<br/></td></tr>
 <tr><td><code>ADD_TO_BASKETS</code></td><td><code>24</code></td><td>
 number of add-to-basket events
 <br/></td></tr>
@@ -413,50 +416,77 @@ number of e-mails clicked
 <tr><td><code>CHOICE_DISPLAYS</code></td><td><code>100</code></td><td>
 number of display of a choice
 <br/></td></tr>
-<tr><td><code>VISITS_WITH_CHOICE_DISPLAYS</code></td><td><code>101</code></td><td>
+<tr><td><code>CHOICE_DISPLAYS_PER_VISIT</code></td><td><code>101</code></td><td>
+CHOICE_DISPLAYS / VISITS
+<br/></td></tr>
+<tr><td><code>VISITS_WITH_CHOICE_DISPLAYS</code></td><td><code>102</code></td><td>
 number of visits having at least one choice display
+<br/></td></tr>
+<tr><td><code>VISITS_WITH_CHOICE_DISPLAYS_RATE</code></td><td><code>103</code></td><td>
+VISITS_WITH_CHOICE_DISPLAYS / VISITS
 <br/></td></tr>
 <tr><td><code>PRODUCT_VIEWS_FROM_CHOICE_DISPLAY</code></td><td><code>110</code></td><td>
 number of product views event related to product displayed in a choice display
 if a ReportDimension is on the product id, then only for this product id
 <br/></td></tr>
-<tr><td><code>VISITS_WITH_PRODUCT_VIEWS_FROM_CHOICE_DISPLAY</code></td><td><code>111</code></td><td>
+<tr><td><code>PRODUCT_VIEWS_FROM_CHOICE_DISPLAY_PER_VISIT</code></td><td><code>111</code></td><td>
+PRODUCT_VIEWS_FROM_CHOICE_DISPLAY / VISITS
+<br/></td></tr>
+<tr><td><code>VISITS_WITH_PRODUCT_VIEWS_FROM_CHOICE_DISPLAY</code></td><td><code>112</code></td><td>
 number of visits having at least one product views event related to product displayed in a choice display
 if a ReportDimension is on the product id, then only for this product id
 if a ReportDimension is on a Choice, then only for this choice
 if a ReportDimension is on a ChoiceVariant, then only for this choice variant
 <br/></td></tr>
-<tr><td><code>TRANSACTIONS_FROM_CHOICE_DISPLAY</code></td><td><code>112</code></td><td>
+<tr><td><code>VISITS_WITH_PRODUCT_VIEWS_FROM_CHOICE_DISPLAY_RATE</code></td><td><code>113</code></td><td>
+VISITS_WITH_PRODUCT_VIEWS_FROM_CHOICE_DISPLAY / VISITS
+<br/></td></tr>
+<tr><td><code>TRANSACTIONS_FROM_CHOICE_DISPLAY</code></td><td><code>120</code></td><td>
 number of transactions related to product displayed in a choice display
 if a ReportDimension is on the product id, then only for this product id
 if a ReportDimension is on a Choice, then only for this choice
 if a ReportDimension is on a ChoiceVariant, then only for this choice variant
 <br/></td></tr>
-<tr><td><code>TRANSACTIONS_PARAMETER_SUM_FROM_CHOICE_DISPLAY</code></td><td><code>113</code></td><td>
+<tr><td><code>TRANSACTIONS_FROM_CHOICE_DISPLAY_PER_VISIT</code></td><td><code>121</code></td><td>
+TRANSACTIONS_FROM_CHOICE_DISPLAY / VISITS
+<br/></td></tr>
+<tr><td><code>TRANSACTIONS_PARAMETER_SUM_FROM_CHOICE_DISPLAY</code></td><td><code>122</code></td><td>
 sum of transaction property value of transactions related to product displayed in a choice display
 if a ReportDimension is on the product id, then only for this product id
 if a ReportDimension is on a Choice, then only for this choice
 if a ReportDimension is on a ChoiceVariant, then only for this choice variant
 <br/></td></tr>
-<tr><td><code>VISITS_WITH_TRANSACTIONS_FROM_CHOICE_DISPLAY</code></td><td><code>114</code></td><td>
+<tr><td><code>TRANSACTIONS_PARAMETER_SUM_FROM_CHOICE_DISPLAY_PER_VISIT</code></td><td><code>123</code></td><td>
+TRANSACTIONS_PARAMETER_SUM_FROM_CHOICE_DISPLAY / VISITS
+<br/></td></tr>
+<tr><td><code>VISITS_WITH_TRANSACTIONS_FROM_CHOICE_DISPLAY</code></td><td><code>130</code></td><td>
 number of visits having at least one transaction event related to product displayed in a choice display
 if a ReportDimension is on the product id, then only for this product id
 if a ReportDimension is on a Choice, then only for this choice
 if a ReportDimension is on a ChoiceVariant, then only for this choice variant
 <br/></td></tr>
-<tr><td><code>ADD_TO_BASKETS_FROM_CHOICE_DISPLAY</code></td><td><code>115</code></td><td>
+<tr><td><code>VISITS_WITH_TRANSACTIONS_FROM_CHOICE_DISPLAY_RATE</code></td><td><code>131</code></td><td>
+VISITS_WITH_TRANSACTIONS_FROM_CHOICE_DISPLAY / VISITS
+<br/></td></tr>
+<tr><td><code>ADD_TO_BASKETS_FROM_CHOICE_DISPLAY</code></td><td><code>132</code></td><td>
 number of add to baskets related to product displayed in a choice display
 if a ReportDimension is on the product id, then only for this product id
 if a ReportDimension is on a Choice, then only for this choice
 if a ReportDimension is on a ChoiceVariant, then only for this choice variant
 <br/></td></tr>
-<tr><td><code>VISITS_WITH_ADD_TO_BASKETS_FROM_CHOICE_DISPLAY</code></td><td><code>116</code></td><td>
+<tr><td><code>ADD_TO_BASKETS_FROM_CHOICE_DISPLAY_PER_VISIT</code></td><td><code>133</code></td><td>
+ADD_TO_BASKETS_FROM_CHOICE_DISPLAY / VISITS
+<br/></td></tr>
+<tr><td><code>VISITS_WITH_ADD_TO_BASKETS_FROM_CHOICE_DISPLAY</code></td><td><code>134</code></td><td>
 number of visits having at least one add to basket related to product displayed in a choice display
 if a ReportDimension is on the product id, then only for this product id
 if a ReportDimension is on a Choice, then only for this choice
 if a ReportDimension is on a ChoiceVariant, then only for this choice variant
 <br/></td></tr>
-<tr><td><code>GOALS_FROM_CHOICE_DISPLAY</code></td><td><code>117</code></td><td>
+<tr><td><code>VISITS_WITH_ADD_TO_BASKETS_FROM_CHOICE_DISPLAY_RATE</code></td><td><code>135</code></td><td>
+VISITS_WITH_ADD_TO_BASKETS_FROM_CHOICE_DISPLAY / VISITS
+<br/></td></tr>
+<tr><td><code>GOALS_FROM_CHOICE_DISPLAY</code></td><td><code>140</code></td><td>
 number of goals related to product displayed in a choice display
 (require identifier to be provided with the choice identifier)
 (will only work if a product identifier is provided with the goal)
@@ -464,13 +494,19 @@ if a ReportDimension is on the product id, then only for this product id
 if a ReportDimension is on a Choice, then only for this choice
 if a ReportDimension is on a ChoiceVariant, then only for this choice variant
 <br/></td></tr>
-<tr><td><code>VISITS_WITH_GOALS_FROM_CHOICE_DISPLAY</code></td><td><code>118</code></td><td>
+<tr><td><code>GOALS_FROM_CHOICE_DISPLAY_PER_VISIT</code></td><td><code>141</code></td><td>
+GOALS_FROM_CHOICE_DISPLAY / VISITS
+<br/></td></tr>
+<tr><td><code>VISITS_WITH_GOALS_FROM_CHOICE_DISPLAY</code></td><td><code>142</code></td><td>
 number of visits having at least goal related to product displayed in a choice display
 (require identifier to be provided with the choice identifier)
 (will only work if a product identifier is provided with the goal)
 if a ReportDimension is on the product id, then only for this product id
 if a ReportDimension is on a Choice, then only for this choice
 if a ReportDimension is on a ChoiceVariant, then only for this choice variant
+<br/></td></tr>
+<tr><td><code>VISITS_WITH_GOALS_FROM_CHOICE_DISPLAY_RATE</code></td><td><code>143</code></td><td>
+VISITS_WITH_GOALS_FROM_CHOICE_DISPLAY / VISITS
 <br/></td></tr>
 </table></div>
 <div class="definition"><h3 id="Enum_ReportDimensionType">Enumeration: ReportDimensionType</h3>
@@ -926,7 +962,7 @@ These keys are, in the case of a TransactionReport defined by a map of dimension
 <table class="table-bordered table-striped table-condensed"><thead><th>Key</th><th>Field</th><th>Type</th><th>Description</th><th>Requiredness</th><th>Default value</th></thead>
 <tr><td>1</td><td>results</td><td><code>list&lt;<code><a href="BoxalinoDataIntelligenceV1.html#Struct_TransactionReportResult">TransactionReportResult</a></code>&gt;</code></td><td>the map of reporting results (one result per TransactionReportResult: indicating dimension values)
 </td><td>required</td><td></td></tr>
-<tr><td>2</td><td>sumResult</td><td><code><a href="BoxalinoDataIntelligenceV1.html#Struct_ReportResultValues">ReportResultValues</a></code></td><td>the sum result
+<tr><td>2</td><td>totalResult</td><td><code>list&lt;<code><a href="BoxalinoDataIntelligenceV1.html#Struct_TransactionReportResult">TransactionReportResult</a></code>&gt;</code></td><td>the total results (over all the time periods) (one result per TransactionReportResult: indicating dimension values)
 </td><td>required</td><td></td></tr>
 </table><br/>This structure defines a transaction report returned
 This object is specific to TransactionReportRequest but is similar to all other type of report responses, as the only difference usually is the key object of the result variable (in this case: TransactionReportResult)
@@ -964,7 +1000,7 @@ These keys are, in the case of a BehaviorReport defined by a map of dimension va
 <table class="table-bordered table-striped table-condensed"><thead><th>Key</th><th>Field</th><th>Type</th><th>Description</th><th>Requiredness</th><th>Default value</th></thead>
 <tr><td>1</td><td>results</td><td><code>list&lt;<code><a href="BoxalinoDataIntelligenceV1.html#Struct_BehaviorReportResult">BehaviorReportResult</a></code>&gt;</code></td><td>the map of reporting results (one result per BehaviorReportResult: indicating dimension values)
 </td><td>required</td><td></td></tr>
-<tr><td>2</td><td>sumResult</td><td><code><a href="BoxalinoDataIntelligenceV1.html#Struct_ReportResultValues">ReportResultValues</a></code></td><td>the sum result
+<tr><td>2</td><td>totalResult</td><td><code>list&lt;<code><a href="BoxalinoDataIntelligenceV1.html#Struct_BehaviorReportResult">BehaviorReportResult</a></code>&gt;</code></td><td>the total results (over all the time periods) (one result per BehaviorReportResult: indicating dimension values)
 </td><td>required</td><td></td></tr>
 </table><br/>This structure defines a behavior report returned
 This object is specific to BehaviorReportRequest but is similar to all other type of report responses, as the only difference usually is the key object of the result variable (in this case: BehaviorReportResult)

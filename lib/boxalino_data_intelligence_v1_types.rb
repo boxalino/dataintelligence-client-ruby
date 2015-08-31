@@ -189,6 +189,8 @@ module ReportMetricType
   TRANSACTIONS_PARAMETER_SUM = 29
   # count of the total number of transaction items (one product with quantity one is one item)
   TRANSACTIONS_QUANTITY = 30
+  # number of transactions customers (different customers having made transactions)
+  TRANSACTIONS_CUSTOMERS = 32
   # number of add-to-basket events
   ADD_TO_BASKETS = 24
   # ADD_TO_BASKET / VISITS
@@ -207,57 +209,79 @@ module ReportMetricType
   MAIL_CLICKED = 52
   # number of display of a choice
   CHOICE_DISPLAYS = 100
+  # CHOICE_DISPLAYS / VISITS
+  CHOICE_DISPLAYS_PER_VISIT = 101
   # number of visits having at least one choice display
-  VISITS_WITH_CHOICE_DISPLAYS = 101
+  VISITS_WITH_CHOICE_DISPLAYS = 102
+  # VISITS_WITH_CHOICE_DISPLAYS / VISITS
+  VISITS_WITH_CHOICE_DISPLAYS_RATE = 103
   # number of product views event related to product displayed in a choice display
 # if a ReportDimension is on the product id, then only for this product id
   PRODUCT_VIEWS_FROM_CHOICE_DISPLAY = 110
+  # PRODUCT_VIEWS_FROM_CHOICE_DISPLAY / VISITS
+  PRODUCT_VIEWS_FROM_CHOICE_DISPLAY_PER_VISIT = 111
   # number of visits having at least one product views event related to product displayed in a choice display
 # if a ReportDimension is on the product id, then only for this product id
 # if a ReportDimension is on a Choice, then only for this choice
 # if a ReportDimension is on a ChoiceVariant, then only for this choice variant
-  VISITS_WITH_PRODUCT_VIEWS_FROM_CHOICE_DISPLAY = 111
+  VISITS_WITH_PRODUCT_VIEWS_FROM_CHOICE_DISPLAY = 112
+  # VISITS_WITH_PRODUCT_VIEWS_FROM_CHOICE_DISPLAY / VISITS
+  VISITS_WITH_PRODUCT_VIEWS_FROM_CHOICE_DISPLAY_RATE = 113
   # number of transactions related to product displayed in a choice display
 # if a ReportDimension is on the product id, then only for this product id
 # if a ReportDimension is on a Choice, then only for this choice
 # if a ReportDimension is on a ChoiceVariant, then only for this choice variant
-  TRANSACTIONS_FROM_CHOICE_DISPLAY = 112
+  TRANSACTIONS_FROM_CHOICE_DISPLAY = 120
+  # TRANSACTIONS_FROM_CHOICE_DISPLAY / VISITS
+  TRANSACTIONS_FROM_CHOICE_DISPLAY_PER_VISIT = 121
   # sum of transaction property value of transactions related to product displayed in a choice display
 # if a ReportDimension is on the product id, then only for this product id
 # if a ReportDimension is on a Choice, then only for this choice
 # if a ReportDimension is on a ChoiceVariant, then only for this choice variant
-  TRANSACTIONS_PARAMETER_SUM_FROM_CHOICE_DISPLAY = 113
+  TRANSACTIONS_PARAMETER_SUM_FROM_CHOICE_DISPLAY = 122
+  # TRANSACTIONS_PARAMETER_SUM_FROM_CHOICE_DISPLAY / VISITS
+  TRANSACTIONS_PARAMETER_SUM_FROM_CHOICE_DISPLAY_PER_VISIT = 123
   # number of visits having at least one transaction event related to product displayed in a choice display
 # if a ReportDimension is on the product id, then only for this product id
 # if a ReportDimension is on a Choice, then only for this choice
 # if a ReportDimension is on a ChoiceVariant, then only for this choice variant
-  VISITS_WITH_TRANSACTIONS_FROM_CHOICE_DISPLAY = 114
+  VISITS_WITH_TRANSACTIONS_FROM_CHOICE_DISPLAY = 130
+  # VISITS_WITH_TRANSACTIONS_FROM_CHOICE_DISPLAY / VISITS
+  VISITS_WITH_TRANSACTIONS_FROM_CHOICE_DISPLAY_RATE = 131
   # number of add to baskets related to product displayed in a choice display
 # if a ReportDimension is on the product id, then only for this product id
 # if a ReportDimension is on a Choice, then only for this choice
 # if a ReportDimension is on a ChoiceVariant, then only for this choice variant
-  ADD_TO_BASKETS_FROM_CHOICE_DISPLAY = 115
+  ADD_TO_BASKETS_FROM_CHOICE_DISPLAY = 132
+  # ADD_TO_BASKETS_FROM_CHOICE_DISPLAY / VISITS
+  ADD_TO_BASKETS_FROM_CHOICE_DISPLAY_PER_VISIT = 133
   # number of visits having at least one add to basket related to product displayed in a choice display
 # if a ReportDimension is on the product id, then only for this product id
 # if a ReportDimension is on a Choice, then only for this choice
 # if a ReportDimension is on a ChoiceVariant, then only for this choice variant
-  VISITS_WITH_ADD_TO_BASKETS_FROM_CHOICE_DISPLAY = 116
+  VISITS_WITH_ADD_TO_BASKETS_FROM_CHOICE_DISPLAY = 134
+  # VISITS_WITH_ADD_TO_BASKETS_FROM_CHOICE_DISPLAY / VISITS
+  VISITS_WITH_ADD_TO_BASKETS_FROM_CHOICE_DISPLAY_RATE = 135
   # number of goals related to product displayed in a choice display
 # (require identifier to be provided with the choice identifier)
 # (will only work if a product identifier is provided with the goal)
 # if a ReportDimension is on the product id, then only for this product id
 # if a ReportDimension is on a Choice, then only for this choice
 # if a ReportDimension is on a ChoiceVariant, then only for this choice variant
-  GOALS_FROM_CHOICE_DISPLAY = 117
+  GOALS_FROM_CHOICE_DISPLAY = 140
+  # GOALS_FROM_CHOICE_DISPLAY / VISITS
+  GOALS_FROM_CHOICE_DISPLAY_PER_VISIT = 141
   # number of visits having at least goal related to product displayed in a choice display
 # (require identifier to be provided with the choice identifier)
 # (will only work if a product identifier is provided with the goal)
 # if a ReportDimension is on the product id, then only for this product id
 # if a ReportDimension is on a Choice, then only for this choice
 # if a ReportDimension is on a ChoiceVariant, then only for this choice variant
-  VISITS_WITH_GOALS_FROM_CHOICE_DISPLAY = 118
-  VALUE_MAP = {1 => "VISITORS", 2 => "VISITS", 3 => "BOUNCES", 4 => "BOUNCE_RATE", 5 => "PAGE_VIEWS", 6 => "PAGE_VIEWS_PER_VISIT", 31 => "TIME_ON_SITE", 7 => "AVERAGE_TIME_ON_SITE", 8 => "PRODUCT_VIEWS", 9 => "PRODUCT_VIEWS_PER_VISIT", 10 => "VISITS_WITH_PRODUCT_VIEWS", 11 => "VISITS_WITH_PRODUCT_VIEWS_RATE", 12 => "SEARCHES", 13 => "SEARCHES_PER_VISIT", 14 => "VISITS_WITH_SEARCHES", 15 => "VISITS_WITH_SEARCHES_RATE", 16 => "GOALS", 17 => "GOALS_PER_VISIT", 18 => "VISITS_WITH_GOALS", 19 => "VISITS_WITH_GOALS_RATE", 20 => "TRANSACTIONS", 21 => "TRANSACTIONS_PER_VISIT", 22 => "VISITS_WITH_TRANSACTIONS", 23 => "VISITS_WITH_TRANSACTIONS_RATE", 28 => "TRANSACTIONS_TURNOVER", 29 => "TRANSACTIONS_PARAMETER_SUM", 30 => "TRANSACTIONS_QUANTITY", 24 => "ADD_TO_BASKETS", 25 => "ADD_TO_BASKETS_PER_VISIT", 26 => "VISITS_WITH_ADD_TO_BASKETS", 27 => "VISITS_WITH_ADD_TO_BASKETS_RATE", 40 => "EVENT_COUNT", 50 => "MAIL_SENT", 51 => "MAIL_OPENED", 52 => "MAIL_CLICKED", 100 => "CHOICE_DISPLAYS", 101 => "VISITS_WITH_CHOICE_DISPLAYS", 110 => "PRODUCT_VIEWS_FROM_CHOICE_DISPLAY", 111 => "VISITS_WITH_PRODUCT_VIEWS_FROM_CHOICE_DISPLAY", 112 => "TRANSACTIONS_FROM_CHOICE_DISPLAY", 113 => "TRANSACTIONS_PARAMETER_SUM_FROM_CHOICE_DISPLAY", 114 => "VISITS_WITH_TRANSACTIONS_FROM_CHOICE_DISPLAY", 115 => "ADD_TO_BASKETS_FROM_CHOICE_DISPLAY", 116 => "VISITS_WITH_ADD_TO_BASKETS_FROM_CHOICE_DISPLAY", 117 => "GOALS_FROM_CHOICE_DISPLAY", 118 => "VISITS_WITH_GOALS_FROM_CHOICE_DISPLAY"}
-  VALID_VALUES = Set.new([VISITORS, VISITS, BOUNCES, BOUNCE_RATE, PAGE_VIEWS, PAGE_VIEWS_PER_VISIT, TIME_ON_SITE, AVERAGE_TIME_ON_SITE, PRODUCT_VIEWS, PRODUCT_VIEWS_PER_VISIT, VISITS_WITH_PRODUCT_VIEWS, VISITS_WITH_PRODUCT_VIEWS_RATE, SEARCHES, SEARCHES_PER_VISIT, VISITS_WITH_SEARCHES, VISITS_WITH_SEARCHES_RATE, GOALS, GOALS_PER_VISIT, VISITS_WITH_GOALS, VISITS_WITH_GOALS_RATE, TRANSACTIONS, TRANSACTIONS_PER_VISIT, VISITS_WITH_TRANSACTIONS, VISITS_WITH_TRANSACTIONS_RATE, TRANSACTIONS_TURNOVER, TRANSACTIONS_PARAMETER_SUM, TRANSACTIONS_QUANTITY, ADD_TO_BASKETS, ADD_TO_BASKETS_PER_VISIT, VISITS_WITH_ADD_TO_BASKETS, VISITS_WITH_ADD_TO_BASKETS_RATE, EVENT_COUNT, MAIL_SENT, MAIL_OPENED, MAIL_CLICKED, CHOICE_DISPLAYS, VISITS_WITH_CHOICE_DISPLAYS, PRODUCT_VIEWS_FROM_CHOICE_DISPLAY, VISITS_WITH_PRODUCT_VIEWS_FROM_CHOICE_DISPLAY, TRANSACTIONS_FROM_CHOICE_DISPLAY, TRANSACTIONS_PARAMETER_SUM_FROM_CHOICE_DISPLAY, VISITS_WITH_TRANSACTIONS_FROM_CHOICE_DISPLAY, ADD_TO_BASKETS_FROM_CHOICE_DISPLAY, VISITS_WITH_ADD_TO_BASKETS_FROM_CHOICE_DISPLAY, GOALS_FROM_CHOICE_DISPLAY, VISITS_WITH_GOALS_FROM_CHOICE_DISPLAY]).freeze
+  VISITS_WITH_GOALS_FROM_CHOICE_DISPLAY = 142
+  # VISITS_WITH_GOALS_FROM_CHOICE_DISPLAY / VISITS
+  VISITS_WITH_GOALS_FROM_CHOICE_DISPLAY_RATE = 143
+  VALUE_MAP = {1 => "VISITORS", 2 => "VISITS", 3 => "BOUNCES", 4 => "BOUNCE_RATE", 5 => "PAGE_VIEWS", 6 => "PAGE_VIEWS_PER_VISIT", 31 => "TIME_ON_SITE", 7 => "AVERAGE_TIME_ON_SITE", 8 => "PRODUCT_VIEWS", 9 => "PRODUCT_VIEWS_PER_VISIT", 10 => "VISITS_WITH_PRODUCT_VIEWS", 11 => "VISITS_WITH_PRODUCT_VIEWS_RATE", 12 => "SEARCHES", 13 => "SEARCHES_PER_VISIT", 14 => "VISITS_WITH_SEARCHES", 15 => "VISITS_WITH_SEARCHES_RATE", 16 => "GOALS", 17 => "GOALS_PER_VISIT", 18 => "VISITS_WITH_GOALS", 19 => "VISITS_WITH_GOALS_RATE", 20 => "TRANSACTIONS", 21 => "TRANSACTIONS_PER_VISIT", 22 => "VISITS_WITH_TRANSACTIONS", 23 => "VISITS_WITH_TRANSACTIONS_RATE", 28 => "TRANSACTIONS_TURNOVER", 29 => "TRANSACTIONS_PARAMETER_SUM", 30 => "TRANSACTIONS_QUANTITY", 32 => "TRANSACTIONS_CUSTOMERS", 24 => "ADD_TO_BASKETS", 25 => "ADD_TO_BASKETS_PER_VISIT", 26 => "VISITS_WITH_ADD_TO_BASKETS", 27 => "VISITS_WITH_ADD_TO_BASKETS_RATE", 40 => "EVENT_COUNT", 50 => "MAIL_SENT", 51 => "MAIL_OPENED", 52 => "MAIL_CLICKED", 100 => "CHOICE_DISPLAYS", 101 => "CHOICE_DISPLAYS_PER_VISIT", 102 => "VISITS_WITH_CHOICE_DISPLAYS", 103 => "VISITS_WITH_CHOICE_DISPLAYS_RATE", 110 => "PRODUCT_VIEWS_FROM_CHOICE_DISPLAY", 111 => "PRODUCT_VIEWS_FROM_CHOICE_DISPLAY_PER_VISIT", 112 => "VISITS_WITH_PRODUCT_VIEWS_FROM_CHOICE_DISPLAY", 113 => "VISITS_WITH_PRODUCT_VIEWS_FROM_CHOICE_DISPLAY_RATE", 120 => "TRANSACTIONS_FROM_CHOICE_DISPLAY", 121 => "TRANSACTIONS_FROM_CHOICE_DISPLAY_PER_VISIT", 122 => "TRANSACTIONS_PARAMETER_SUM_FROM_CHOICE_DISPLAY", 123 => "TRANSACTIONS_PARAMETER_SUM_FROM_CHOICE_DISPLAY_PER_VISIT", 130 => "VISITS_WITH_TRANSACTIONS_FROM_CHOICE_DISPLAY", 131 => "VISITS_WITH_TRANSACTIONS_FROM_CHOICE_DISPLAY_RATE", 132 => "ADD_TO_BASKETS_FROM_CHOICE_DISPLAY", 133 => "ADD_TO_BASKETS_FROM_CHOICE_DISPLAY_PER_VISIT", 134 => "VISITS_WITH_ADD_TO_BASKETS_FROM_CHOICE_DISPLAY", 135 => "VISITS_WITH_ADD_TO_BASKETS_FROM_CHOICE_DISPLAY_RATE", 140 => "GOALS_FROM_CHOICE_DISPLAY", 141 => "GOALS_FROM_CHOICE_DISPLAY_PER_VISIT", 142 => "VISITS_WITH_GOALS_FROM_CHOICE_DISPLAY", 143 => "VISITS_WITH_GOALS_FROM_CHOICE_DISPLAY_RATE"}
+  VALID_VALUES = Set.new([VISITORS, VISITS, BOUNCES, BOUNCE_RATE, PAGE_VIEWS, PAGE_VIEWS_PER_VISIT, TIME_ON_SITE, AVERAGE_TIME_ON_SITE, PRODUCT_VIEWS, PRODUCT_VIEWS_PER_VISIT, VISITS_WITH_PRODUCT_VIEWS, VISITS_WITH_PRODUCT_VIEWS_RATE, SEARCHES, SEARCHES_PER_VISIT, VISITS_WITH_SEARCHES, VISITS_WITH_SEARCHES_RATE, GOALS, GOALS_PER_VISIT, VISITS_WITH_GOALS, VISITS_WITH_GOALS_RATE, TRANSACTIONS, TRANSACTIONS_PER_VISIT, VISITS_WITH_TRANSACTIONS, VISITS_WITH_TRANSACTIONS_RATE, TRANSACTIONS_TURNOVER, TRANSACTIONS_PARAMETER_SUM, TRANSACTIONS_QUANTITY, TRANSACTIONS_CUSTOMERS, ADD_TO_BASKETS, ADD_TO_BASKETS_PER_VISIT, VISITS_WITH_ADD_TO_BASKETS, VISITS_WITH_ADD_TO_BASKETS_RATE, EVENT_COUNT, MAIL_SENT, MAIL_OPENED, MAIL_CLICKED, CHOICE_DISPLAYS, CHOICE_DISPLAYS_PER_VISIT, VISITS_WITH_CHOICE_DISPLAYS, VISITS_WITH_CHOICE_DISPLAYS_RATE, PRODUCT_VIEWS_FROM_CHOICE_DISPLAY, PRODUCT_VIEWS_FROM_CHOICE_DISPLAY_PER_VISIT, VISITS_WITH_PRODUCT_VIEWS_FROM_CHOICE_DISPLAY, VISITS_WITH_PRODUCT_VIEWS_FROM_CHOICE_DISPLAY_RATE, TRANSACTIONS_FROM_CHOICE_DISPLAY, TRANSACTIONS_FROM_CHOICE_DISPLAY_PER_VISIT, TRANSACTIONS_PARAMETER_SUM_FROM_CHOICE_DISPLAY, TRANSACTIONS_PARAMETER_SUM_FROM_CHOICE_DISPLAY_PER_VISIT, VISITS_WITH_TRANSACTIONS_FROM_CHOICE_DISPLAY, VISITS_WITH_TRANSACTIONS_FROM_CHOICE_DISPLAY_RATE, ADD_TO_BASKETS_FROM_CHOICE_DISPLAY, ADD_TO_BASKETS_FROM_CHOICE_DISPLAY_PER_VISIT, VISITS_WITH_ADD_TO_BASKETS_FROM_CHOICE_DISPLAY, VISITS_WITH_ADD_TO_BASKETS_FROM_CHOICE_DISPLAY_RATE, GOALS_FROM_CHOICE_DISPLAY, GOALS_FROM_CHOICE_DISPLAY_PER_VISIT, VISITS_WITH_GOALS_FROM_CHOICE_DISPLAY, VISITS_WITH_GOALS_FROM_CHOICE_DISPLAY_RATE]).freeze
 end
 
 module ReportDimensionType
@@ -1268,20 +1292,20 @@ end
 class TransactionReport
   include ::Thrift::Struct, ::Thrift::Struct_Union
   RESULTS = 1
-  SUMRESULT = 2
+  TOTALRESULT = 2
 
   FIELDS = {
     # the map of reporting results (one result per TransactionReportResult: indicating dimension values)
     RESULTS => {:type => ::Thrift::Types::LIST, :name => 'results', :element => {:type => ::Thrift::Types::STRUCT, :class => ::TransactionReportResult}},
-    # the sum result
-    SUMRESULT => {:type => ::Thrift::Types::STRUCT, :name => 'sumResult', :class => ::ReportResultValues}
+    # the total results (over all the time periods) (one result per TransactionReportResult: indicating dimension values)
+    TOTALRESULT => {:type => ::Thrift::Types::LIST, :name => 'totalResult', :element => {:type => ::Thrift::Types::STRUCT, :class => ::TransactionReportResult}}
   }
 
   def struct_fields; FIELDS; end
 
   def validate
     raise ::Thrift::ProtocolException.new(::Thrift::ProtocolException::UNKNOWN, 'Required field results is unset!') unless @results
-    raise ::Thrift::ProtocolException.new(::Thrift::ProtocolException::UNKNOWN, 'Required field sumResult is unset!') unless @sumResult
+    raise ::Thrift::ProtocolException.new(::Thrift::ProtocolException::UNKNOWN, 'Required field totalResult is unset!') unless @totalResult
   end
 
   ::Thrift::Struct.generate_accessors self
@@ -1366,20 +1390,20 @@ end
 class BehaviorReport
   include ::Thrift::Struct, ::Thrift::Struct_Union
   RESULTS = 1
-  SUMRESULT = 2
+  TOTALRESULT = 2
 
   FIELDS = {
     # the map of reporting results (one result per BehaviorReportResult: indicating dimension values)
     RESULTS => {:type => ::Thrift::Types::LIST, :name => 'results', :element => {:type => ::Thrift::Types::STRUCT, :class => ::BehaviorReportResult}},
-    # the sum result
-    SUMRESULT => {:type => ::Thrift::Types::STRUCT, :name => 'sumResult', :class => ::ReportResultValues}
+    # the total results (over all the time periods) (one result per BehaviorReportResult: indicating dimension values)
+    TOTALRESULT => {:type => ::Thrift::Types::LIST, :name => 'totalResult', :element => {:type => ::Thrift::Types::STRUCT, :class => ::BehaviorReportResult}}
   }
 
   def struct_fields; FIELDS; end
 
   def validate
     raise ::Thrift::ProtocolException.new(::Thrift::ProtocolException::UNKNOWN, 'Required field results is unset!') unless @results
-    raise ::Thrift::ProtocolException.new(::Thrift::ProtocolException::UNKNOWN, 'Required field sumResult is unset!') unless @sumResult
+    raise ::Thrift::ProtocolException.new(::Thrift::ProtocolException::UNKNOWN, 'Required field totalResult is unset!') unless @totalResult
   end
 
   ::Thrift::Struct.generate_accessors self
